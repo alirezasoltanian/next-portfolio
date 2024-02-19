@@ -1,0 +1,12 @@
+.language2  {
+  margin-top: 50px;
+  margin-left: 60px;
+  display: block;
+  
+  position: fixed;
+ z-index: 300;
+  
+}
+.homeflow {
+  overflow-x: hidden ;
+}

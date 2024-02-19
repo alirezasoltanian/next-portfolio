@@ -1,0 +1,75 @@
+.portfolio__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+.active { background-color: red;}
+.button-choose{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px ;
+  font-weight: bold;
+}
+.portfolio__item {
+  /* background-color: var(--color-bg-variant); */
+  /* background:linear-gradient(rgba(7, 0, 0, 0.23) 0%, rgba(118, 118, 118, 0.803) 100%); */
+  /* border: 1px solid rgba(255, 255, 255, 0.199); */
+  border: 2px solid rgb(85, 168, 246);
+  border-radius: 2rem ;
+  transition: va(--transition);
+  /* backdrop-filter: blur(10px); */
+  padding: 0rem;
+  
+}
+.portfolio__cover {
+  background-color: #2c2c6c46;
+  border-radius: 2rem ;
+  /* backdrop-filter: blur(10px); */
+  padding: 1.2rem;
+  transition: all 400ms ease;
+  /* border: 1px solid rgba(255, 255, 255, 0.199); */
+  width: 100%;
+  height: 100%;
+  
+}
+
+.portfolio__item :hover {
+  /* backdrop-filter: blur(3px); */
+  border-color: var(--color-bg-variant);
+  /* background: rgba(0, 0, 0, 0.442); */
+
+}
+
+.portfolio__item-image {
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.portfolio__item h3 {
+  margin: 1.5rem 0 2rem;
+  min-height: 80px;
+}
+
+.portfolio__item-cta {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+/* ========== MEDIA QUERIES (MEDIA DEVICES) ========== */
+
+@media screen and (max-width: 1024px) {
+  .portfolio__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
+
+}
+/* ========== MEDIA QUERIES (SMALL DEVICES) ========== */
+
+@media screen and (max-width: 600px) {
+  .portfolio__container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+}
