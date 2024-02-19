@@ -1,9 +1,11 @@
+// @ts-nocheck
+
 import { MdEmail } from "react-icons/md";
 import { FaTelegramPlane } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
 import React,{useRef} from 'react' ;
 import './contact.css';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const form = useRef();

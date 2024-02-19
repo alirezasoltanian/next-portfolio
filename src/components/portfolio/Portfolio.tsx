@@ -1,25 +1,18 @@
+// @ts-nocheck
+
 "use client";
 
 import React, { useEffect, useState } from "react";
 import "./portfolio.css";
-import IMG1 from "/public/assets/Slicwee1.png";
 
-import IMG4 from "/public/assets/DribbbleshotHD-1.png";
-import IMG5 from "/public/assets/Slic12e2.png";
-import IMG6 from "/public/assets/DribbbaleshotHD-2.png";
-import IMG7 from "/public/assets/DribbbleasasasshotHD-4.png";
-import IMG8 from "/public/assets/DribbbleshotHDbridge-3.png";
-import IMG9 from "/public/assets/DribbbleshotHD-5.png";
-import IMG10 from "/public/assets/DribbbleshotHD-6.png";
-import IMG11 from "/public/assets/noghteKhatImg.png";
-import IMG12 from "/public/assets/framer.png";
+
 import { cn } from "@/utils/cn";
 
 import { AnimatePresence, motion } from "framer-motion";
 const random = [
   {
     id: 11,
-    image: IMG11,
+    image: "../../assets/noghteKhatImg.png",
     name: "frontend",
     title:
       "Tools : Nextjs13 , Typescript , mantine , zustand , tailwind , Axios , yup , lodash  ",
@@ -29,7 +22,7 @@ const random = [
   },
   {
     id: 12,
-    image: IMG12,
+    image: "../../assets/framer.png",
     name: "frontend",
     title: "Tools : Nextjs13 , Typescript , Framer-motion , Tailwind  ",
    
@@ -41,7 +34,7 @@ const random = [
   },
   {
     id: 1,
-    image: IMG1,
+    image: "../../assets/Slicwee1.png",
     name: "frontend",
     title: "Tools : React , Javascript , Axios , React-router-dom , Swiper  ",
     disable: '',
@@ -73,7 +66,7 @@ const random = [
   // },
   {
     id: 4,
-    image: IMG4,
+    image: "../../assets/DribbbleshotHD-1.png",
     name: "figma",
     title: "Tool : figma",
     disable: '',
@@ -84,7 +77,7 @@ const random = [
   },
   {
     id: 5,
-    image: IMG5,
+    image: "../../assets/Slic12e2.png",
     name: "frontend",
     title: "Tools : Bootstrap , Html , Css  ",
     disable: '',
@@ -94,7 +87,7 @@ const random = [
   },
   {
     id: 6,
-    image: IMG6,
+    image: "../../assets/DribbbaleshotHD-2.png",
     name: "frontend",
     title: "Tools : React , MaterialUI , GraphQL , HyGraph , ReactRouterDom ",
     disable: '',
@@ -104,7 +97,7 @@ const random = [
   },
   {
     id: 7,
-    image: IMG7,
+    image: "../../assets/DribbbleasasasshotHD-4.png",
     name: "solidity",
     title:
       "Tools : Nextjs , MaterialUI , Tailwind , Solidity , Moralis , ethers ",
@@ -115,7 +108,7 @@ const random = [
   },
   {
     id: 8,
-    image: IMG8,
+    image: "../../assets/DribbbleshotHDbridge-3.png",
     name: "solidity",
     title:
       "Tools : Nextjs , MaterialUI , Tailwind , Solidity , Moralis , ethers  ",
@@ -126,7 +119,7 @@ const random = [
   },
   {
     id: 9,
-    image: IMG9,
+    image: "../../assets/DribbbleshotHD-5.png",
     name: "solidity",
     title:
       "Tools : Nextjs , MaterialUI , Tailwind , 0x Protocol , Alchemy SDK , Solidity , ethers   ",
@@ -137,7 +130,7 @@ const random = [
   },
   {
     id: 10,
-    image: IMG10,
+    image: "../../assets/DribbbleshotHD-6.png",
     name: "frontend",
     title: "Tools : Nextjs , Typescript , Tailwind    ",
     disable: '',

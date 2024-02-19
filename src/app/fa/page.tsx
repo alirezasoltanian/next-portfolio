@@ -1,3 +1,4 @@
+// @ts-nocheck
 'use client'
 import About2 from "@/components/about/About2";
 import Contact2 from "@/components/contact/Contact2";

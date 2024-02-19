@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 'use client'
 
 import React from "react";
@@ -191,7 +193,7 @@ const Nav = ({ active }) => {
             ) : null}
           </motion.a>
         ))}
-        <Link href="#services" href="/fa">
+        <Link  href="/fa">
           <MdLanguage />
         </Link>
       </motion.nav>

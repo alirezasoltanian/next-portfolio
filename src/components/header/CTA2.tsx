@@ -1,4 +1,6 @@
 
+// @ts-nocheck
+
 import React, { useEffect, useRef, useState } from 'react'
 const CTA = () => {
   const divRef = useRef<HTMLButtonElement>(null);

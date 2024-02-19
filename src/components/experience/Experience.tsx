@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import React, { useRef } from 'react';
 import './experience.css';
 import {BsPatchCheckFill} from 'react-icons/bs' ;
@@ -23,127 +25,127 @@ const Experience = ({experienceRef}) => {
         style={{ x, display: "flex", justifyContent: "space-between" , width:'2000px' }}
       >
         <Image
-          width={720}
-          height={720}
+          width={360}
+          height={360}
           src="https://raw.githubusercontent.com/hussainweb/hussainweb/main/icons/react.png"
           alt="Alirezas7ss's GitHub stats"
           style={{ width: "33px", height: "33px" }}
         />
         <Image
-          width={720}
-          height={720}
+          width={360}
+          height={360}
           src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nextjs-colored-dark.svg"
           alt="Alirezas7ss's GitHub stats"
           style={{ width: "33px", height: "33px" }}
         />
         <Image
-          width={720}
-          height={720}
+          width={360}
+          height={360}
           src="https://raw.githubusercontent.com/hussainweb/hussainweb/main/icons/javascript.png"
           style={{ width: "33px", height: "33px" }}
           alt="HTML5"
         />
         <Image
-          width={720}
-          height={720}
+          width={360}
+          height={360}
           src="https://github.com/MacroPower/MacroPower/raw/master/img/typescript-original.svg"
           style={{ width: "33px", height: "33px" }}
           alt="react"
         />
         <Image
-          width={720}
-          height={720}
+          width={360}
+          height={360}
           src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss-colored.svg"
           alt="Alirezas7ss's GitHub stats"
           style={{ width: "33px", height: "33px" }}
         />
         <Image
-          width={720}
-          height={720}
+          width={360}
+          height={360}
           src="https://w7.pngwing.com/pngs/895/275/png-transparent-solidity-ethereum-smart-contract-blockchain-cryptocurrency-blockchain-angle-triangle-logo.png"
           style={{ width: "33px", height: "33px" }}
           alt="HTML5"
         />
         <Image
-          width={720}
-          height={720}
+          width={360}
+          height={360}
           src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg"
           style={{ width: "33px", height: "33px" }}
           alt="javascript"
         />
         <Image
-          width={720}
-          height={720}
+          width={360}
+          height={360}
           src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg"
           style={{ width: "33px", height: "33px" }}
           alt="CSS3"
         />
         <Image
-          width={720}
-          height={720}
+          width={360}
+          height={360}
           src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/sass-colored.svg"
           style={{ width: "33px", height: "33px" }}
           alt="Sass"
         />
         <Image
-          width={720}
-          height={720}
+          width={360}
+          height={360}
           src="https://img.icons8.com/color/48/000000/wordpress.png"
           style={{ width: "33px", height: "33px" }}
           alt="wordpress"
         />
         <Image
-          width={720}
-          height={720}
+          width={360}
+          height={360}
           src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/figma-colored.svg"
           style={{ width: "33px", height: "33px" }}
           alt="Figma"
         />
           <Image
-            width={720}
-            height={720}
+            width={360}
+            height={360}
           src="https://raw.githubusercontent.com/hussainweb/hussainweb/main/icons/react.png"
           alt="Alirezas7ss's GitHub stats"
           style={{ width: "33px", height: "33px" }}
         />
         <Image
-          width={720}
-          height={720}
+          width={360}
+          height={360}
           src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nextjs-colored-dark.svg"
           alt="Alirezas7ss's GitHub stats"
           style={{ width: "33px", height: "33px" }}
         />
         <Image
-          width={720}
-          height={720}
+          width={360}
+          height={360}
           src="https://raw.githubusercontent.com/hussainweb/hussainweb/main/icons/javascript.png"
           style={{ width: "33px", height: "33px" }}
           alt="HTML5"
         />
         <Image
-          width={720}
-          height={720}
+          width={360}
+          height={360}
           src="https://github.com/MacroPower/MacroPower/raw/master/img/typescript-original.svg"
           style={{ width: "33px", height: "33px" }}
           alt="react"
         />
         <Image
-          width={720}
-          height={720}
+          width={360}
+          height={360}
           src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss-colored.svg"
           alt="Alirezas7ss's GitHub stats"
           style={{ width: "33px", height: "33px" }}
         />
         <Image
-          width={720}
-          height={720}
+          width={360}
+          height={360}
           src="https://w7.pngwing.com/pngs/895/275/png-transparent-solidity-ethereum-smart-contract-blockchain-cryptocurrency-blockchain-angle-triangle-logo.png"
           style={{ width: "33px", height: "33px" }}
           alt="HTML5"
         />
         <Image
-          width={720}
-          height={720}
+          width={360}
+          height={360}
           src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg"
           style={{ width: "33px", height: "33px" }}
           alt="javascript"

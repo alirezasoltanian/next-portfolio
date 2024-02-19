@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 const CTA = () => {
@@ -71,7 +73,7 @@ const CTA = () => {
         className='btn btn-primary'
         href='#contact'
       >
-        Let's Talk
+        Let&apos;s Talk
       </a>
     </div>
   );

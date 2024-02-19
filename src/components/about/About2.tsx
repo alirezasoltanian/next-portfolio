@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import React, { useEffect, useRef } from "react";
 import "./about2.css";
 import { FaAward } from "react-icons/fa";

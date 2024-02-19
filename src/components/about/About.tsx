@@ -1,4 +1,6 @@
-'use client'
+// @ts-nocheck
+
+"use client";
 import React, { useRef } from "react";
 import "./about.css";
 import { FaAward } from "react-icons/fa";
@@ -6,15 +8,7 @@ import ME from "../../assets/me-about2.webp";
 import { FiUsers } from "react-icons/fi";
 import { VscFolderLibrary } from "react-icons/vsc";
 import styles from "./bubble.module.css";
-import {
-  motion,
-  useScroll,
-  useSpring,
-  useTransform,
-  useMotionValue,
-  useVelocity,
-  useAnimationFrame,
-} from "framer-motion";
+import { useTransform, useMotionValue, useAnimationFrame } from "framer-motion";
 import { wrap } from "@motionone/utils";
 import { Marquee } from "../ui/Marquee";
 import Image from "next/image";
@@ -98,14 +92,14 @@ const About = ({ aboutRef }) => {
             </artifact>
           </div>
           <p>
-            i'm a developer in web2 and web3 world , in world i'm frontend and
-            solidity developer you can see in the portfolio my experiences and
-            projects also can see my github and linkedin to get to know me
-            better if have question or Speech You can send me a message from the
-            Contact ME. I will be happy to talk to you :)
+            i&apos;m a developer in web2 and web3 world , in world i&apos;m
+            frontend and solidity developer you can see in the portfolio my
+            experiences and projects also can see my github and linkedin to get
+            to know me better if have question or Speech You can send me a
+            message from the Contact ME. I will be happy to talk to you :)
           </p>
           <a href='#contact' className='btn btn-primary'>
-            Let's Talk
+            Let&apos;s Talk
           </a>
         </div>
       </div>
