@@ -20,7 +20,7 @@ import {
 import { wrap } from "@motionone/utils";
 import { Marquee } from "../ui/Marquee";
 import styles from "./bubble.module.css";
-import Image from "next/image";
+import ImageB from "@/components/ImageB";
 
 const About = ({ aboutRef }) => {
   // justMove
@@ -34,19 +34,16 @@ const About = ({ aboutRef }) => {
     baseX.set(baseX.get() + moveBy);
   });
   // justMove
-    console.log("aa");
-
-  
+  console.log("aa");
 
   return (
     <section ref={aboutRef} className='sectionAbout'>
-      <div >
+      <div>
         <Marquee fade={true}>
           {Array.from({ length: 3 }).map((_, index) => (
             <h2
               key={index}
               className='text-center text-5xl font-thin text-indigo-300'
-              
             >
               {"GET TO KNOW".split("").map((child, idx) => (
                 <span className={styles.hoverText} key={idx}>
@@ -69,8 +66,8 @@ const About = ({ aboutRef }) => {
           data-aos-duration='800'
           className='about__me'
         >
-         <div className='about__me-image1'>
-            <Image src={ME} alt='About Image' />
+          <div className='about__me-image1'>
+            <ImageB src={ME} alt='About Image' />
           </div>
         </div>
 
@@ -94,8 +91,8 @@ const About = ({ aboutRef }) => {
               className='about__card'
             >
               <FiUsers className='about__icon' />
-              <h5>Not yet</h5>
-              {/* <small>2+ Worldwide</small> */}
+              <h5>همکاری</h5>
+              <small>2</small>
             </artifact>
 
             <artifact

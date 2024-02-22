@@ -11,7 +11,8 @@ import styles from "./bubble.module.css";
 import { useTransform, useMotionValue, useAnimationFrame } from "framer-motion";
 import { wrap } from "@motionone/utils";
 import { Marquee } from "../ui/Marquee";
-import Image from "next/image";
+import ImageB from "@/components/ImageB";
+import { ButtonGooey } from "../ButtonGooey";
 const About = ({ aboutRef }) => {
   // justMove
   const baseVelocity = -100;
@@ -52,7 +53,7 @@ const About = ({ aboutRef }) => {
           className='about__me1'
         >
           <div className='about__me-image1'>
-            <Image src={ME} alt='About Image' />
+            <ImageB src={ME} alt='About Image' />
           </div>
         </div>
 
@@ -76,8 +77,8 @@ const About = ({ aboutRef }) => {
               className='about__card1'
             >
               <FiUsers className='about__icon1' />
-              <h5>Not yet</h5>
-              {/* <small>2+ Worldwide</small> */}
+              <h5>Cooperation</h5>
+              <small>2</small>
             </artifact>
 
             <artifact
@@ -98,6 +99,7 @@ const About = ({ aboutRef }) => {
             to know me better if have question or Speech You can send me a
             message from the Contact ME. I will be happy to talk to you :)
           </p>
+
           <a href='#contact' className='btn btn-primary'>
             Let&apos;s Talk
           </a>

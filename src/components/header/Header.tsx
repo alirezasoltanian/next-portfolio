@@ -12,7 +12,7 @@ import "aos/dist/aos.css";
 
 import Typewriter from "typewriter-effect";
 import { Spotlight } from "../ui/Spotlight";
-import Image from "next/image";
+import ImageB from "@/components/ImageB";
 
 const Header = ({ firstRef }) => {
   useEffect(() => {
@@ -20,8 +20,8 @@ const Header = ({ firstRef }) => {
     AOS.refresh();
   }, []);
   return (
-    <header ref={firstRef} id='first' className="">
-      <Spotlight
+    <header ref={firstRef} id='first overflow-hidden' >
+       <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20"
         fill="white"
       />
@@ -58,12 +58,16 @@ const Header = ({ firstRef }) => {
         <CTA />
         <HeaderSocials />
         <div
-          data-aos='zoom-in'
-          data-aos-easing='ease-out-cubic'
-          data-aos-duration='500'
+          // data-aos='zoom-in'
+          // data-aos-easing='ease-out-cubic'
+          // data-aos-duration='500'
           className='me   overflow-hidden h-[400px] w-[320px] flex justify-center mt-4 '
         >
-          <Image src={Me} alt='' className="w-full rounded-t-full h-full inset-0  object-cover " />
+          <ImageB
+            src={Me}
+            alt=''
+            className='w-full rounded-t-full h-full inset-0  object-cover '
+          />
         </div>
         <a href='#contact' className='scroll__down'>
           scroll Down

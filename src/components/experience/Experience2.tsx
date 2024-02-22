@@ -10,7 +10,7 @@ import {
   useTransform,
 } from "framer-motion";
 import { wrap } from "@motionone/utils";
-import Image from "next/image";
+import ImageB from "@/components/ImageB";
 
 const nameSkill = [
   "react",
@@ -44,126 +44,126 @@ const Experience = ({ experienceRef }) => {
           width: "2000px",
         }}
       >
-        <Image
+        <ImageB
           width={360}
           height={360}
           src='https://raw.githubusercontent.com/hussainweb/hussainweb/main/icons/react.png'
           alt="Alirezas7ss's GitHub stats"
           style={{ width: "33px", height: "33px" }}
         />
-        <Image
+        <ImageB
           width={360}
           height={360}
           src='https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nextjs-colored-dark.svg'
           alt="Alirezas7ss's GitHub stats"
           style={{ width: "33px", height: "33px" }}
         />
-        <Image
+        <ImageB
           width={360}
           height={360}
           src='https://raw.githubusercontent.com/hussainweb/hussainweb/main/icons/javascript.png'
           style={{ width: "33px", height: "33px" }}
           alt='HTML5'
         />
-        <Image
+        <ImageB
           width={360}
           height={360}
           src='https://github.com/MacroPower/MacroPower/raw/master/img/typescript-original.svg'
           style={{ width: "33px", height: "33px" }}
           alt='react'
         />
-        <Image
+        <ImageB
           width={360}
           height={360}
           src='https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss-colored.svg'
           alt="Alirezas7ss's GitHub stats"
           style={{ width: "33px", height: "33px" }}
         />
-        <Image
+        <ImageB
           width={360}
           height={360}
           src='https://w7.pngwing.com/pngs/895/275/png-transparent-solidity-ethereum-smart-contract-blockchain-cryptocurrency-blockchain-angle-triangle-logo.png'
           style={{ width: "33px", height: "33px" }}
           alt='HTML5'
         />
-        <Image
+        <ImageB
           width={360}
           height={360}
           src='https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg'
           style={{ width: "33px", height: "33px" }}
           alt='javascript'
         />
-        <Image
+        <ImageB
           width={360}
           height={360}
           src='https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg'
           style={{ width: "33px", height: "33px" }}
           alt='CSS3'
         />
-        <Image
+        <ImageB
           width={360}
           height={360}
           src='https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/sass-colored.svg'
           style={{ width: "33px", height: "33px" }}
           alt='Sass'
         />
-        <Image
+        <ImageB
           width={360}
           height={360}
           src='https://img.icons8.com/color/48/000000/wordpress.png'
           style={{ width: "33px", height: "33px" }}
           alt='wordpress'
         />
-        <Image
+        <ImageB
           width={360}
           height={360}
           src='https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/figma-colored.svg'
           style={{ width: "33px", height: "33px" }}
           alt='Figma'
         />
-        <Image
+        <ImageB
           width={360}
           height={360}
           src='https://raw.githubusercontent.com/hussainweb/hussainweb/main/icons/react.png'
           alt="Alirezas7ss's GitHub stats"
           style={{ width: "33px", height: "33px" }}
         />
-        <Image
+        <ImageB
           width={360}
           height={360}
           src='https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nextjs-colored-dark.svg'
           alt="Alirezas7ss's GitHub stats"
           style={{ width: "33px", height: "33px" }}
         />
-        <Image
+        <ImageB
           width={360}
           height={360}
           src='https://raw.githubusercontent.com/hussainweb/hussainweb/main/icons/javascript.png'
           style={{ width: "33px", height: "33px" }}
           alt='HTML5'
         />
-        <Image
+        <ImageB
           width={360}
           height={360}
           src='https://github.com/MacroPower/MacroPower/raw/master/img/typescript-original.svg'
           style={{ width: "33px", height: "33px" }}
           alt='react'
         />
-        <Image
+        <ImageB
           width={360}
           height={360}
           src='https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss-colored.svg'
           alt="Alirezas7ss's GitHub stats"
           style={{ width: "33px", height: "33px" }}
         />
-        <Image
+        <ImageB
           width={360}
           height={360}
           src='https://w7.pngwing.com/pngs/895/275/png-transparent-solidity-ethereum-smart-contract-blockchain-cryptocurrency-blockchain-angle-triangle-logo.png'
           style={{ width: "33px", height: "33px" }}
           alt='HTML5'
         />
-        <Image
+        <ImageB
           width={360}
           height={360}
           src='https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg'
@@ -172,39 +172,7 @@ const Experience = ({ experienceRef }) => {
         />
       </motion.div>
       <h2 className='experience-titre2'>مهارت های من</h2>
-      <div className='routerName'>
-        {nameSkill.map((name, index) => (
-          <div key={index + 1} className='hamintori'>
-            <motion.div
-              className='ferris-wheel-techs'
-              initial='initial'
-              animate={["animate", "initialHide"]}
-              variants={{
-                initial: {
-                  opacity: 0,
-                },
-                initialHide: {
-                  opacity: 1,
-                  transition: {
-                    delay: index + 1,
-                  },
-                },
-                animate: {
-                  rotate: -360,
-                  transition: {
-                    duration: nameSkill.length,
-                    repeat: Infinity,
-                    delay: index + 1,
-                    ease: "linear",
-                  },
-                },
-              }}
-            >
-              {name}
-            </motion.div>
-          </div>
-        ))}
-      </div>
+
       <div className='container experience__container'>
         <div
           data-aos-duration='1000'
@@ -213,8 +181,8 @@ const Experience = ({ experienceRef }) => {
           data-aos-easing='ease-in-sine'
           className='experience__frontend'
         >
-          <h3>توسعه دهنده فرانت اند</h3>
-          <div className='experience__content'>
+          <h3>Frontend Developer</h3>
+          <div className='experience__content overflow-hidden'>
             <artifact className='experience__details'>
               <BsPatchCheckFill className='experience__details__icon' />
               <div>
@@ -285,6 +253,23 @@ const Experience = ({ experienceRef }) => {
                 <small className='text-light'>intermediate</small>
               </div>
             </artifact>
+            <div class='absolute inset-0 bg-[radial-gradient(40%_128px_at_50%_0%,theme(backgroundColor.white/10%),transparent)]'></div>
+
+            <div class='absolute inset-0 h-full w-full bg-[url(https://lunarui.dev/twitter/noise.png)] bg-[size:96px] bg-repeat opacity-[0.025]'></div>
+
+            <div class='absolute inset-0 h-44 w-full overflow-hidden'>
+              <div class='absolute -top-1/2 h-full w-full'>
+                <div class='relative flex h-full w-full items-center justify-center [--duration:1.5s] [--scale:1.25] [--baseSize:80px] [--sizeStep:64px] [--opacityStep:0.05] [--baseOpacity:0.25]'>
+                  <div class='absolute size-[calc(var(--baseSize)+var(--sizeStep)*var(--i))] animate-ripple rounded-full border border-dashed border-white/50 bg-white/5 opacity-[calc(var(--baseOpacity)-var(--opacityStep)*var(--i))] [--i:0]'></div>
+
+                  <div class='absolute size-[calc(var(--baseSize)+var(--sizeStep)*var(--i))] animate-ripple rounded-full border border-dashed border-white/50 bg-white/5 opacity-[calc(var(--baseOpacity)-var(--opacityStep)*var(--i))] [--i:1]'></div>
+
+                  <div class='absolute size-[calc(var(--baseSize)+var(--sizeStep)*var(--i))] animate-ripple rounded-full border border-dashed border-white/50 bg-white/5 opacity-[calc(var(--baseOpacity)-var(--opacityStep)*var(--i))] [--i:2]'></div>
+
+                  <div class='absolute size-[calc(var(--baseSize)+var(--sizeStep)*var(--i))] animate-ripple rounded-full border border-dashed border-white/50 bg-white/5 opacity-[calc(var(--baseOpacity)-var(--opacityStep)*var(--i))] [--i:3]'></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div
@@ -294,7 +279,7 @@ const Experience = ({ experienceRef }) => {
           data-aos-easing='ease-in-sine'
           className='experience__backend'
         >
-          <h3>توسعه دهنده بلاکچین</h3>
+          <h3>Block chain</h3>
           <div className='experience__content'>
             <artifact className='experience__details'>
               <BsPatchCheckFill className='experience__details__icon' />

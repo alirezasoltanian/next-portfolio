@@ -24,6 +24,12 @@
 .button-choose button {
   font-family: Kalameh;
 }
+.button-choose{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px ;
+  font-weight: bold;
+}
 .portfolio__item {
   /* background-color: var(--color-bg-variant); */
   /* background:linear-gradient(rgba(7, 0, 0, 0.23) 0%, rgba(118, 118, 118, 0.803) 100%); */

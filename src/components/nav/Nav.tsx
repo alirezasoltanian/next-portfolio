@@ -1,6 +1,6 @@
 // @ts-nocheck
 
-'use client'
+"use client";
 
 import React from "react";
 import "./nav.css";
@@ -19,6 +19,7 @@ import {
   useViewportScroll,
 } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 let scrollThreshold = [0, 50];
 
 const items = [
@@ -68,6 +69,7 @@ const parent = {
 };
 const Nav = ({ active }) => {
   let { scrollY } = useViewportScroll();
+  const pathname = usePathname();
   let scrollYOnDirectionChange = useRef(scrollY.get());
   let lastPixelsScrolled = useRef();
   let lastScrollDirection = useRef();
@@ -125,8 +127,6 @@ const Nav = ({ active }) => {
           layout: { duration: 10 },
         }}
       >
-       
-
         {items.map((item) => (
           <motion.a
             layoutId={item.Tagactive}
@@ -145,13 +145,11 @@ const Nav = ({ active }) => {
               position: "relative",
               color: active === item.Tagactive ? "var(--color-bg)" : "",
             }}
-            
           >
             {item.tagIcon}
-          
+
             {active === item.Tagactive ? (
               <motion.div
-                
                 animate={{
                   boxShadow: [
                     "0px 0px 0px rgb(22,225,215)",
@@ -167,7 +165,7 @@ const Nav = ({ active }) => {
                     "0px 0px 0px rgb(255,255,255)",
                   ],
                 }}
-                layoutId="background"
+                layoutId='background'
                 transition={{
                   layout: {
                     duration: 0.3,
@@ -193,7 +191,7 @@ const Nav = ({ active }) => {
             ) : null}
           </motion.a>
         ))}
-        <Link  href="/fa">
+        <Link href={pathname.includes("fa") ? "/" : "/fa"}>
           <MdLanguage />
         </Link>
       </motion.nav>
