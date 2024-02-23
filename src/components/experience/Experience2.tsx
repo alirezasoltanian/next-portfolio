@@ -48,14 +48,14 @@ const Experience = ({ experienceRef }) => {
           width={360}
           height={360}
           src='https://raw.githubusercontent.com/hussainweb/hussainweb/main/icons/react.png'
-          alt="Alirezas7ss's GitHub stats"
+          alt="alirezasoltanian's GitHub stats"
           style={{ width: "33px", height: "33px" }}
         />
         <ImageB
           width={360}
           height={360}
           src='https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nextjs-colored-dark.svg'
-          alt="Alirezas7ss's GitHub stats"
+          alt="alirezasoltanian's GitHub stats"
           style={{ width: "33px", height: "33px" }}
         />
         <ImageB
@@ -76,7 +76,7 @@ const Experience = ({ experienceRef }) => {
           width={360}
           height={360}
           src='https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss-colored.svg'
-          alt="Alirezas7ss's GitHub stats"
+          alt="alirezasoltanian's GitHub stats"
           style={{ width: "33px", height: "33px" }}
         />
         <ImageB
@@ -125,14 +125,14 @@ const Experience = ({ experienceRef }) => {
           width={360}
           height={360}
           src='https://raw.githubusercontent.com/hussainweb/hussainweb/main/icons/react.png'
-          alt="Alirezas7ss's GitHub stats"
+          alt="alirezasoltanian's GitHub stats"
           style={{ width: "33px", height: "33px" }}
         />
         <ImageB
           width={360}
           height={360}
           src='https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nextjs-colored-dark.svg'
-          alt="Alirezas7ss's GitHub stats"
+          alt="alirezasoltanian's GitHub stats"
           style={{ width: "33px", height: "33px" }}
         />
         <ImageB
@@ -153,7 +153,7 @@ const Experience = ({ experienceRef }) => {
           width={360}
           height={360}
           src='https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss-colored.svg'
-          alt="Alirezas7ss's GitHub stats"
+          alt="alirezasoltanian's GitHub stats"
           style={{ width: "33px", height: "33px" }}
         />
         <ImageB

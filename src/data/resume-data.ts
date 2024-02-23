@@ -20,43 +20,45 @@ import {
   import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
   
   export const RESUME_DATA = {
-    name: "Bartosz Jarocki",
+    ogImage: "https://alirezasoltanian.ir/opengraph-image.jpg",
+    url: "https://alirezasoltanian",
+    name: "Alireza Soltanian",
     initials: "BJ",
-    location: "Wrocław, Poland, CET",
-    locationLink: "https://www.google.com/maps/place/Wrocław",
+    location: "Iran, Tehran",
+    // locationLink: "https://www.google.com/maps/place/Wrocław",
     about:
       "Full Stack Engineer focused on building products with extra attention to detail",
     summary:
-      "As a Full Stack Engineer, I have successfully taken multiple products from 0 to 1. I lead teams effectively, ensuring an environment where people can do their best work. Currently, I work mostly with TypeScript, React, Node.js, and GraphQL. I have over 8 years of experience in working remotely with companies all around the world.",
-    avatarUrl: "https://avatars.githubusercontent.com/u/1017620?v=4",
-    personalWebsiteUrl: "https://jarocki.me",
+      "As a Full Stack Engineer, I have successfully taken multiple products from 0 to 1. I lead teams effectively, ensuring an environment where people can do their best work. Currently, I work mostly with TypeScript, React, Node.js, and GraphQL. I have over 3 years of experience in working remotely with companies all around the world.",
+    avatarUrl: "https://media.licdn.com/dms/image/C5603AQHW6klW2sJrFw/profile-displayphoto-shrink_400_400/0/1627887121295?e=1714003200&v=beta&t=s-WVI8yHc4faRjxQveglnKRs49uV_9Rb_QCFc9ZXRQY",
+    personalWebsiteUrl: "https://alirezasoltanian.ir",
     contact: {
-      email: "bartosz.jarocki@hey.com",
-      tel: "+48530213401",
+      email: "ali76rez@gmail.com",
+      tel: "",
       social: [
         {
           name: "GitHub",
-          url: "https://github.com/BartoszJarocki",
+          url: "https://github.com/alirezasoltanian",
           icon: GitHubIcon,
         },
         {
           name: "LinkedIn",
-          url: "https://www.linkedin.com/in/bjarocki/",
+          url: "https://www.linkedin.com/in/alirezasoltanian/",
           icon: LinkedInIcon,
         },
         {
           name: "X",
-          url: "https://x.com/BartoszJarocki",
+          url: "https://x.com/",
           icon: XIcon,
         },
       ],
     },
     education: [
       {
-        school: "Wrocław University of Technology",
-        degree: "Bachelor's Degree in Control systems engineering and Robotics",
-        start: "2007",
-        end: "2010",
+        school: "",
+        degree: "",
+        start: "",
+        end: "",
       },
     ],
     work: [

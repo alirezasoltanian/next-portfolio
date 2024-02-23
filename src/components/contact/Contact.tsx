@@ -3,7 +3,7 @@
 import { MdEmail } from "react-icons/md";
 import { FaTelegramPlane } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
-import React, { useRef , useState , useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "./contact.css";
 import emailjs from "@emailjs/browser";
 import { VisionOSIcon } from "./VisionOSIcon";
@@ -62,37 +62,34 @@ const Contact = () => {
 
   return (
     <section id='contact relative'>
-      
-     
-        <h5>Get In Meet</h5>
-        <div className='flex justify-center mb-3'>
-        <Link
-            ref={divRef}
-            onMouseMove={handleMouseMove}
-            onFocus={handleFocus}
-            onBlur={handleBlur}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            href='/calendly'
-            className='btn group relative '
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <div className='absolute inset-1 -z-10 rounded-lg bg-gradient-to-b from-[rgb(199,210,254)] to-[#8678f9] opacity-75 blur transition-all duration-500 group-hover:-inset-1 ' />
-            <div
-              className='pointer-events-none absolute inset-[-12px] -z-10 rounded-[4px] blur transition duration-300'
-              style={{
-                opacity,
-                background: `radial-gradient(120px circle at ${position.x}px ${position.y}px, rgba(199, 210, 254,1), transparent 40%)`,
-              }}
-            />
-            <h4>Get In Meet</h4>
-          </Link>
-      </div>
-      <div>
+      {/* <div>
         <VisionOSIcon />
-      </div>
+      </div> */}
       <h2>Contact Me</h2>
+      <div className='flex justify-center mb-3'>
+        <Link
+          ref={divRef}
+          onMouseMove={handleMouseMove}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          href='/calendly'
+          className='btn group relative '
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <div className='absolute inset-1 -z-10 rounded-lg bg-gradient-to-b from-[rgb(199,210,254)] to-[#8678f9] opacity-75 blur transition-all duration-500 group-hover:-inset-1 ' />
+          <div
+            className='pointer-events-none absolute inset-[-12px] -z-10 rounded-[4px] blur transition duration-300'
+            style={{
+              opacity,
+              background: `radial-gradient(120px circle at ${position.x}px ${position.y}px, rgba(199, 210, 254,1), transparent 40%)`,
+            }}
+          />
+          <h4>Get In Meet</h4>
+        </Link>
+      </div>
       <div className='container contact__container'>
         <div className='contact__options'>
           <article

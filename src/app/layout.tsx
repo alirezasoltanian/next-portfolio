@@ -2,53 +2,54 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Spotlight } from "@/components/ui/Spotlight";
+import { RESUME_DATA } from "@/data/resume-data";
 
 const inter = Inter({ subsets: ["latin"] });
 
-// export const metadata: Metadata = {
-//   title: {
-//     default: siteConfig.name,
-//     template: `%s | ${siteConfig.name}`,
-//   },
-//   description: siteConfig.description,
-//   keywords: [
-//     "nextjs",
-//     "react",
-//     "react server components",
-//     "skateshop",
-//     "skateboarding",
-//     "kickflip",
-//   ],
-//   authors: [
-//     {
-//       name: "solop",
-//       url: "https://solop.com",
-//     },
-//   ],
-//   creator: "solop",
+export const metadata: Metadata = {
+  title: {
+    default: RESUME_DATA.name,
+    template: `%s | ${RESUME_DATA.name}`,
+  },
+  description: RESUME_DATA.about,
+  keywords: [
+    "nextjs",
+    "react",
+    "react server components",
+    "portfolio",
+    "Alireza",
+    "Soltanian",
+  ],
+  authors: [
+    {
+      name: "alirezasoltanian",
+      url: "https://alirezasoltanian.ir",
+    },
+  ],
+  creator: "alirezasoltanian",
 
-//   openGraph: {
-//     type: "website",
-//     locale: "en_US",
-//     url: siteConfig.url,
-//     title: siteConfig.name,
-//     description: siteConfig.description,
-//     siteName: siteConfig.name,
-//   },
-//   twitter: {
-//     card: "summary_large_image",
-//     title: siteConfig.name,
-//     description: siteConfig.description,
-//     images: [`${siteConfig.ogImage}`],
-//     creator: "@solop",
-//   },
-//   icons: {
-//     icon: "/favicon.ico",
-//     shortcut: "/favicon-16x16.png",
-//     apple: "/apple-touch-icon.png",
-//   },
-//   manifest: absoluteUrl("/site.webmanifest"),
-// }
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: RESUME_DATA.url,
+    title: RESUME_DATA.name,
+    description: RESUME_DATA.about,
+    siteName: RESUME_DATA.name,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: RESUME_DATA.name,
+    description: RESUME_DATA.about,
+    images: [`${RESUME_DATA.ogImage}`],
+    creator: "@alirezasoltanian",
+  },
+  // icons: {
+  //   icon: "/favicon.ico",
+  //   shortcut: "/favicon-16x16.png",
+  //   apple: "/apple-touch-icon.png",
+  // },
+  // manifest: absoluteUrl("/site.webmanifest"),
+}
 
 // export const viewport: Viewport = {
 //   colorScheme: "dark light",

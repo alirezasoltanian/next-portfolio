@@ -38,14 +38,14 @@ const Experience = ({ experienceRef }) => {
           width={360}
           height={360}
           src='https://raw.githubusercontent.com/hussainweb/hussainweb/main/icons/react.png'
-          alt="Alirezas7ss's GitHub stats"
+          alt="alirezasoltanian's GitHub stats"
           style={{ width: "33px", height: "33px" }}
         />
         <ImageB
           width={360}
           height={360}
           src='https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nextjs-colored-dark.svg'
-          alt="Alirezas7ss's GitHub stats"
+          alt="alirezasoltanian's GitHub stats"
           style={{ width: "33px", height: "33px" }}
         />
         <ImageB
@@ -66,7 +66,7 @@ const Experience = ({ experienceRef }) => {
           width={360}
           height={360}
           src='https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss-colored.svg'
-          alt="Alirezas7ss's GitHub stats"
+          alt="alirezasoltanian's GitHub stats"
           style={{ width: "33px", height: "33px" }}
         />
         <ImageB
@@ -115,14 +115,14 @@ const Experience = ({ experienceRef }) => {
           width={360}
           height={360}
           src='https://raw.githubusercontent.com/hussainweb/hussainweb/main/icons/react.png'
-          alt="Alirezas7ss's GitHub stats"
+          alt="alirezasoltanian's GitHub stats"
           style={{ width: "33px", height: "33px" }}
         />
         <ImageB
           width={360}
           height={360}
           src='https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nextjs-colored-dark.svg'
-          alt="Alirezas7ss's GitHub stats"
+          alt="alirezasoltanian's GitHub stats"
           style={{ width: "33px", height: "33px" }}
         />
         <ImageB
@@ -143,7 +143,7 @@ const Experience = ({ experienceRef }) => {
           width={360}
           height={360}
           src='https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss-colored.svg'
-          alt="Alirezas7ss's GitHub stats"
+          alt="alirezasoltanian's GitHub stats"
           style={{ width: "33px", height: "33px" }}
         />
         <ImageB
@@ -242,26 +242,23 @@ const Experience = ({ experienceRef }) => {
                 <small className='text-light'>intermediate</small>
               </div>
             </artifact>
-            <div class="absolute inset-0 bg-[radial-gradient(40%_128px_at_50%_0%,theme(backgroundColor.white/10%),transparent)]"></div>
+            <div class='absolute inset-0 bg-[radial-gradient(40%_128px_at_50%_0%,theme(backgroundColor.white/10%),transparent)]'></div>
 
-      
-      <div class="absolute h-full w-full bg-[url(https://lunarui.dev/twitter/noise.png)] bg-[size:96px] bg-repeat opacity-[0.025]"></div>
+            <div class='absolute h-full w-full bg-[url(https://lunarui.dev/twitter/noise.png)] bg-[size:96px] bg-repeat opacity-[0.025]'></div>
 
-      <div class="absolute inset-0 h-44 w-full overflow-hidden">
-        <div class="absolute -top-1/2 h-full w-full">
-          
-          <div class="relative flex h-full w-full items-center justify-center [--duration:1.5s] [--scale:1.25] [--baseSize:80px] [--sizeStep:64px] [--opacityStep:0.05] [--baseOpacity:0.25]">
-           
-            <div class="absolute size-[calc(var(--baseSize)+var(--sizeStep)*var(--i))] animate-ripple rounded-full border border-dashed border-white/50 bg-white/5 opacity-[calc(var(--baseOpacity)-var(--opacityStep)*var(--i))] [--i:0]"></div>
+            <div class='absolute inset-0 h-44 w-full overflow-hidden'>
+              <div class='absolute -top-1/2 h-full w-full'>
+                <div class='relative flex h-full w-full items-center justify-center [--duration:1.5s] [--scale:1.25] [--baseSize:80px] [--sizeStep:64px] [--opacityStep:0.05] [--baseOpacity:0.25]'>
+                  <div class='absolute size-[calc(var(--baseSize)+var(--sizeStep)*var(--i))] animate-ripple rounded-full border border-dashed border-white/50 bg-white/5 opacity-[calc(var(--baseOpacity)-var(--opacityStep)*var(--i))] [--i:0]'></div>
 
-            <div class="absolute size-[calc(var(--baseSize)+var(--sizeStep)*var(--i))] animate-ripple rounded-full border border-dashed border-white/50 bg-white/5 opacity-[calc(var(--baseOpacity)-var(--opacityStep)*var(--i))] [--i:1]"></div>
+                  <div class='absolute size-[calc(var(--baseSize)+var(--sizeStep)*var(--i))] animate-ripple rounded-full border border-dashed border-white/50 bg-white/5 opacity-[calc(var(--baseOpacity)-var(--opacityStep)*var(--i))] [--i:1]'></div>
 
-            <div class="absolute size-[calc(var(--baseSize)+var(--sizeStep)*var(--i))] animate-ripple rounded-full border border-dashed border-white/50 bg-white/5 opacity-[calc(var(--baseOpacity)-var(--opacityStep)*var(--i))] [--i:2]"></div>
+                  <div class='absolute size-[calc(var(--baseSize)+var(--sizeStep)*var(--i))] animate-ripple rounded-full border border-dashed border-white/50 bg-white/5 opacity-[calc(var(--baseOpacity)-var(--opacityStep)*var(--i))] [--i:2]'></div>
 
-            <div class="absolute size-[calc(var(--baseSize)+var(--sizeStep)*var(--i))] animate-ripple rounded-full border border-dashed border-white/50 bg-white/5 opacity-[calc(var(--baseOpacity)-var(--opacityStep)*var(--i))] [--i:3]"></div>
-          </div>
-        </div>
-      </div>
+                  <div class='absolute size-[calc(var(--baseSize)+var(--sizeStep)*var(--i))] animate-ripple rounded-full border border-dashed border-white/50 bg-white/5 opacity-[calc(var(--baseOpacity)-var(--opacityStep)*var(--i))] [--i:3]'></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div

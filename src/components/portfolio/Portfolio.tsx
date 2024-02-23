@@ -5,7 +5,6 @@
 import React, { useEffect, useState } from "react";
 import "./portfolio.css";
 
-
 import { cn } from "@/utils/cn";
 
 import { AnimatePresence, motion } from "framer-motion";
@@ -16,8 +15,8 @@ const random = [
     name: "frontend",
     title:
       "Tools : Nextjs13 , Typescript , mantine , zustand , tailwind , Axios , yup , lodash  ",
-    disable: 'code demo',
-    github: "https://github.com/Alirezas7ss",
+    disable: "code demo",
+    github: "https://github.com/alirezasoltanian",
     demo: "https://noghteh-khat.ir/",
   },
   {
@@ -25,11 +24,10 @@ const random = [
     image: "../../assets/framer.png",
     name: "frontend",
     title: "Tools : Nextjs13 , Typescript , Framer-motion , Tailwind  ",
-   
-    
-    disable: '',
-    
-    github: "https://github.com/Alirezas7ss",
+
+    disable: "",
+
+    github: "https://github.com/alirezasoltanian",
     demo: "https://framer-motion-page.vercel.app/",
   },
   {
@@ -37,9 +35,9 @@ const random = [
     image: "../../assets/Slicwee1.png",
     name: "frontend",
     title: "Tools : React , Javascript , Axios , React-router-dom , Swiper  ",
-    disable: '',
-    
-    github: "https://github.com/Alirezas7ss/Responsive_Store-",
+    disable: "",
+
+    github: "https://github.com/alirezasoltanian/Responsive_Store-",
     demo: "https://responsive-store.vercel.app/home",
   },
 
@@ -48,9 +46,9 @@ const random = [
   //   image: IMG2,
   //   name: "frontend",
   //   title: "Tools : Javascript , React , AOS , Swiper , CSS , HTML ",
-    // disable: '',
-  //   
-  // github: "https://github.com/Alirezas7ss/PORTFOLIO",
+  // disable: '',
+  //
+  // github: "https://github.com/alirezasoltanian/PORTFOLIO",
   //   demo: "https://www.alirezasoltanian.ir",
   // },
   // {
@@ -59,9 +57,9 @@ const random = [
   //   name: "solidity",
   //   title:
   //     "Tools : Solidity , React , Javascript , Etherjs , Truffle , Tailwind , Css , Html",
-    // disable: '',
-  //   
-  // github: "https://github.com/Alirezas7ss/ProjectNftWith-Dapp",
+  // disable: '',
+  //
+  // github: "https://github.com/alirezasoltanian/ProjectNftWith-Dapp",
   //   demo: "https://silly-panda-815189.netlify.app/",
   // },
   {
@@ -69,8 +67,8 @@ const random = [
     image: "../../assets/DribbbleshotHD-1.png",
     name: "figma",
     title: "Tool : figma",
-    disable: '',
-    
+    disable: "",
+
     github:
       "https://www.figma.com/file/jQ8ZwlFSv5qumlriZQhXL8/ProjectFigma?node-id=0%3A1",
     demo: "https://www.figma.com/file/jQ8ZwlFSv5qumlriZQhXL8/ProjectFigma?node-id=0%3A1",
@@ -80,9 +78,9 @@ const random = [
     image: "../../assets/Slic12e2.png",
     name: "frontend",
     title: "Tools : Bootstrap , Html , Css  ",
-    disable: '',
-    
-    github: "https://github.com/Alirezas7ss/bootstrap-project",
+    disable: "",
+
+    github: "https://github.com/alirezasoltanian/bootstrap-project",
     demo: "https://bootstrap-project-eta.vercel.app/",
   },
   {
@@ -90,9 +88,9 @@ const random = [
     image: "../../assets/DribbbaleshotHD-2.png",
     name: "frontend",
     title: "Tools : React , MaterialUI , GraphQL , HyGraph , ReactRouterDom ",
-    disable: '',
-    
-    github: "https://github.com/Alirezas7ss/Blogram",
+    disable: "",
+
+    github: "https://github.com/alirezasoltanian/Blogram",
     demo: "https://blogram.vercel.app/",
   },
   {
@@ -101,9 +99,9 @@ const random = [
     name: "solidity",
     title:
       "Tools : Nextjs , MaterialUI , Tailwind , Solidity , Moralis , ethers ",
-    disable: '',
-    
-      github: "https://github.com/Alirezas7ss",
+    disable: "",
+
+    github: "https://github.com/alirezasoltanian",
     demo: "https://market-dapp.vercel.app/",
   },
   {
@@ -112,9 +110,9 @@ const random = [
     name: "solidity",
     title:
       "Tools : Nextjs , MaterialUI , Tailwind , Solidity , Moralis , ethers  ",
-    disable: '',
-    
-      github: "https://github.com/Alirezas7ss",
+    disable: "",
+
+    github: "https://github.com/alirezasoltanian",
     demo: "https://stickygum.vercel.app/",
   },
   {
@@ -123,9 +121,9 @@ const random = [
     name: "solidity",
     title:
       "Tools : Nextjs , MaterialUI , Tailwind , 0x Protocol , Alchemy SDK , Solidity , ethers   ",
-    disable: '',
-    
-      github: "https://github.com/Alirezas7ss",
+    disable: "",
+
+    github: "https://github.com/alirezasoltanian",
     demo: "https://swap-stickygum.vercel.app/",
   },
   {
@@ -133,9 +131,9 @@ const random = [
     image: "../../assets/DribbbleshotHD-6.png",
     name: "frontend",
     title: "Tools : Nextjs , Typescript , Tailwind    ",
-    disable: '',
-    
-    github: "https://github.com/Alirezas7ss/Netflix",
+    disable: "",
+
+    github: "https://github.com/alirezasoltanian/Netflix",
     demo: "https://netflix-chi-five.vercel.app/",
   },
 ];
@@ -199,67 +197,77 @@ const Portfolio = ({ portfolioRef }) => {
         className='container portfolio__container'
       >
         <AnimatePresence mode='wait'>
-          {filtered.map(({ id, image, title, github, demo, name , disable }, i) => {
-            console.log(i);
-            return (
-              <motion.artifact
-                variants={{
-                  hidden: (i) => ({
-                    opacity: 0,
-                    // scale: 0.5 * i,
-                    scale: 0.5,
-                  }),
-                  visible: (i) => ({
-                    opacity: 1,
-                    scale: 1,
-                    transition: {
-                      delay: i * 0.1,
+          {filtered.map(
+            ({ id, image, title, github, demo, name, disable }, i) => {
+              console.log(i);
+              return (
+                <motion.artifact
+                  variants={{
+                    hidden: (i) => ({
+                      opacity: 0,
+                      // scale: 0.5 * i,
+                      scale: 0.5,
+                    }),
+                    visible: (i) => ({
+                      opacity: 1,
+                      scale: 1,
+                      transition: {
+                        delay: i * 0.1,
+                      },
+                    }),
+                    removed: {
+                      opacity: 0,
+                      scale: 0,
                     },
-                  }),
-                  removed: {
-                    opacity: 0,
-                    scale: 0,
-                  },
-                }}
-                initial='hidden'
-                animate='visible'
-                exit='removed'
-                custom={i}
-                key={id}
-                style={{
-                  backgroundImage: `linear-gradient(rgba(229,229,229,0.7) 0%, rgba(150,150,150 , 0.93) 100%) , url(${image})`,
-                }}
-                className='portfolio__item'
-              >
-                <div className='portfolio__cover'>
-                  <div className='portfolio__item-image'>
-                    <img src={image} alt='' />
+                  }}
+                  initial='hidden'
+                  animate='visible'
+                  exit='removed'
+                  custom={i}
+                  key={id}
+                  style={{
+                    backgroundImage: `linear-gradient(rgba(229,229,229,0.7) 0%, rgba(150,150,150 , 0.93) 100%) , url(${image})`,
+                  }}
+                  className='portfolio__item'
+                >
+                  <div className='portfolio__cover'>
+                    <div className='portfolio__item-image'>
+                      <img src={image} alt='' />
+                    </div>
+                    <h3>{title}</h3>
+                    <div className='portfolio__item-cta'>
+                      <a
+                        href={github}
+                        rel='noreferrer'
+                        className={cn(
+                          disable.includes("demo")
+                            ? "cursor-auto pointer-events-none "
+                            : "cursor-pointer",
+                          "btn "
+                        )}
+                        target='_blank'
+                      >
+                        Github
+                      </a>
+                      <a
+                        className={cn(
+                          disable.includes("demo")
+                            ? "cursor-auto pointer-events-none"
+                            : "cursor-pointer",
+                          "btn btn-primary"
+                        )}
+                        href={demo}
+                        rel='noreferrer'
+                        target='_blank'
+                      >
+                        Live Demo
+                      </a>
+                    </div>
                   </div>
-                  <h3>{title}</h3>
-                  <div className='portfolio__item-cta'>
-                    <a
-                      href={github}
-                      rel='noreferrer'
-                      className={cn(disable.includes('demo') ? 'cursor-auto pointer-events-none ' : 'cursor-pointer' , 'btn ')}
-
-                      target='_blank'
-                    >
-                      Github
-                    </a>
-                    <a
-                        className={cn(disable.includes('demo') ? 'cursor-auto pointer-events-none' : 'cursor-pointer' , 'btn btn-primary')}
-                      
-                      href={demo}
-                      rel='noreferrer'
-                      target='_blank'
-                    >
-                      Live Demo
-                    </a>
-                  </div>
-                </div>
-              </motion.artifact>
-            );
-          })}
+                </motion.artifact>
+              );
+            }
+          )}
         </AnimatePresence>
       </div>
     </section>
