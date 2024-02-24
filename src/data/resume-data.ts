@@ -25,7 +25,7 @@ import {
     name: "Alireza Soltanian",
     initials: "BJ",
     location: "Iran, Tehran",
-    // locationLink: "https://www.google.com/maps/place/Wrocław",
+    locationLink: "",
     about:
       "Full Stack Engineer focused on building products with extra attention to detail",
     summary:
