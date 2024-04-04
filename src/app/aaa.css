@@ -5,7 +5,6 @@
 @layer base {
   .wrapper {
     --col-width: 130px;
-
     @apply grid w-full gap-2 md:gap-4;
     grid-template-columns:
       [full-start]

@@ -7,6 +7,7 @@ import Experience from "@/components/experience/Experience";
 import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
 import Nav from "@/components/nav/Nav";
+import scrollTOStartPage from "@/components/scroll-to-first-page/scroll-to-first-page";
 import Portfolio from "@/components/portfolio/Portfolio";
 import { LampContainer } from "@/components/ui/Lamp";
 import { Spotlight } from "@/components/ui/Spotlight";
@@ -14,6 +15,7 @@ import useViewRef from "@/hooks/useViewRef";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
+import ScrollTOStartPage from "@/components/scroll-to-start-page/scroll-to-start-page";
 export default function Home() {
   const [active, setActive] = useState("first");
 

@@ -111,7 +111,26 @@ html {
 }
 
 ::-webkit-scrollbar {
-  display: none;
+  /* display: none; */
+  width: 12px;
+  
+  /* animation-duration: 100ms; */
+  transition:all 1s ease;
+}
+::-webkit-scrollbar:hover {
+  /* display: none; */
+  width: 16px;
+}
+::-webkit-scrollbar-track {
+  background: #266D98;
+}
+::-webkit-scrollbar-thumb {
+  background: #5AC2FF;
+  border-radius: 2px;
+
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #98D8EC;
 }
 
 body {

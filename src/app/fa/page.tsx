@@ -1,6 +1,7 @@
 // @ts-nocheck
-'use client'
+"use client";
 import About2 from "@/components/about/About2";
+import BlogHome from "@/components/blogHome/BlogHome";
 import Contact2 from "@/components/contact/Contact2";
 import Experience2 from "@/components/experience/Experience2";
 import Footer2 from "@/components/footer/Footer2";
@@ -19,8 +20,8 @@ export default function Home() {
   const [aboutRef, isInAboutView] = useViewRef();
   const [experienceRef, isInExperienceView] = useViewRef();
   const [portfolioRef, isInPortfolioView] = useViewRef();
-  const pathname = usePathname()
-  console.log(pathname)
+  const pathname = usePathname();
+  console.log(pathname);
   useEffect(() => {
     const viewStates = {
       first: isInFirstView,
@@ -38,13 +39,14 @@ export default function Home() {
         className='-top-40 left-0 md:left-60 md:-top-20'
         fill='white'
       /> */}
-      <Link className='language2 ' href={pathname.includes('fa') ? '/' : '/fa'}>
+      <Link className='language2 ' href={pathname.includes("fa") ? "/" : "/fa"}>
         English
       </Link>
 
       <Header2 firstRef={firstRef} />
       <Nav active={active} />
       <About2 aboutRef={aboutRef} />
+      <BlogHome />
       <Experience2 experienceRef={experienceRef} />
       {/* <Services /> */}
       <Portfolio2 portfolioRef={portfolioRef} />

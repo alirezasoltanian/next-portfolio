@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Spotlight } from "@/components/ui/Spotlight";
 import { RESUME_DATA } from "@/data/resume-data";
+import ScrollTOStartPage from "@/components/scroll-to-start-page/scroll-to-start-page";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -69,6 +70,8 @@ export default function RootLayout({
     <html className="overflow-x-hidden " lang="en">
       
       <body className={inter.className}>{children}</body>
+    <ScrollTOStartPage />
+
     </html>
   );
 }
