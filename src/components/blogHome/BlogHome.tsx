@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,7 +10,7 @@ import { buttonVariants } from "@/components/ui/button";
 import BlogCard from "./BlogCard";
 import { ChevronLeft } from "lucide-react";
 
-async function BlogHome() {
+function BlogHome() {
   const posts = allPosts
     .slice(0, 3)
     .filter((post) => post.published)

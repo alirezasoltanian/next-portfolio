@@ -47,3 +47,40 @@ export const getDate = (sub: number = 0) => {
 
   return format(dateXDaysAgo, "dd/MM/yyyy");
 };
+
+export function formatDateG(input: string | number | Date): string {
+  console.log(input);
+
+  const date = new Date(input);
+  const now = new Date();
+  const seconds = Math.floor((now - date) / 1000);
+  let interval = Math.floor(seconds / 31536000);
+
+  if (interval >= 1) {
+    return interval + "  سال پیش";
+  }
+  interval = Math.floor(seconds / 2592000);
+  if (interval >= 1) {
+    return interval + " ماه پیش";
+  }
+  interval = Math.floor(seconds / 86400);
+  if (interval >= 1) {
+    return interval + "روز پیش";
+  }
+  interval = Math.floor(seconds / 3600);
+  if (interval >= 1) {
+    return interval + "ساعت پیش";
+  }
+  interval = Math.floor(seconds / 60);
+  if (interval >= 1) {
+    return interval + "دقیقه پیش";
+  }
+  return Math.floor(seconds) + "ثانیه پیش";
+  // const diffInWeeks = Math.floor(diffInDays / 7);
+  // return `${diffInWeeks} week${diffInWeeks === 1 ? '' : 's'} ago`;
+  // return date.toLocaleDateString("en-US", {
+  //   month: "long",
+  //   day: "numeric",
+  //   year: "numeric",
+  // });
+}

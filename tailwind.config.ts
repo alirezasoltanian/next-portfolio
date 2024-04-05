@@ -25,6 +25,11 @@ const config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+
+        brand: {
+          DEFAULT: "var(--color-bg)",
+          foreground: "var(--color-primary)",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -54,6 +59,20 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      backgroundImage: ({ theme }) => ({
+        "vc-border-gradient": `radial-gradient(at left top, ${theme(
+          "colors.gray.500"
+        )}, 50px, ${theme("colors.gray.800")} 50%)`,
+        "custom-vc-border-gradient": `radial-gradient(at left top, ${theme(
+          "colors.gray.800"
+        )}, 50px, ${theme("colors.gray.500")} 50%)`,
+        "light-custom-gradient":
+          "linear-gradient(90deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.50) 25%, rgba(0, 0, 0, 0.02) 100%)",
+        "light-custom-y-gradient":
+          "linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.50) 25%, rgba(0, 0, 0, 0.02) 90%)",
+        "custom-gradient":
+          "linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.18) 25%, rgba(255, 255, 255, 0.02) 100%)",
+      }),
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

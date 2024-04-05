@@ -16,6 +16,21 @@
   }
 }
 
+@font-face {
+  font-family: Kalameh;
+  src: url(/public/assets//fonts/KALAMEHFANUM-BOLD.TTF);
+}
+@font-face {
+  font-family: Iransansx;
+  src: url(/public/assets//fonts/IRANSANSX-REGULAR.TTF);
+}
+
+.blog-title {
+  font-family: Kalameh;
+}
+.blog-text {
+  font-family: Iransansx;
+}
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,600&family=Press+Start+2P&display=swap");
 
 @layer base {
@@ -25,57 +40,57 @@
 
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
- 
+
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
- 
+
     --primary: 240 5.9% 10%;
     --primary-foreground: 0 0% 98%;
- 
+
     --secondary: 240 4.8% 95.9%;
     --secondary-foreground: 240 5.9% 10%;
- 
+
     --muted: 240 4.8% 95.9%;
     --muted-foreground: 240 3.8% 46.1%;
- 
+
     --accent: 240 4.8% 95.9%;
     --accent-foreground: 240 5.9% 10%;
- 
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
     --ring: 240 10% 3.9%;
- 
+
     --radius: 0.5rem;
   }
- 
+
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
- 
+
     --card: 240 10% 3.9%;
     --card-foreground: 0 0% 98%;
- 
+
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
- 
+
     --primary: 0 0% 98%;
     --primary-foreground: 240 5.9% 10%;
- 
+
     --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
- 
+
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;
- 
+
     --accent: 240 3.7% 15.9%;
     --accent-foreground: 0 0% 98%;
- 
+
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
- 
+
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
@@ -113,24 +128,23 @@ html {
 ::-webkit-scrollbar {
   /* display: none; */
   width: 12px;
-  
+
   /* animation-duration: 100ms; */
-  transition:all 1s ease;
+  transition: all 1s ease;
 }
-::-webkit-scrollbar:hover {
-  /* display: none; */
+/* ::-webkit-scrollbar:hover {
+  display: none;
   width: 16px;
-}
+} */
 ::-webkit-scrollbar-track {
-  background: #266D98;
+  background: #266d98;
 }
 ::-webkit-scrollbar-thumb {
-  background: #5AC2FF;
+  background: #5ac2ff;
   border-radius: 2px;
-
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #98D8EC;
+  background: #98d8ec;
 }
 
 body {

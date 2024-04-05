@@ -191,7 +191,7 @@ const Nav = ({ active }) => {
             ) : null}
           </motion.a>
         ))}
-        <div className='bg-black w-[1px] my-[1px] -mx-1' />
+        <div className='bg-light-custom-y-gradient w-[3px] rounded-full my-[1px] -mx-1 ' />
         <Link href={pathname.includes("fa") ? "/" : "/fa"}>
           <MdLanguage />
         </Link>

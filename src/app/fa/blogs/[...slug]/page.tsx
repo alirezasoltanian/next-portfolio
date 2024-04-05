@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { allAuthors, allPosts } from "contentlayer/generated";
 
 import "@/styles/mdx.css";
 
@@ -9,12 +10,18 @@ import Link from "next/link";
 
 import { env } from "@/env.js";
 import { redis } from "@/lib/redis";
-import { absoluteUrl, calculateReadingTime, cn, formatDate } from "@/lib/utils";
+import {
+  absoluteUrl,
+  calculateReadingTime,
+  cn,
+  formatDate,
+  formatDateG,
+} from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import { DigitC } from "@/components/Digit";
 
 import BlogView from "../_components/BlogView";
-import { ChevronLeft } from "lucide-react";
+import { ChevronLeft, View } from "lucide-react";
 import { Mdx } from "@/components/mdx/mdx-components";
 
 interface PostPageProps {
@@ -104,7 +111,10 @@ export default async function PostPage({ params }: PostPageProps) {
   console.log(params?.slug?.join("/"), params?.slug, views);
 
   return (
-    <article className='container relative max-w-3xl py-6 lg:py-10'>
+    <article
+      dir='rtl'
+      className='container relative max-w-3xl py-6 lg:py-10 blog-text bg-black/70'
+    >
       <Link
         href='/blog'
         className={cn(
@@ -116,21 +126,21 @@ export default async function PostPage({ params }: PostPageProps) {
         <ChevronLeft className='mr-2 size-4' />
       </Link>
       <div>
-        <h1 className='my-2 inline-block font-heading text-4xl leading-tight lg:text-5xl'>
+        <h1 className='my-2 blog-title inline-block font-heading text-4xl leading-tight lg:text-5xl'>
           {post.title}
         </h1>
-        <div className='flex gap-4 mt-2'>
+        <div className='flex  gap-4 mt-2 blog-text'>
           {post.date && (
-            <time dateTime={post.date}>{formatDate(post.date)}</time>
+            <time dateTime={post.date}>{formatDateG(post.date)}</time>
           )}
           <div className='flex gap-1'>
-            <view />
+            <View />
 
             <div className='  overflow-hidden   px-2 text-foreground'>
               <DigitC value={views} />
             </div>
           </div>
-          <p>{calculateReadingTime(post.body.code)} min read</p>
+          <p> خواندن {calculateReadingTime(post.body.code)} دقیقه</p>
         </div>
         {authors?.length ? (
           <div className='mt-4 flex space-x-4'>
