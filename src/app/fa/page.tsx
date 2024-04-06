@@ -3,7 +3,6 @@
 import About2 from "@/components/about/About2";
 import BlogHome from "@/components/blogHome/BlogHome";
 import Contact2 from "@/components/contact/Contact2";
-import Experience2 from "@/components/experience/Experience2";
 import Footer2 from "@/components/footer/Footer2";
 import Header2 from "@/components/header/Header2";
 import Nav from "@/components/nav/Nav";
@@ -13,6 +12,8 @@ import useViewRef from "@/hooks/useViewRef";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
+import Skills from "@/components/skills/Skills2";
+import Experience2 from "@/components/experience/Experience2";
 export default function Home() {
   const [active, setActive] = useState("first");
 
@@ -46,8 +47,8 @@ export default function Home() {
       <Header2 firstRef={firstRef} />
       <Nav active={active} />
       <About2 aboutRef={aboutRef} />
-      <BlogHome />
-      <Experience2 experienceRef={experienceRef} />
+      <Experience2 />
+      <Skills experienceRef={experienceRef} />
       {/* <Services /> */}
       <Portfolio2 portfolioRef={portfolioRef} />
       {/* <Testimonials /> */}

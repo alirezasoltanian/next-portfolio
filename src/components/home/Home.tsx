@@ -1,11 +1,11 @@
 // @ts-nocheck
 
-'use client'
+"use client";
 
 import React, { useEffect, useState } from "react";
 import About from "../about/About";
 import Contact from "../contact/Contact";
-import Experience from "../experience/Experience";
+import Experience from "../skills/Skills";
 import Footer from "../footer/Footer";
 import Header from "../header/Header";
 import Nav from "../nav/Nav";
@@ -33,11 +33,10 @@ export default function Home() {
 
     const activeView = Object.keys(viewStates).find((key) => viewStates[key]);
     setActive(activeView);
-  }, [isInFirstView, isInAboutView, isInExperienceView , isInPortfolioView ]);
+  }, [isInFirstView, isInAboutView, isInExperienceView, isInPortfolioView]);
   return (
-    
-    <div className="homeflow">
-      <Link className="language" href="/fa">
+    <div className='homeflow'>
+      <Link className='language' href='/fa'>
         persian
       </Link>
       <Header firstRef={firstRef} />

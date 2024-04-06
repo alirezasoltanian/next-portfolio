@@ -34,7 +34,6 @@ const About = ({ aboutRef }) => {
     baseX.set(baseX.get() + moveBy);
   });
   // justMove
-  console.log("aa");
 
   return (
     <section ref={aboutRef} className='sectionAbout'>

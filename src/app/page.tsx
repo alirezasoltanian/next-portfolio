@@ -3,7 +3,7 @@
 "use client";
 import About from "@/components/about/About";
 import Contact from "@/components/contact/Contact";
-import Experience from "@/components/experience/Experience";
+import Skills from "@/components/skills/Skills";
 import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
 import Nav from "@/components/nav/Nav";
@@ -16,6 +16,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import ScrollTOStartPage from "@/components/scroll-to-start-page/scroll-to-start-page";
+import Experience from "@/components/experience/Experience";
 export default function Home() {
   const [active, setActive] = useState("first");
 
@@ -45,7 +46,8 @@ export default function Home() {
 
       <Nav active={active} />
       <About aboutRef={aboutRef} />
-      <Experience experienceRef={experienceRef} />
+      <Experience />
+      <Skills experienceRef={experienceRef} />
       {/* <Services /> */}
       <Portfolio portfolioRef={portfolioRef} />
       {/* <Testimonials /> */}
