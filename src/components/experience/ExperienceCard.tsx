@@ -18,21 +18,22 @@ function ExperienceCard({ work }: { work: Work }) {
 
   function handleMouseMove({ currentTarget, clientX, clientY }: MouseEvent) {
     let { left, top } = currentTarget.getBoundingClientRect();
+    console.log(clientX, clientY);
 
-    mouseX.set(clientX - left);
-    mouseY.set(clientY - top);
+    mouseX.set(clientX ? clientX - left : left);
+    mouseY.set(clientY ? clientY - top : top);
   }
   return (
     <div
-      className='group relative max-w-md rounded-xl border border-white/10 bg-gray-900/90 p-1 shadow-2xl'
+      className='group relative max-w-md rounded-xl border border-white/60 bg-gray-900/90 p-1 shadow-2xl'
       onMouseMove={handleMouseMove}
     >
       <motion.div
-        className='pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-300 group-hover:opacity-100'
+        className='pointer-events-none absolute -inset-px rounded-xl  transition duration-300 group-hover:opacity-100'
         style={{
           background: useMotionTemplate`
         radial-gradient(
-          650px circle at ${mouseX}px ${mouseY}px,
+          450px circle at ${mouseX}px ${mouseY}px,
           rgba(14, 165, 233, 0.8),
           transparent 80%
         )
@@ -55,12 +56,12 @@ function ExperienceCard({ work }: { work: Work }) {
       </div> */}
       <Card className='relative bg-gray-900 text-white'>
         <motion.div
-          className='pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-300 group-hover:opacity-100'
+          className='pointer-events-none absolute -inset-px rounded-xl  transition duration-300 group-hover:opacity-100'
           style={{
             background: useMotionTemplate`
         radial-gradient(
-          650px circle at ${mouseX}px ${mouseY}px,
-          rgba(14, 165, 233, 0.15),
+          550px circle at ${mouseX}px ${mouseY}px,
+          rgba(14, 165, 233, 0.2),
           transparent 80%
         )
       `,

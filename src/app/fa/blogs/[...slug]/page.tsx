@@ -154,8 +154,8 @@ export default async function PostPage({ params }: PostPageProps) {
                   <Image
                     src={author.avatar}
                     alt={author.title}
-                    width={42}
-                    height={42}
+                    width={800}
+                    height={1200}
                     className='rounded-full bg-white'
                   />
                   <div className='flex-1 text-left leading-tight'>

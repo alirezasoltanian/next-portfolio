@@ -27,8 +27,8 @@ function BlogCard({ post }: Props) {
               <Image
                 src={`${post.image}`}
                 alt={post.title}
-                width={250}
-                height={250}
+                width={800}
+                height={1200}
                 className='absolute inset-0 size-full  object-cover'
               />
               {/* {post?.content?.weddings[0]?.image} */}

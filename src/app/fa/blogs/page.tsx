@@ -28,55 +28,50 @@ export default async function BlogPage() {
     return acc;
   }, {} as Record<string, number>);
   return (
-    <div dir='rtl' className='container max-w-4xl py-6 lg:py-10'>
+    <div dir='rtl' className='container max-w-4xl py-6 lg:py-10 blog-text'>
       <div className='flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8'>
         <div className='flex-1 space-y-4'>
-          <h1 className='inline-block font-heading text-4xl tracking-tight lg:text-5xl'>
-            Blog
+          <h1 className='inline-block font-heading text-4xl tracking-tight lg:text-5xl '>
+            آخرین مطالب
           </h1>
-          <p className='text-xl text-muted-foreground'>
+          {/* <p className='text-xl text-muted-foreground blog-title'>
             A blog built using Contentlayer. Posts are written in MDX.
-          </p>
+          </p> */}
         </div>
       </div>
       <hr className='my-8' />
       {posts?.length ? (
         <div className='grid gap-10 sm:grid-cols-2'>
           {posts.map((post, index) => (
-            <article
-              key={post._id}
-              className='group relative flex flex-col space-y-2'
-            >
-              <BlogCard post={post} />
-              {/* {post.image && (
-                <Image
-                  src={post.image}
-                  alt={post.title}
-                  width={804}
-                  height={452}
-                  className='rounded-md border bg-muted transition-colors'
-                  priority={index <= 1}
-                />
-              )}
-              <h2 className='text-2xl font-extrabold'>{post.title}</h2>
-              {post.description && (
-                <p className='text-muted-foreground'>{post.description}</p>
-              )}
-              {post.date && (
-                <p className='text-sm text-muted-foreground'>
-                  {formatDate(post.date)}
-                </p>
-              )}
-              <div className='flex gap-1'>
-                <View />
-                <div className='  overflow-hidden   px-2 text-foreground'>
-                  <DigitC value={views[post.slug]} />
-                </div>
-              </div>
-              <Link href={post.slug} className='absolute inset-0'>
-                <span className='sr-only'>View Article</span>
-              </Link> */}
-            </article>
+            <BlogCard post={post} key={index} />
+            //  {post.image && (
+            //   <Image
+            //     src={post.image}
+            //     alt={post.title}
+            //     width={804}
+            //     height={452}
+            //     className='rounded-md border bg-muted transition-colors'
+            //     priority={index <= 1}
+            //   />
+            // )}
+            // <h2 className='text-2xl font-extrabold'>{post.title}</h2>
+            // {post.description && (
+            //   <p className='text-muted-foreground'>{post.description}</p>
+            // )}
+            // {post.date && (
+            //   <p className='text-sm text-muted-foreground'>
+            //     {formatDate(post.date)}
+            //   </p>
+            // )}
+            // <div className='flex gap-1'>
+            //   <View />
+            //   <div className='  overflow-hidden   px-2 text-foreground'>
+            //     <DigitC value={views[post.slug]} />
+            //   </div>
+            // </div>
+            // <Link href={post.slug} className='absolute inset-0'>
+            //   <span className='sr-only'>View Article</span>
+            // </Link>
           ))}
         </div>
       ) : (
