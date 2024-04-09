@@ -13,7 +13,17 @@ export function truncate(str: string, length: number) {
 export function absoluteUrl(path: string) {
   return `${env.NEXT_PUBLIC_APP_URL}${path}`;
 }
+export function slugify(str: string) {
+  return str
+    .toLowerCase()
+    .replace(/ /g, "-")
+    .replace(/[^\w-]+/g, "")
+    .replace(/--+/g, "-");
+}
 
+export function unslugify(str: string) {
+  return str.replace(/-/g, " ");
+}
 export function formatDate(
   date: Date | string | number,
   options: Intl.DateTimeFormatOptions = {}

@@ -21,7 +21,14 @@ function BlogCard({ post }: Props) {
     <div className=' group relative  z-20 flex overflow-hidden text-brand-foreground'>
       <div className='z-20 relative overflow-hidden'>
         <div className='absolute inset-0 z-10 -translate-x-full bg-transparent bg-gradient-to-r from-transparent via-brand-foreground bg-clip-border group-hover:translate-x-full group-hover:transition group-hover:duration-1000' />
-        <div className='m-[1px] flex h-fit w-fit items-center justify-center border-2 border-accent bg-brand rounded-md'>
+        <div
+          style={{
+            // minHeight: "100%",
+            background:
+              "repeating-conic-gradient(var(--color-bg) 0 0.00013%,#0000 0 0.0002%) 60% 60%/3000px 3000px",
+          }}
+          className='m-[1px] flex h-fit w-fit items-center justify-center border-2 border-accent   rounded-md'
+        >
           <div className='m-5  h-[320px] w-[250px] flex flex-col  gap-2 '>
             <div className='relative flex aspect-video  w-full items-center justify-center rounded-md'>
               <Image

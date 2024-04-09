@@ -111,86 +111,90 @@ export default async function PostPage({ params }: PostPageProps) {
   console.log(params?.slug?.join("/"), params?.slug, views);
 
   return (
-    <article
-      dir='rtl'
-      className='container relative max-w-3xl py-6 lg:py-10 blog-text bg-black/70'
-    >
-      <Link
-        href='/blog'
-        className={cn(
-          buttonVariants({ variant: "ghost" }),
-          "absolute left-[-200px] top-14 hidden xl:inline-flex"
-        )}
+    <div className='blog-background'>
+      <article
+        dir='rtl'
+        className='container relative max-w-3xl py-6 lg:py-10 blog-text '
       >
-        See all posts
-        <ChevronLeft className='mr-2 size-4' />
-      </Link>
-      <div>
-        <h1 className='my-2 blog-title inline-block font-heading text-4xl leading-tight lg:text-5xl'>
-          {post.title}
-        </h1>
-        <div className='flex  gap-4 mt-2 blog-text'>
-          {post.date && (
-            <time dateTime={post.date}>{formatDateG(post.date)}</time>
+        <Link
+          href='/blog'
+          className={cn(
+            buttonVariants({ variant: "ghost" }),
+            "absolute left-[-200px] top-14 hidden xl:inline-flex"
           )}
-          <div className='flex gap-1'>
-            <View />
-
-            <div className='  overflow-hidden   px-2 text-foreground'>
-              <DigitC value={views} />
-            </div>
-          </div>
-          <p> خواندن {calculateReadingTime(post.body.code)} دقیقه</p>
-        </div>
-        {authors?.length ? (
-          <div className='mt-4 flex space-x-4'>
-            {authors.map((author) =>
-              author ? (
-                <Link
-                  key={author._id}
-                  href={`https://twitter.com/${author.twitter}`}
-                  className='flex items-center space-x-2 text-sm'
-                >
-                  <Image
-                    src={author.avatar}
-                    alt={author.title}
-                    width={800}
-                    height={1200}
-                    className='rounded-full bg-white'
-                  />
-                  <div className='flex-1 text-left leading-tight'>
-                    <p className='font-medium'>{author.title}</p>
-                    <p className='text-[12px] text-muted-foreground'>
-                      @{author.twitter}
-                    </p>
-                  </div>
-                </Link>
-              ) : null
-            )}
-          </div>
-        ) : null}
-      </div>
-      {post.image && (
-        <Image
-          src={post.image}
-          alt={post.title}
-          width={720}
-          height={405}
-          className='my-8 rounded-md border bg-muted transition-colors'
-          priority
-        />
-      )}
-      <Mdx code={post.body.code} />
-      <hr className='mt-12' />
-      <div className='flex justify-center py-6 lg:py-10'>
-        <Link href='/blog' className={cn(buttonVariants({ variant: "ghost" }))}>
+        >
           See all posts
           <ChevronLeft className='mr-2 size-4' />
         </Link>
-      </div>
-      <React.Suspense>
-        <BlogView blogId={params?.slug?.join("/")} />
-      </React.Suspense>
-    </article>
+        <div>
+          <h1 className='my-2 blog-title inline-block font-heading text-4xl leading-tight lg:text-5xl'>
+            {post.title}
+          </h1>
+          <div className='flex  gap-4 mt-2 blog-text'>
+            {post.date && (
+              <time dateTime={post.date}>{formatDateG(post.date)}</time>
+            )}
+            <div className='flex gap-1'>
+              <View />
+              <div className='  overflow-hidden   px-2 text-foreground'>
+                <DigitC value={views} />
+              </div>
+            </div>
+            <p> خواندن {calculateReadingTime(post.body.code)} دقیقه</p>
+          </div>
+          {authors?.length ? (
+            <div className='mt-4 flex space-x-4'>
+              {authors.map((author) =>
+                author ? (
+                  <Link
+                    key={author._id}
+                    href={`https://twitter.com/${author.twitter}`}
+                    className='flex items-center space-x-2 text-sm'
+                  >
+                    <Image
+                      src={author.avatar}
+                      alt={author.title}
+                      width={800}
+                      height={1200}
+                      className='rounded-full bg-white'
+                    />
+                    <div className='flex-1 text-left leading-tight'>
+                      <p className='font-medium'>{author.title}</p>
+                      <p className='text-[12px] text-muted-foreground'>
+                        @{author.twitter}
+                      </p>
+                    </div>
+                  </Link>
+                ) : null
+              )}
+            </div>
+          ) : null}
+        </div>
+        {post.image && (
+          <Image
+            src={post.image}
+            alt={post.title}
+            width={720}
+            height={405}
+            className='my-8 rounded-md border bg-muted transition-colors'
+            priority
+          />
+        )}
+        <Mdx code={post.body.code} />
+        <hr className='mt-12' />
+        <div className='flex justify-center py-6 lg:py-10'>
+          <Link
+            href='/blog'
+            className={cn(buttonVariants({ variant: "ghost" }))}
+          >
+            See all posts
+            <ChevronLeft className='mr-2 size-4' />
+          </Link>
+        </div>
+        <React.Suspense>
+          <BlogView blogId={params?.slug?.join("/")} />
+        </React.Suspense>
+      </article>
+    </div>
   );
 }

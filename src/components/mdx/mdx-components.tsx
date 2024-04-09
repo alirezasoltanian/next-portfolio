@@ -1,12 +1,13 @@
-import { useMDXComponent } from "next-contentlayer/hooks"
+import { useMDXComponent } from "next-contentlayer/hooks";
 
-import { cn } from "@/lib/utils"
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
-import { AspectRatio } from "@/components/ui/aspect-ratio"
-import { Callout } from "@/components/mdx/callout"
-import { CodeBlock } from "@/components/mdx/code-block"
-import { MdxCard } from "@/components/mdx/mdx-card"
-import { MdxImage } from "@/components/mdx/mdx-image"
+import { cn } from "@/lib/utils";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Callout } from "@/components/mdx/callout";
+import { CodeBlock } from "@/components/mdx/code-block";
+import { MdxCard } from "@/components/mdx/mdx-card";
+import { MdxImage } from "@/components/mdx/mdx-image";
+import { TitleATag } from "@/components/mdx/title-a-tag";
 
 /** Originally from `shadcn/ui-docs`
  * @link https://github.com/shadcn/ui/blob/main/apps/www/components/mdx-components.tsx
@@ -103,10 +104,10 @@ const components = {
     <img className={cn("rounded-md", className)} alt={alt} {...props} />
   ),
   hr: ({ ...props }: React.HTMLAttributes<HTMLHRElement>) => (
-    <hr className="my-4 md:my-8" {...props} />
+    <hr className='my-4 md:my-8' {...props} />
   ),
   table: ({ className, ...props }: React.HTMLAttributes<HTMLTableElement>) => (
-    <div className="my-6 w-full overflow-y-auto">
+    <div className='my-6 w-full overflow-y-auto'>
       <table className={cn("w-full", className)} {...props} />
     </div>
   ),
@@ -151,18 +152,19 @@ const components = {
   AspectRatio,
   Card: MdxCard,
   Callout,
-}
+  TitleATag,
+};
 
 interface MdxProps {
-  code: string
+  code: string;
 }
 
 export function Mdx({ code }: MdxProps) {
-  const Component = useMDXComponent(code)
+  const Component = useMDXComponent(code);
 
   return (
-    <div className="mdx">
+    <div className='mdx'>
       <Component components={components} />
     </div>
-  )
+  );
 }
