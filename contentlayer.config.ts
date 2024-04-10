@@ -21,12 +21,23 @@ const computedFields: ComputedFields = {
   readingTime: {
     type: "number",
     resolve: (doc) => {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
       const content = doc.body.raw as string;
       const wordsPerMinute = 200;
       const numberOfWords = content.split(/\s/g).length;
       const minutes = numberOfWords / wordsPerMinute;
       return Math.ceil(minutes);
+    },
+  },
+  headings: {
+    type: "json",
+    resolve: async (doc) => {
+      const regXHeader = /<TitleATag>([^<]+)<\/TitleATag>/g;
+      const titles = [];
+      let match;
+      while ((match = regXHeader.exec(doc.body.raw)) !== null) {
+        titles.push(match[1].trim());
+      }
+      return titles;
     },
   },
 };
@@ -64,10 +75,14 @@ export const Post = defineDocumentType(() => ({
       of: { type: "string" },
       required: true,
     },
+    toc: {
+      type: "boolean",
+      required: false,
+      default: false,
+    },
   },
   computedFields,
 }));
-
 export const Author = defineDocumentType(() => ({
   name: "Author",
   filePathPattern: `authors/**/*.mdx`,
@@ -91,26 +106,9 @@ export const Author = defineDocumentType(() => ({
   },
   computedFields,
 }));
-
-export const Page = defineDocumentType(() => ({
-  name: "Page",
-  filePathPattern: `pages/**/*.mdx`,
-  contentType: "mdx",
-  fields: {
-    title: {
-      type: "string",
-      required: true,
-    },
-    description: {
-      type: "string",
-    },
-  },
-  computedFields,
-}));
-
 export default makeSource({
   contentDirPath: "./src/content",
-  documentTypes: [Post, Author, Page],
+  documentTypes: [Post, Author],
   mdx: {
     // @ts-expect-error - codeImport types are not compatible with remark plugins
     remarkPlugins: [codeImport],

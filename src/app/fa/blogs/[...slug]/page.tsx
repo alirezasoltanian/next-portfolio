@@ -23,6 +23,8 @@ import { DigitC } from "@/components/Digit";
 import BlogView from "../_components/BlogView";
 import { ChevronLeft, View } from "lucide-react";
 import { Mdx } from "@/components/mdx/mdx-components";
+import { Grain } from "../_components/Grain";
+import TableOfContent from "../_components/Table-of-content";
 
 interface PostPageProps {
   params: {
@@ -45,6 +47,7 @@ export async function generateMetadata({
   params,
 }: PostPageProps): Promise<Metadata> {
   const post = await getPostFromParams(params);
+  console.log(post);
 
   if (!post) {
     return {};
@@ -111,7 +114,10 @@ export default async function PostPage({ params }: PostPageProps) {
   console.log(params?.slug?.join("/"), params?.slug, views);
 
   return (
-    <div className='blog-background'>
+    <div className=''>
+      <div className='fixed w-32 ml-[7%] bg-red-600  top-0 mt-32 hidden xl:inline-flex'>
+        <TableOfContent heading={post.headings} />
+      </div>
       <article
         dir='rtl'
         className='container relative max-w-3xl py-6 lg:py-10 blog-text '
@@ -123,9 +129,10 @@ export default async function PostPage({ params }: PostPageProps) {
             "absolute left-[-200px] top-14 hidden xl:inline-flex"
           )}
         >
-          See all posts
+          دیدن همه پست ها
           <ChevronLeft className='mr-2 size-4' />
         </Link>
+
         <div>
           <h1 className='my-2 blog-title inline-block font-heading text-4xl leading-tight lg:text-5xl'>
             {post.title}
@@ -171,14 +178,18 @@ export default async function PostPage({ params }: PostPageProps) {
           ) : null}
         </div>
         {post.image && (
-          <Image
-            src={post.image}
-            alt={post.title}
-            width={720}
-            height={405}
-            className='my-8 rounded-md border bg-muted transition-colors'
-            priority
-          />
+          <div className='relative'>
+            <Grain />
+
+            <Image
+              src={post.image}
+              alt={post.title}
+              width={720}
+              height={405}
+              className='my-8 rounded-md border bg-muted transition-colors'
+              priority
+            />
+          </div>
         )}
         <Mdx code={post.body.code} />
         <hr className='mt-12' />

@@ -5,6 +5,7 @@ import * as React from "react";
 
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { cn } from "@/lib/utils";
+import { Grain } from "@/app/fa/blogs/_components/Grain";
 
 interface CalloutProps extends React.PropsWithChildren {
   icon?: string;
@@ -30,6 +31,8 @@ export function Callout({
       )}
       {...props}
     >
+      <Grain />
+
       {icon && <span className='mr-4 text-2xl'>{icon}</span>}
       {title && <AlertTitle>{title}</AlertTitle>}
       <AlertDescription>{children}</AlertDescription>

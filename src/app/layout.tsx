@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   //   apple: "/apple-touch-icon.png",
   // },
   // manifest: absoluteUrl("/site.webmanifest"),
-}
+};
 
 // export const viewport: Viewport = {
 //   colorScheme: "dark light",
@@ -67,11 +67,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className="overflow-x-hidden " lang="en">
-      
+    <html className='overflow-x-hidden h-fit' lang='en'>
       <body className={inter.className}>{children}</body>
-    <ScrollTOStartPage />
-
+      <ScrollTOStartPage />
     </html>
   );
 }
