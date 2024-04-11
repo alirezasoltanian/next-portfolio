@@ -9,8 +9,8 @@ import { slugify } from "@/lib/utils";
 // https://paco.me/craft
 function TableOfContent({ heading }: { heading: string[] }) {
   return (
-    <div>
-      <h2>TableOfContent or TCG</h2>
+    <div className='flex flex-col w-full gap-2 blog-text'>
+      <p className='my-1 blog-title text-lg '>تیتر های بلاگ</p>
       {heading.map((item, index) => (
         <div key={index}>
           <a href={`#${slugify(item)}`}>{item}</a>

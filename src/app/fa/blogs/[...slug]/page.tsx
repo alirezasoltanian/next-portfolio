@@ -114,10 +114,13 @@ export default async function PostPage({ params }: PostPageProps) {
   console.log(params?.slug?.join("/"), params?.slug, views);
 
   return (
-    <div className=''>
-      <div className='fixed w-32 ml-[7%] bg-red-600  top-0 mt-32 hidden xl:inline-flex'>
-        <TableOfContent heading={post.headings} />
+    <div className='flex justify-between'>
+      <div dir='rtl' className=' w-full '>
+        <div className=' text-sm sticky w-[80%]   top-5 mt-32 hidden xl:inline-flex mr-[50px] '>
+          <TableOfContent heading={post.headings} />
+        </div>
       </div>
+
       <article
         dir='rtl'
         className='container relative max-w-3xl py-6 lg:py-10 blog-text '
@@ -132,9 +135,8 @@ export default async function PostPage({ params }: PostPageProps) {
           دیدن همه پست ها
           <ChevronLeft className='mr-2 size-4' />
         </Link>
-
         <div>
-          <h1 className='my-2 blog-title inline-block font-heading text-4xl leading-tight lg:text-5xl'>
+          <h1 className='my-2 blog-title inline-block font-heading text-xl md:text-4xl  leading-tight lg:text-5xl'>
             {post.title}
           </h1>
           <div className='flex  gap-4 mt-2 blog-text'>
@@ -206,6 +208,7 @@ export default async function PostPage({ params }: PostPageProps) {
           <BlogView blogId={params?.slug?.join("/")} />
         </React.Suspense>
       </article>
+      <div className=' w-full '></div>
     </div>
   );
 }

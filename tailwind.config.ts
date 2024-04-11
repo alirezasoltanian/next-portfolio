@@ -104,6 +104,41 @@ const config = {
             transform: "scale(var(--scale, 1.25))",
           },
         },
+        "hover-tada": {
+          "0%": {
+            transform: "scale(1)",
+          },
+          "10%": {
+            transform: "scale(0.9) rotate(-3deg)",
+          },
+          "20%": {
+            transform: "scale(0.9) rotate(-3deg)",
+          },
+          "30%": {
+            transform: "scale(1.1) rotate(3deg)",
+          },
+          "40%": {
+            transform: "scale(1.1) rotate(-3deg)",
+          },
+          "50%": {
+            transform: "scale(1.1) rotate(3deg)",
+          },
+          "60%": {
+            transform: "scale(1.1) rotate(-3deg)",
+          },
+          "70%": {
+            transform: "scale(1.1) rotate(3deg)",
+          },
+          "80%": {
+            transform: "scale(1.1) rotate(-3deg)",
+          },
+          "90%": {
+            transform: "scale(1.1) rotate(3deg)",
+          },
+          "100%": {
+            transform: "scale(1) rotate(0)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -111,6 +146,7 @@ const config = {
         spotlight: "spotlight 2s ease .75s 1 forwards",
         ripple:
           "ripple var(--duration, 1.5s) ease calc(var(--i, 0) * 0.1s) infinite",
+        "hover-tada": "hover-tada 1s ease-in-out",
       },
     },
   },
