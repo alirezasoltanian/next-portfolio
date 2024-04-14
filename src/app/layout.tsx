@@ -69,7 +69,7 @@ export default function RootLayout({
   return (
     <html className='overflow-x-hidden h-fit' lang='en'>
       <body className={inter.className}>{children}</body>
-      <ScrollTOStartPage />
+      {/* <ScrollTOStartPage /> */}
     </html>
   );
 }

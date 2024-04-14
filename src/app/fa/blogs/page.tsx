@@ -28,7 +28,7 @@ export default async function BlogPage() {
     return acc;
   }, {} as Record<string, number>);
   return (
-    <div className='blog-background    '>
+    <div className='blog-background  min-h-dvh  '>
       <div
         dir='rtl'
         style={{

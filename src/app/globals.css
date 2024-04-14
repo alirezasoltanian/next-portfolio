@@ -55,7 +55,7 @@ html {
   background: repeating-conic-gradient(#1a1a2f 0 0.00011%, #b7020200 0 0.0002%)
     60% 60%/3000px 3000px;
 }
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,600&family=Press+Start+2P&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,600&family=Press+Start+2P&display=swap"); */
 
 @layer base {
   :root {
