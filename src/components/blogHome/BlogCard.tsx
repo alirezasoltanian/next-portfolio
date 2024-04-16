@@ -3,14 +3,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { formatDate } from "@/lib/utils";
+import { Post } from "contentlayer/generated";
 
-interface Post {
-  title: string;
-  image: string;
-  slug: string;
-  description: string;
-  date: string;
-}
 interface Props {
   post: Post;
 }

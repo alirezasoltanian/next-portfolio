@@ -35,7 +35,7 @@ const computedFields: ComputedFields = {
       const titles = [];
       let match;
       while ((match = regXHeader.exec(doc.body.raw)) !== null) {
-        titles.push(match[1].trim());
+        match[1] && titles.push(match[1].trim());
       }
       return titles;
     },
@@ -110,7 +110,6 @@ export default makeSource({
   contentDirPath: "./src/content",
   documentTypes: [Post, Author],
   mdx: {
-    // @ts-expect-error - codeImport types are not compatible with remark plugins
     remarkPlugins: [codeImport],
     rehypePlugins: [
       [

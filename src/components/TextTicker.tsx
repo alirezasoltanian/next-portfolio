@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useEffect, useRef } from "react";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 

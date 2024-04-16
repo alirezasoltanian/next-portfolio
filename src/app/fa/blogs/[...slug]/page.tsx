@@ -111,7 +111,7 @@ export default async function PostPage({ params }: PostPageProps) {
     (await redis.mget<number[]>(
       ["pageviews[0]", "blog", params?.slug?.join("/")].join(":")
     )) ?? 0;
-  console.log(params?.slug?.join("/"), params?.slug, views);
+  console.log(params?.slug?.join("/"), params?.slug, views[0]);
 
   return (
     <div className='flex justify-between'>
@@ -146,7 +146,7 @@ export default async function PostPage({ params }: PostPageProps) {
             <div className='flex gap-1'>
               <View />
               <div className='  overflow-hidden   px-2 text-foreground'>
-                <DigitC value={views} />
+                <DigitC value={views[0]} />
               </div>
             </div>
             <p> خواندن {calculateReadingTime(post.body.code)} دقیقه</p>

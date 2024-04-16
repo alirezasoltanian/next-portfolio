@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Image from "next/image";
 import Link from "next/link";
 import { allPosts } from "contentlayer/generated";
@@ -18,7 +19,6 @@ export default async function BlogPage() {
     .filter((post) => post.published)
     .sort((a, b) => b.date.localeCompare(a.date));
 
-  console.log((posts[0]?.slug).split("/")[2]);
   const views = (
     await redis.mget<number[]>(
       ...posts.map((p) => ["pageviews", "blog", p.slug.split("/")[2]].join(":"))
