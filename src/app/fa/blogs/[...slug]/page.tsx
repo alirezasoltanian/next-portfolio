@@ -114,7 +114,7 @@ export default async function PostPage({ params }: PostPageProps) {
   console.log(params?.slug?.join("/"), params?.slug, views[0]);
 
   return (
-    <div className='flex justify-between'>
+    <div className='flex justify-between blog-background-sm'>
       <div dir='rtl' className=' w-full '>
         <div className=' text-sm sticky w-[80%]   top-5 mt-32 hidden xl:inline-flex mr-[50px] '>
           <TableOfContent heading={post.headings} />
