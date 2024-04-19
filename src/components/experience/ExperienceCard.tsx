@@ -87,8 +87,8 @@ function ExperienceCard({ work }: { work: Work }) {
           <div className='inline-flex gap-x-1 mt-2'>
             {work.badges.map((badge) => (
               <Badge
-                variant='secondary'
-                className='align-middle text-xs'
+                // variant='secondary'
+                className='align-middle text-xs  bg-brand bg-opacity-15'
                 key={badge}
               >
                 {badge}

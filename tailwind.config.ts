@@ -29,7 +29,7 @@ const config = {
 
         brand: {
           DEFAULT: "var(--color-bg)",
-          foreground: "var(--color-primary)",
+          foreground: "hsl(var(--color-primary-hsl))",
         },
         primary: {
           DEFAULT: "hsl(var(--primary))",
