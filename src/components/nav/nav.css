@@ -1,20 +1,33 @@
 nav {
-  background: rgba(2, 93, 139, 0.762) ;
+  background: rgba(2, 93, 139, 0.762);
   width: max-content;
   display: block;
   padding: 0.7rem 1.7rem;
   z-index: 2;
   position: fixed;
   left: 50%;
-  transform: translateX(-50%) ;
+  transform: translateX(-50%);
   bottom: 2rem;
   display: flex;
   gap: 0.8rem;
   border-radius: 3rem;
   backdrop-filter: blur(8px);
 }
-
-nav a{
+.nav-two {
+  background: rgba(2, 93, 139, 0.762);
+  width: max-content;
+  display: block;
+  padding: 0.7rem 1.7rem;
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2rem;
+  display: flex;
+  gap: 0.8rem;
+  border-radius: 3rem;
+}
+nav a {
   background: transparent;
   padding: 0.9rem;
   border-radius: 50%;
@@ -22,13 +35,24 @@ nav a{
   color: var(--color-light);
   font-size: 1.1rem;
 }
-nav a:hover{
-  background: rgb(0,0,0,0.5);
-
+nav a:hover {
+  background: rgb(0, 0, 0, 0.5);
 }
 
 nav a.active {
-  background: var(--color-primary) ;
-  color: var(--color-bg) ;
+  background: var(--color-primary);
+  color: var(--color-bg);
 }
 
+.glass-effect {
+  background: rgba(0, 0, 0, 0.2);
+  background: repeating-radial-gradient(
+    circle at 50%50%,
+    rgb(255 255 255 / 0),
+    rgba(255, 255, 255, 0.2) 10px,
+    rgb(255 255 255) 31px
+  );
+  filter: url(#fractal-noise-glass);
+  background-size: 6px 6px;
+  backdrop-filter: blur(0px);
+}

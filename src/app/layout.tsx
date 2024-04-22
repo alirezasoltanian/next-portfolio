@@ -4,6 +4,7 @@ import "./globals.css";
 import { Spotlight } from "@/components/ui/Spotlight";
 import { RESUME_DATA } from "@/data/resume-data";
 import ScrollTOStartPage from "@/components/scroll-to-start-page/scroll-to-start-page";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -68,7 +69,9 @@ export default function RootLayout({
 }>) {
   return (
     <html className='overflow-x-hidden h-fit' lang='en'>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <TooltipProvider>{children}</TooltipProvider>
+      </body>
       {/* <ScrollTOStartPage /> */}
     </html>
   );
