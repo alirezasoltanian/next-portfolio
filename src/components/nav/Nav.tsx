@@ -131,7 +131,7 @@ const Nav = ({ active }) => {
         transition={{
           layout: { duration: 10 },
         }}
-        className=''
+        className='z-40'
       >
         <div className='absolute inset-0 rounded-full'>
           <div className='pointer-events-none absolute bottom-0 left-0 z-10 size-full overflow-hidden rounded-full border border-[#f5f5f51a]'>

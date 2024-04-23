@@ -13,6 +13,7 @@ import "aos/dist/aos.css";
 import Typewriter from "typewriter-effect";
 import { Spotlight } from "../ui/Spotlight";
 import ImageB from "@/components/ImageB";
+import Stickers from "./stickers";
 
 const Header = ({ firstRef }) => {
   useEffect(() => {
@@ -20,10 +21,10 @@ const Header = ({ firstRef }) => {
     AOS.refresh();
   }, []);
   return (
-    <header ref={firstRef} id='first' className="overflow-hidden" >
-       <Spotlight
-        className="-top-40 left-0 md:left-60 md:-top-20"
-        fill="white"
+    <header ref={firstRef} id='first' className='overflow-hidden'>
+      <Spotlight
+        className='-top-40 left-0 md:left-60 md:-top-20'
+        fill='white'
       />
       <div className='container header__container  flex flex-col items-center'>
         {/* <h5 data-aos="zoom-in-down" data-aos-duration="1500" >Hello I'm</h5>
@@ -57,11 +58,14 @@ const Header = ({ firstRef }) => {
         />
         <CTA />
         <HeaderSocials />
+        <div className='absolute flex justify-center items-center w-full h-fit mt-56'>
+          <Stickers />
+        </div>
         <div
           // data-aos='zoom-in'
           // data-aos-easing='ease-out-cubic'
           // data-aos-duration='500'
-          className='me   overflow-hidden h-[400px] w-[320px] flex justify-center mt-4 '
+          className='me  z-30 overflow-hidden h-[400px] w-[320px] flex justify-center mt-4 '
         >
           <ImageB
             src={Me}

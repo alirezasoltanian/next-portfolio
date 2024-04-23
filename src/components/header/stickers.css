@@ -1,0 +1,22 @@
+.stickers-body {
+  --x: 0;
+  --y: 0;
+}
+/* Asset Parallax */
+.first-level-move:first-of-type {
+  object-position: calc(-50% + (clamp(-1, var(--x), 1) * 30px))
+    calc(43% + (clamp(-1, var(--y), 1) * -20px));
+}
+
+.second-level-move {
+  translate: calc(-50% + (clamp(-1, var(--x), 1) * -30px))
+    calc(clamp(-1, var(--y), 1) * -20px);
+}
+.second-two-level-move {
+  translate: calc(-50% + (clamp(-1, var(--x), 1) * 10px))
+    calc(clamp(-1, var(--y), 1) * -5px);
+}
+.third-level-move {
+  object-position: calc(-50% + (clamp(-1, var(--x), 1) * 40px))
+    calc(43% + (clamp(-1, var(--y), 1) * -40px));
+}
