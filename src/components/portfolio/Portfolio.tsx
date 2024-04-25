@@ -199,7 +199,6 @@ const Portfolio = ({ portfolioRef }) => {
         <AnimatePresence mode='wait'>
           {filtered.map(
             ({ id, image, title, github, demo, name, disable }, i) => {
-              console.log(i);
               return (
                 <motion.artifact
                   variants={{

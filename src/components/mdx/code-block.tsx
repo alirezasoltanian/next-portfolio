@@ -13,8 +13,6 @@ type CodeBlockProps = React.DetailedHTMLProps<
 };
 
 export function CodeBlock({ children, raw, ...props }: CodeBlockProps) {
-  console.log(raw);
-
   return (
     <>
       <div className='flex justify-end'>

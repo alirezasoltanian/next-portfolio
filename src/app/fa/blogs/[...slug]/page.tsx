@@ -116,7 +116,7 @@ export default async function PostPage({ params }: PostPageProps) {
   return (
     <div className='flex justify-between blog-background-sm'>
       <div dir='rtl' className=' w-full '>
-        <div className=' text-sm sticky w-[80%]   top-5 mt-32 hidden xl:inline-flex mr-[50px] '>
+        <div className=' text-sm sticky w-[80%] top-5 mt-32  xl:inline-flex mr-[25px] '>
           <TableOfContent heading={post.headings} />
         </div>
       </div>

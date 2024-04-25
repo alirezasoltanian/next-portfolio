@@ -1,14 +1,8 @@
 // @ts-nocheck
-import Image from "next/image";
-import Link from "next/link";
 import { allPosts } from "contentlayer/generated";
-import { compareDesc } from "date-fns";
 
-import { redis } from "@/lib/redis";
-import { formatDate } from "@/lib/utils";
-import { DigitC } from "@/components/Digit";
-import { View } from "lucide-react";
 import BlogCard from "@/components/blogHome/BlogCard";
+import { redis } from "@/lib/redis";
 
 export const metadata = {
   title: "Blog",

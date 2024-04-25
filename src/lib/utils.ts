@@ -59,8 +59,6 @@ export const getDate = (sub: number = 0) => {
 };
 
 export function formatDateG(input: string | number | Date): string {
-  console.log(input);
-
   const date = Number(new Date(input));
   const now = Number(new Date());
   const seconds = Math.floor((now - date) / 1000);

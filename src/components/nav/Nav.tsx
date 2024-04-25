@@ -117,7 +117,6 @@ const Nav = ({ active }) => {
   }, [pixelsScrolled, scrollY]);
   const handleClick = (e, id) => {
     e.preventDefault();
-    console.log(id);
     document.querySelector(`#${id}`).scrollIntoView({
       behavior: `smooth`,
     });

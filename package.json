@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rimraf --glob **/node_modules **/dist **/.next pnpm-lock.yaml **/.tsbuildinfo **/.contentlayer ",
     "build": " contentlayer build && next build",
-    "dev": "concurrently \"contentlayer dev\" \"next dev --turbo\"",
+    "dev": "concurrently \"contentlayer dev\" \"next dev \"",
     "turbo": " next dev --turbo",
     "ncu": "ncu -i --format group",
     "knip": "knip",

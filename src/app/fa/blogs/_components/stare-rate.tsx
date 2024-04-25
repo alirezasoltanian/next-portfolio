@@ -1,6 +1,5 @@
 "use client";
 import { DigitC } from "@/components/Digit";
-import TextTicker from "@/components/TextTicker";
 import { CornerLeftUp } from "lucide-react";
 import React, { useEffect, useState } from "react";
 // import shortStar from "/voice-effect/short-star.m4a";
@@ -40,28 +39,28 @@ function StareRate() {
       case 0:
         setNumberOfStar(1);
         setValueFill(20);
-        new Audio("/voice-effect/short-star.m4a").play();
+        new Audio("/voice-effect/sound-effect-star.mp3").play();
         break;
       case 1:
         setNumberOfStar(2);
         setValueFill(16);
 
-        new Audio("/voice-effect/short-star.m4a").play();
+        new Audio("/voice-effect/sound-effect-star.mp3").play();
         setTimeout(() => {
-          new Audio("/voice-effect/short-star.m4a").play();
+          new Audio("/voice-effect/sound-effect-star.mp3").play();
         }, 100);
 
         break;
       case 2:
         setNumberOfStar(3);
         setValueFill(10);
-        new Audio("/voice-effect/short-star.m4a").play();
+        new Audio("/voice-effect/sound-effect-star.mp3").play();
         setTimeout(() => {
-          new Audio("/voice-effect/short-star.m4a").play();
+          new Audio("/voice-effect/sound-effect-star.mp3").play();
         }, 200);
 
         setTimeout(() => {
-          new Audio("/voice-effect/short-star.m4a").play();
+          new Audio("/voice-effect/sound-effect-star.mp3").play();
         }, 100);
 
         break;
@@ -69,25 +68,22 @@ function StareRate() {
         setNumberOfStar(4);
         setValueFill(6);
         setValueFill(10);
-        new Audio("/voice-effect/short-star.m4a").play();
+        new Audio("/voice-effect/sound-effect-star.mp3").play();
         setTimeout(() => {
-          new Audio("/voice-effect/short-star.m4a").play();
+          new Audio("/voice-effect/sound-effect-star.mp3").play();
         }, 200);
 
         setTimeout(() => {
-          new Audio("/voice-effect/short-star.m4a").play();
+          new Audio("/voice-effect/sound-effect-star.mp3").play();
         }, 100);
         break;
       case 4:
         setNumberOfStar(5);
         setValueFill(0);
-        new Audio("/voice-effect/long-star.m4a").play();
-        new Audio("/voice-effect/rotate.m4a").play();
-      case 5:
-        setNumberOfStar(0);
-        setValueFill(32);
-        new Audio("/voice-effect/long-star.m4a").play();
-        new Audio("/voice-effect/rotate.m4a").play();
+        new Audio("/voice-effect/sound-effect-star.mp3").play();
+        new Audio("/voice-effect/sound-effect-star.mp3").play();
+        new Audio("/voice-effect/sound-effect-star.mp3").play();
+        new Audio("/voice-effect/shooting-star-2.mp3").play();
 
         break;
     }

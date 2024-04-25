@@ -18,7 +18,6 @@ function ExperienceCard({ work }: { work: Work }) {
 
   function handleMouseMove({ currentTarget, clientX, clientY }: MouseEvent) {
     let { left, top } = currentTarget.getBoundingClientRect();
-    console.log(clientX, clientY);
 
     mouseX.set(clientX ? clientX - left : left);
     mouseY.set(clientY ? clientY - top : top);

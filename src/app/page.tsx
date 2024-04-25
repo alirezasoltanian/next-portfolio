@@ -25,7 +25,6 @@ export default function Home() {
   const [experienceRef, isInExperienceView] = useViewRef();
   const [portfolioRef, isInPortfolioView] = useViewRef();
   const pathname = usePathname();
-  console.log(pathname);
   useEffect(() => {
     const viewStates = {
       first: isInFirstView,
