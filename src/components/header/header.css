@@ -1,10 +1,7 @@
-
-
 header {
   height: 100vh;
-  padding-top: 4rem ;
+  /* padding-top: 4rem ; */
   overflow: hidden;
-
 }
 
 .header__container {
@@ -17,8 +14,8 @@ header {
 
 .cta {
   margin-top: 2.5rem;
-  display: flex ;
-  gap : 1.5rem ;
+  display: flex;
+  gap: 1.5rem;
   justify-content: center;
 }
 
@@ -34,8 +31,6 @@ header {
   bottom: 3rem;
   font-size: 1.5rem;
 }
-
-
 
 .header__socials::after {
   content: "";
@@ -69,7 +64,6 @@ header {
   padding: 5rem 1.5rem 1.5rem 1.5rem;
 } */
 
-
 /* ========== ME ========== */
 
 .scroll__down {
@@ -83,14 +77,14 @@ header {
 /* ========== MEDIA QUERIES (MEDIA DEVICES) ========== */
 
 @media screen and (max-width: 1024px) {
-   header {
-   }
+  header {
+  }
 }
 /* ========== MEDIA QUERIES (SMALL DEVICES) ========== */
 
 @media screen and (max-width: 600px) {
   .header__socials,
   .scroll__down {
-     display: none;
+    display: none;
   }
 }

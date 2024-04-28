@@ -69,7 +69,7 @@ function Stickers() {
     };
   }, []);
   return (
-    <div className='relative  h-fit'>
+    <div className='relative  h-fit mt-12'>
       <h4
         className={`${beba.className} size-1/2 md:size-1 z-20 absolute -right-4 md:-right-1 top-0 text-brand m-0 text-[4rem] uppercase second-two-level-move `}
       >
@@ -86,7 +86,7 @@ function Stickers() {
         </span>
       </h4>
 
-      <div className='z-20 size-16 md:size-32 absolute ml-32 md:ml-0 md:left-0 -top-8 md:top-1/2 text-brand m-0 text-[4rem] uppercase second-level-move'>
+      {/* <div className='z-20 size-16 md:size-32 absolute ml-32 md:ml-0 md:left-0 -top-8 md:top-1/2 text-brand m-0 text-[4rem] uppercase second-level-move'>
         <Shine puffyness='2'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -104,7 +104,7 @@ function Stickers() {
             </g>
           </svg>
         </Shine>
-      </div>
+      </div> */}
       <article className=' w-[600px] aspect-[2/1.1] max-h-[calc(100svh-2rem)] relative overflow-hidden max-w-[calc(100%-2rem)] portrait:min-h-[330px]'>
         <div className='assets absolute inset-0 rounded-[4em] overflow-hidden'>
           <ImageB
@@ -114,11 +114,7 @@ function Stickers() {
             src='/images/osaka-sky.jpeg'
             alt=''
           />
-          <h4
-            className={`${beba.className} z-20 absolute left-1/2 top-[50%] text-brand m-0 text-[4rem] uppercase second-level-move `}
-          >
-            <Shine puffyness='2'>SOLOP</Shine>
-          </h4>
+
           {/* <img
               className='absolute top-0 left-1/2 -translate-x-1/2 h-full w-[460px] max-w-[unset] object-cover select-none third-level-move'
               src='../../assets/me31.png'
@@ -126,6 +122,11 @@ function Stickers() {
             /> */}
         </div>
       </article>
+      <h4
+        className={`${beba.className} z-20 absolute left-1/2 top-[50%] text-brand m-0 text-[4rem] uppercase second-level-move `}
+      >
+        <Shine puffyness='2'>SOLOP</Shine>
+      </h4>
     </div>
   );
 }
