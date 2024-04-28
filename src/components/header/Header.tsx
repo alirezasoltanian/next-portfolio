@@ -19,6 +19,33 @@ const Header = ({ firstRef }) => {
   useEffect(() => {
     AOS.init();
     AOS.refresh();
+    const HEADING = document.querySelector("h1");
+
+    const CONFIG = {
+      text: "Your name",
+      accent: "#e619a1",
+      probability: 0.1,
+    };
+    let splitters = "";
+    const flickIndex = Math.floor(Math.random() * (CONFIG.text.length + 1));
+    for (let c = 0; c < CONFIG.text.length; c++) {
+      const flick = Math.random() < CONFIG.probability || c === flickIndex;
+      const speed = Math.random() * (4 - 1) + 1;
+      const delay = Math.random() * 5;
+      console.log(CONFIG.text[c]);
+
+      // You can generate the custom flicker for each letter
+      const seedEase = `rough({ template: power1.inOut, strength: 2, points: 50, taper: 'none', randomize: true, clamp: true})`;
+      // const customEase = generateCustomEase(seedEase, 0.0005, 4, 0.25);
+
+      splitters += `<span ${
+        flick ? `data-flick="true"  --speed:${speed}; --delay:${delay};"` : ""
+      }aria-hidden="true" >${CONFIG.text[c]}</span>`;
+    }
+    HEADING.innerHTML = `
+    ${splitters}
+    <span class="sr-only">${CONFIG.text}</span>
+  `;
   }, []);
   return (
     <header ref={firstRef} id='first' className='overflow-hidden'>
@@ -31,7 +58,7 @@ const Header = ({ firstRef }) => {
         <h1 data-aos="zoom-in-down" data-aos-duration="1500">Soltanian</h1>
         <h5 className="text-light"  data-aos="zoom-in-down" data-aos-duration="1000">Fullstack Developer</h5> */}
 
-        <Typewriter
+        {/* <Typewriter
           className='text-xl'
           options={{
             autoStart: true,
@@ -55,7 +82,9 @@ const Header = ({ firstRef }) => {
               .typeString("Web3 developer (solidity & Hardhat ...)")
               .start();
           }}
-        />
+        /> */}
+        <h1 id='header-flicker' className='flicker' />
+
         <CTA />
         <HeaderSocials />
         <div className='absolute flex justify-center items-center w-full h-fit mt-56'>
