@@ -68,16 +68,16 @@ const CTA = () => {
           />
           SEE CV
         </a>
-        <a
+        {/* <a
           // data-aos='fade-left'
           // data-aos-duration='900'
           className='btn btn-primary'
           href='#contact'
         >
           Let&apos;s Talk
-        </a>
+        </a> */}
       </div>
-      <div className="h-1/2">
+      <div className='h-1/2'>
         <ButtonGooey />
       </div>
     </div>

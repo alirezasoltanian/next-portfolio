@@ -70,10 +70,10 @@ function Stickers() {
   }, []);
   return (
     <div className='relative  h-fit mt-12'>
-      <h4
-        className={`${beba.className} size-1/2 md:size-1 z-20 absolute -right-4 md:-right-1 top-0 text-brand m-0 text-[4rem] uppercase second-two-level-move `}
+      <div
+        className={`${beba.className}  z-20 absolute right-24 md:-right-16 top-0 text-brand m-0  uppercase second-two-level-move `}
       >
-        <span className='flex text-white'>
+        <span className='flex text-white text-[2.5rem] md:text-[4rem]'>
           <span>(</span>
           <Shine puffyness='2'>
             <span className=' text-black'>⌐■</span>
@@ -84,7 +84,7 @@ function Stickers() {
           </Shine>
           <span>)</span>
         </span>
-      </h4>
+      </div>
 
       {/* <div className='z-20 size-16 md:size-32 absolute ml-32 md:ml-0 md:left-0 -top-8 md:top-1/2 text-brand m-0 text-[4rem] uppercase second-level-move'>
         <Shine puffyness='2'>
@@ -123,7 +123,7 @@ function Stickers() {
         </div>
       </article>
       <h4
-        className={`${beba.className} z-20 absolute left-1/2 top-[50%] text-brand m-0 text-[4rem] uppercase second-level-move `}
+        className={`${beba.className} z-20 absolute left-1/2 top-[60%] md:top-[50%] text-brand m-0 text-[3.5rem] md:text-[4rem] uppercase second-level-move `}
       >
         <Shine puffyness='2'>SOLOP</Shine>
       </h4>

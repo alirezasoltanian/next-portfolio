@@ -9,36 +9,41 @@ export const ButtonGooey = () => {
   //   open: { opacity: 1, x: 0 , rotate: '360deg' },
   //   closed: { opacity: 0, x: "-100%" , rotate: '00deg' },
   // };
-   const mounted = useMounted()
+  const mounted = useMounted();
   const variants = {
-    open: { rotate: '360deg' },
-    closed: {  rotate: '0deg' , transition: {  ease: "easeOut", duration: 0.5 }  },
-    
-    
+    open: { rotate: "360deg" },
+    closed: { rotate: "0deg", transition: { ease: "easeOut", duration: 0.5 } },
   };
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
   return (
     <>
-      <div className='wrapper'>
-       { mounted ? <button
-          onClick={() => setIsOpen((isOpen) => !isOpen)}
-          className='button'
-        >
-          ( •_•)&gt;⌐■-■
-          <div className=' bubble'>
+      <div className='wrapper relative'>
+        <p className='absolute -top-2 left-0 right-0 m-auto text-[8px] text-black'>
+          Skill issue
+        </p>
+        {mounted ? (
+          <button
+            onClick={() => setIsOpen((isOpen) => !isOpen)}
+            className='button'
+          >
+            ( •_•)&gt;⌐■-■
+            <div className=' bubble'>
               <motion.div
                 animate={isOpen ? "open" : "closed"}
                 variants={variants}
-                
               >
-                <span>(</span><span className=" text-black">⌐■</span><span>_</span><span className=" text-black">■</span><span>)</span>
+                <span>(</span>
+                <span className=' text-black'>⌐■</span>
+                <span>_</span>
+                <span className=' text-black'>■</span>
+                <span>)</span>
               </motion.div>
-          </div>
-        </button>
-      :  
-      <button className='w-32 h-16 bg-[#1c305d] rounded-xl mt-3'></button>
-      }
+            </div>
+          </button>
+        ) : (
+          <button className='w-32 h-16  rounded-xl mt-3'></button>
+        )}
       </div>
 
       <svg

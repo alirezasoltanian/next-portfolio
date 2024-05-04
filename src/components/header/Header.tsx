@@ -22,7 +22,7 @@ const Header = ({ firstRef }) => {
     const HEADING = document.querySelector("h1");
 
     const CONFIG = {
-      text: "Your name",
+      text: "Alireza soltanian",
       accent: "#e619a1",
       probability: 0.1,
     };

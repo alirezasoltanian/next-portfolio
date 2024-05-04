@@ -250,13 +250,13 @@ html {
   opacity: clamp(0.2, var(--opacity), 1);
 }
 h1 span {
-  --shadow: color-mix(in lch, #e619a1 90%, hsl(0 0% 100% / 0.5));
+  --shadow: color-mix(in lch, #4db5ff 90%, hsl(0 0% 100% / 0.5));
   color: transparent;
-  /*	-webkit-text-stroke: 0.0025em #e619a1;*/
-  -webkit-text-stroke: 0.015em #e619a1;
+  /*	-webkit-text-stroke: 0.0025em #4db5ff;*/
+  -webkit-text-stroke: 0.015em #4db5ff;
   /*	letter-spacing: 0.025em;*/
   filter: drop-shadow(0.02em 0.02em 0.1em hsl(0 0% 100% / 0.25))
-    drop-shadow(0.02em 0.02em 0.2em #e619a1)
+    drop-shadow(0.02em 0.02em 0.2em #4db5ff)
     drop-shadow(0.02em 0.02em 0.6em var(--shadow)) brightness(1.25);
   user-select: none;
 }
