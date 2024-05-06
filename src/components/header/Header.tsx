@@ -19,7 +19,7 @@ const Header = ({ firstRef }) => {
   useEffect(() => {
     AOS.init();
     AOS.refresh();
-    const HEADING = document.querySelector("h1");
+    const HEADING = document.getElementById("header-flicker");
 
     const CONFIG = {
       text: "Alireza soltanian",
@@ -35,11 +35,13 @@ const Header = ({ firstRef }) => {
       console.log(CONFIG.text[c]);
 
       // You can generate the custom flicker for each letter
-      const seedEase = `rough({ template: power1.inOut, strength: 2, points: 50, taper: 'none', randomize: true, clamp: true})`;
+      // const seedEase = `rough({ template: power1.inOut, strength: 2, points: 50, taper: 'none', randomize: true, clamp: true})`;
       // const customEase = generateCustomEase(seedEase, 0.0005, 4, 0.25);
 
       splitters += `<span ${
-        flick ? `data-flick="true"  --speed:${speed}; --delay:${delay};"` : ""
+        flick
+          ? `data-flick="true" style="--custom:${customEase}; --speed:${speed}; --delay:${delay};"`
+          : ""
       }aria-hidden="true" >${CONFIG.text[c]}</span>`;
     }
     HEADING.innerHTML = `

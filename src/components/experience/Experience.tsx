@@ -25,7 +25,7 @@ const experienceData = [
 ];
 function Experience() {
   return (
-    <div className='flex mt-2 flex-col px-12 justify-center items-center'>
+    <div className='flex mt-2 flex-col px-12 justify-center items-center '>
       <h2 className='text-brand-foreground'>My experience</h2>
       <div className='flex gap-5 flex-wrap mt-2'>
         {experienceData.map((item, index) => (
