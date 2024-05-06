@@ -40,7 +40,7 @@ const Header = ({ firstRef }) => {
 
       splitters += `<span ${
         flick
-          ? `data-flick="true" style="--custom:${customEase}; --speed:${speed}; --delay:${delay};"`
+          ? `data-flick="true" style=" --speed:${speed}; --delay:${delay};"`
           : ""
       }aria-hidden="true" >${CONFIG.text[c]}</span>`;
     }
@@ -85,19 +85,17 @@ const Header = ({ firstRef }) => {
               .start();
           }}
         /> */}
-        <h1 id='header-flicker' className='flicker' />
+        <h1 id='header-flicker' className='flicker ' />
+        {/* <h1 id='header-flicker' className='flickerfull '>
+          Alireza soltanian
+        </h1> */}
 
         <CTA />
         <HeaderSocials />
-        <div className='absolute flex justify-center items-center w-full h-fit mt-56'>
+        <div className='absolute flex justify-center items-center w-full h-fit mt-72'>
           <Stickers />
         </div>
-        <div
-          // data-aos='zoom-in'
-          // data-aos-easing='ease-out-cubic'
-          // data-aos-duration='500'
-          className='me  z-30 overflow-hidden h-[400px] w-[320px] flex justify-center mt-4 '
-        >
+        <div className='me  z-30 overflow-hidden h-[400px] w-[320px] flex justify-center mt-4 '>
           <ImageB
             src={Me}
             alt=''

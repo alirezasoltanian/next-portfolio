@@ -69,7 +69,7 @@ function Stickers() {
     };
   }, []);
   return (
-    <div className='relative  h-fit mt-12'>
+    <div className='relative  h-fit '>
       <div
         className={`${beba.className}  z-20 absolute right-24 md:-right-16 top-0 text-brand m-0  uppercase second-two-level-move `}
       >

@@ -188,13 +188,16 @@ html {
     --ring: 240 4.9% 83.9%;
   }
 }
-/* @keyframes flicker {
+@keyframes flickerfull {
   25% {
     opacity: 0.2;
     filter: drop-shadow(0 -3vmin 3vmin hsl(180, 0%, 0%, 0))
       drop-shadow(0 0 6vmin hsl(180, 80%, 50%, 0));
   }
-} */
+}
+.flickerfull {
+  animation: flickerfull 1s infinite var(--custom) alternate;
+}
 @keyframes flicker {
   0%,
   100% {
@@ -204,9 +207,6 @@ html {
     --opacity: 0.2;
   }
 }
-/* .flicker {
-  animation: flicker 1s infinite var(--custom) alternate;
-} */
 [data-flick] {
   --custom: linear(
     0 0% 0.5%,
