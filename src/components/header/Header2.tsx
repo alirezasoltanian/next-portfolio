@@ -18,7 +18,7 @@ const Header = ({ firstRef }) => {
     AOS.refresh();
   }, []);
   return (
-    <header ref={firstRef} id='first' className="overflow-hidden">
+    <header ref={firstRef} id='first' className='overflow-hidden'>
       <Spotlight
         className='-top-40 left-0 md:left-60 md:-top-20'
         fill='white'
@@ -51,6 +51,9 @@ const Header = ({ firstRef }) => {
               .start();
           }}
         />
+        <h1 id='header-flicker' className='flickerfull font-[Kalameh]'>
+          <span>علیرضا سلطانیان</span>
+        </h1>
         <CTA2 />
         <HeaderSocials2 />
         <div

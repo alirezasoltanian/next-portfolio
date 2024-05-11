@@ -281,7 +281,6 @@ h1 span {
 ::-webkit-scrollbar {
   /* display: none; */
   width: 12px;
-
   /* animation-duration: 100ms; */
   transition: all 1s ease;
 }
