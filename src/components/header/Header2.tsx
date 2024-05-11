@@ -26,7 +26,7 @@ const Header = ({ firstRef }) => {
       <div className='container header__container  flex flex-col items-center'>
         {/* <h1 data-aos="zoom-in-down" data-aos-duration="1500">علیرضا سلطانیان</h1>
         <h5 className="text-light"  data-aos="zoom-in-down" data-aos-duration="1000">فرانت اند دولوپر</h5> */}
-        <Typewriter
+        {/* <Typewriter
           className='text-xl'
           options={{
             autoStart: true,
@@ -50,7 +50,7 @@ const Header = ({ firstRef }) => {
               .typeString("Web3 developer (solidity & Hardhat ...)")
               .start();
           }}
-        />
+        /> */}
         <h1 id='header-flicker' className='flickerfull font-[Kalameh]'>
           <span>علیرضا سلطانیان</span>
         </h1>

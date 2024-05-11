@@ -1,8 +1,7 @@
-
 // @ts-nocheck
 
-import React, { useEffect, useRef, useState } from 'react'
-import { ButtonGooey } from '../ButtonGooey';
+import React, { useEffect, useRef, useState } from "react";
+import { ButtonGooey } from "../ButtonGooey";
 const CTA = () => {
   const divRef = useRef<HTMLButtonElement>(null);
   const [isFocused, setIsFocused] = useState(false);
@@ -42,7 +41,7 @@ const CTA = () => {
   };
   return (
     <div>
-      <div className='cta'  >
+      <div className='cta'>
         {/* <Link data-aos="fade-right" data-aos-duration="900" to='/cv/fa' className='btn'>رزومه</Link> */}
         {/* <a href="/cv-soltanian.pdf" data-aos="fade-right" data-aos-duration="900" className='btn' target="_blank" rel="noopener noreferrer">دیدن رزومه</a> */}
         <a
@@ -69,17 +68,12 @@ const CTA = () => {
           />
           دیدن رزومه
         </a>
-        <a 
-        // data-aos="fade-left" 
-        // data-aos-duration="900"
-         className='btn btn-primary' href="#contact">تماس با من</a>
-      
       </div>
-      <div className="h-1/2">
+      <div className='h-1/2'>
         <ButtonGooey />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CTA
+export default CTA;
