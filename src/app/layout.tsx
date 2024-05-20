@@ -1,12 +1,11 @@
-import type { Metadata, Viewport } from "next";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { RESUME_DATA } from "@/data/resume-data";
+import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Spotlight } from "@/components/ui/Spotlight";
-import { RESUME_DATA } from "@/data/resume-data";
-import ScrollTOStartPage from "@/components/scroll-to-start-page/scroll-to-start-page";
-import { TooltipProvider } from "@/components/ui/tooltip";
 
 const inter = Inter({ subsets: ["latin"] });
+// export const rendering = "force-static";
 
 export const metadata: Metadata = {
   title: {

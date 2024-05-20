@@ -1,20 +1,19 @@
 // @ts-nocheck
-
 "use client";
 import About from "@/components/about/About";
 import Contact from "@/components/contact/Contact";
-import Skills from "@/components/skills/Skills";
+import Experience from "@/components/experience/Experience";
 import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
 import Nav from "@/components/nav/Nav";
 import Portfolio from "@/components/portfolio/Portfolio";
-import { LampContainer } from "@/components/ui/Lamp";
-import { Spotlight } from "@/components/ui/Spotlight";
+import Skills from "@/components/skills/Skills";
 import useViewRef from "@/hooks/useViewRef";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
-import React, { useEffect, useState } from "react";
-import Experience from "@/components/experience/Experience";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+// export const rendering = "force-static";
+
 export default function Home() {
   const [active, setActive] = useState("first");
 
@@ -31,9 +30,11 @@ export default function Home() {
       portfolio: isInPortfolioView,
     };
 
-    const activeView = Object.keys(viewStates).find((key) => viewStates[key]);
+    const activeView =
+      Object.keys(viewStates).find((key) => viewStates[key]) || "";
     setActive(activeView);
   }, [isInFirstView, isInAboutView, isInExperienceView, isInPortfolioView]);
+
   return (
     <div className='homeflow  overflow-x-hidden'>
       <Link className='language' href={pathname.includes("fa") ? "/" : "/fa"}>
