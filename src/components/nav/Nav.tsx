@@ -76,8 +76,8 @@ const Nav = ({ active }) => {
   let { scrollY } = useViewportScroll();
   const pathname = usePathname();
   let scrollYOnDirectionChange = useRef(scrollY.get());
-  let lastPixelsScrolled = useRef();
-  let lastScrollDirection = useRef();
+  let lastPixelsScrolled = useRef(undefined);
+  let lastScrollDirection = useRef(undefined);
   let pixelsScrolled = useMotionValue(0);
   let background = useTransform(pixelsScrolled, scrollThreshold, [
     "rgba(2, 93, 139, 0.562)",

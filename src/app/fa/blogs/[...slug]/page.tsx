@@ -27,9 +27,9 @@ import { Grain } from "../_components/Grain";
 import TableOfContent from "../_components/Table-of-content";
 
 interface PostPageProps {
-  params: {
+  params: Promise<{
     slug: string[];
-  };
+  }>;
 }
 
 async function getPostFromParams(params: any) {
@@ -43,9 +43,8 @@ async function getPostFromParams(params: any) {
   return post;
 }
 
-export async function generateMetadata({
-  params,
-}: PostPageProps): Promise<Metadata> {
+export async function generateMetadata(props: PostPageProps): Promise<Metadata> {
+  const params = await props.params;
   const post = await getPostFromParams(params);
   console.log(post);
 
@@ -97,7 +96,8 @@ export async function generateStaticParams(): Promise<
   }));
 }
 
-export default async function PostPage({ params }: PostPageProps) {
+export default async function PostPage(props: PostPageProps) {
+  const params = await props.params;
   const post = await getPostFromParams(params);
 
   if (!post) {

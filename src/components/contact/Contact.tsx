@@ -46,7 +46,7 @@ const Contact = () => {
   const handleMouseLeave = () => {
     setOpacity(0);
   };
-  const form = useRef();
+  const form = useRef(undefined);
   const sendEmail = (e) => {
     e.preventDefault();
 

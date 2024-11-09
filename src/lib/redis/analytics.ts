@@ -1,4 +1,4 @@
-import { headers } from "next/headers";
+import { headers, type UnsafeUnwrappedHeaders } from "next/headers";
 import { parse } from "date-fns";
 
 import { redis } from "@/lib/redis";
@@ -26,7 +26,7 @@ export class Analytics {
   }
   async track(namespace: string, event: Event, opts?: TrackOptions) {
     try {
-      const headersList = headers();
+      const headersList = (headers() as unknown as UnsafeUnwrappedHeaders);
 
       const ip = headersList.get("x-forwarded-for") ?? "127.0.0.1";
       const buf = await crypto.subtle.digest(
@@ -94,7 +94,7 @@ export class Analytics {
   }
   async trackBlog(slug: string) {
     try {
-      const headersList = headers();
+      const headersList = (headers() as unknown as UnsafeUnwrappedHeaders);
 
       const ip = headersList.get("x-forwarded-for") ?? "127.0.0.1";
       if (ip) {
