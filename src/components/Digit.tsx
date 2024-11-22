@@ -16,7 +16,7 @@ export function Digit({ place, value }: { place: number; value: number }) {
   }, [animatedValue, valueRoundedToPlace]);
 
   return (
-    <div style={{ height }} className='relative w-[1ch] tabular-nums'>
+    <div style={{ height }} className="relative w-[1ch] tabular-nums">
       {[...Array(10).keys()].map((_, i) => (
         <Number key={i} mv={animatedValue} number={i} />
       ))}
@@ -39,12 +39,13 @@ export function Number({ mv, number }: { mv: MotionValue; number: number }) {
   });
 
   return (
-    <motion.span
+    <motion.div
       style={{ y }}
-      className='absolute inset-0 flex items-center justify-center'
+
+      // className='absolute inset-0 flex items-center justify-center'
     >
       {number}
-    </motion.span>
+    </motion.div>
   );
 }
 
@@ -58,8 +59,8 @@ export function DigitC({ value }: { value: number | undefined | null }) {
   return (
     <div
       style={{ fontSize }}
-      dir='ltr'
-      className='py-1 overflow-hidden   px-2 flex items-center text-center  space-x-1    leading-none '
+      dir="ltr"
+      className="py-1 overflow-hidden   px-2 flex items-center text-center  space-x-1    leading-none "
     >
       {Array.from({ length: lengthOfNumber }).map((_, index) => (
         <Digit

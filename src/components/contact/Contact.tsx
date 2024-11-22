@@ -61,12 +61,12 @@ const Contact = () => {
   };
 
   return (
-    <section id='contact relative'>
+    <section id="contact relative">
       {/* <div>
         <VisionOSIcon />
       </div> */}
       <h2>Contact Me</h2>
-      <div className='flex justify-center mb-3'>
+      <div className="flex justify-center mb-3">
         <Link
           ref={divRef}
           onMouseMove={handleMouseMove}
@@ -74,14 +74,14 @@ const Contact = () => {
           onBlur={handleBlur}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
-          href='/calendly'
-          className='btn group relative '
-          target='_blank'
-          rel='noopener noreferrer'
+          href="/calendly"
+          className="btn group relative "
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <div className='absolute inset-1 -z-10 rounded-lg bg-gradient-to-b from-[rgb(199,210,254)] to-[#8678f9] opacity-75 blur transition-all duration-500 group-hover:-inset-1 ' />
+          <div className="absolute inset-1 -z-10 rounded-lg bg-gradient-to-b from-[rgb(199,210,254)] to-[#8678f9] opacity-75 blur transition-all duration-500 group-hover:-inset-1 " />
           <div
-            className='pointer-events-none absolute inset-[-12px] -z-10 rounded-[4px] blur transition duration-300'
+            className="pointer-events-none absolute inset-[-12px] -z-10 rounded-[4px] blur transition duration-300"
             style={{
               opacity,
               background: `radial-gradient(120px circle at ${position.x}px ${position.y}px, rgba(199, 210, 254,1), transparent 40%)`,
@@ -90,46 +90,46 @@ const Contact = () => {
           <h4>Get In Meet</h4>
         </Link>
       </div>
-      <div className='container contact__container'>
-        <div className='contact__options'>
+      <div className="container contact__container">
+        <div className="contact__options">
           <article
-            data-aos='zoom-in'
-            data-aos-easing='ease-out-cubic'
-            data-aos-duration='900'
-            className='contact__option'
+            data-aos="zoom-in"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="900"
+            className="contact__option"
           >
-            <MdEmail className='contact__option-icon' />
+            <MdEmail className="contact__option-icon" />
             <h4>Email</h4>
-            <h5>asoltanian76@gmail.com</h5>
-            <a href='mailto:asoltanian76@gmail.com' target='_blank'>
+            <h5 className="break-words">asoltanian76@gmail.com</h5>
+            <a href="mailto:asoltanian76@gmail.com" target="_blank">
               Send{" "}
             </a>
           </article>
           <article
-            data-aos='zoom-in'
-            data-aos-easing='ease-out-cubic'
-            data-aos-duration='1200'
-            className='contact__option'
+            data-aos="zoom-in"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1200"
+            className="contact__option"
           >
-            <FaTelegramPlane className='contact__option-icon' />
+            <FaTelegramPlane className="contact__option-icon" />
             <h4>telegram</h4>
             <h5>@ali76rez</h5>
-            <a href='https://t.me/ali76rez' target='_blank'>
+            <a href="https://t.me/ali76rez" target="_blank">
               Send{" "}
             </a>
           </article>
           <article
-            data-aos='zoom-in'
-            data-aos-easing='ease-out-cubic'
-            data-aos-duration='1500'
-            className='contact__option'
+            data-aos="zoom-in"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1500"
+            className="contact__option"
           >
-            <IoLogoWhatsapp className='contact__option-icon' />
+            <IoLogoWhatsapp className="contact__option-icon" />
             <h4>Whatsapp</h4>
             <h5>number</h5>
             <a
-              target='_blank'
-              href='https://api.whatsapp.com/send?phone=1XXXXXXXXXX'
+              target="_blank"
+              href="https://api.whatsapp.com/send?phone=1XXXXXXXXXX"
             >
               Send{" "}
             </a>
@@ -137,25 +137,25 @@ const Contact = () => {
         </div>
         {/* END OF CONTACT OPTION */}
         <form
-          data-aos='zoom-in'
-          data-aos-easing='ease-out-cubic'
-          data-aos-duration='700'
+          data-aos="zoom-in"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="700"
           ref={form}
           onSubmit={sendEmail}
         >
           <input
-            type='text'
-            name='name'
-            placeholder='Your Full Name'
+            type="text"
+            name="name"
+            placeholder="Your Full Name"
             required
           />
-          <input type='email' name='Email' placeholder='Your Email' required />
+          <input type="email" name="Email" placeholder="Your Email" required />
           <textarea
-            name='message'
-            rows='7'
-            placeholder='Your Message'
+            name="message"
+            rows="7"
+            placeholder="Your Message"
           ></textarea>
-          <button type='submit' className='btn btn-primary'>
+          <button type="submit" className="btn btn-primary">
             Send Message
           </button>
         </form>

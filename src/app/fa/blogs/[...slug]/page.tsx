@@ -43,7 +43,9 @@ async function getPostFromParams(params: any) {
   return post;
 }
 
-export async function generateMetadata(props: PostPageProps): Promise<Metadata> {
+export async function generateMetadata(
+  props: PostPageProps
+): Promise<Metadata> {
   const params = await props.params;
   const post = await getPostFromParams(params);
   console.log(post);
@@ -88,13 +90,13 @@ export async function generateMetadata(props: PostPageProps): Promise<Metadata> 
   };
 }
 
-export async function generateStaticParams(): Promise<
-  PostPageProps["params"][]
-> {
-  return allPosts.map((post) => ({
-    slug: post.slugAsParams.split("/"),
-  }));
-}
+// export async function generateStaticParams(): Promise<
+//   PostPageProps["params"][]
+// > {
+//   return allPosts.map((post) => ({
+//     slug: post.slugAsParams.split("/"),
+//   }));
+// }
 
 export default async function PostPage(props: PostPageProps) {
   const params = await props.params;
@@ -114,62 +116,62 @@ export default async function PostPage(props: PostPageProps) {
   console.log(params?.slug?.join("/"), params?.slug, views[0]);
 
   return (
-    <div className='flex justify-between blog-background-sm'>
-      <div dir='rtl' className=' w-full '>
-        <div className=' text-sm sticky w-[80%] top-5 mt-32  xl:inline-flex mr-[25px] '>
+    <div className="flex justify-between blog-background-sm">
+      <div dir="rtl" className=" w-full ">
+        <div className=" text-sm sticky w-[80%] top-5 mt-32  xl:inline-flex mr-[25px] ">
           <TableOfContent heading={post.headings} />
         </div>
       </div>
 
       <article
-        dir='rtl'
-        className='container relative max-w-3xl py-6 lg:py-10 blog-text '
+        dir="rtl"
+        className="container relative max-w-3xl py-6 lg:py-10 blog-text "
       >
         <Link
-          href='/blog'
+          href="/blog"
           className={cn(
             buttonVariants({ variant: "ghost" }),
             "absolute left-[-200px] top-14 hidden xl:inline-flex"
           )}
         >
           دیدن همه پست ها
-          <ChevronLeft className='mr-2 size-4' />
+          <ChevronLeft className="mr-2 size-4" />
         </Link>
         <div>
-          <h1 className='my-2 blog-title inline-block font-heading text-xl md:text-4xl  leading-tight lg:text-5xl'>
+          <h1 className="my-2 blog-title inline-block font-heading text-xl md:text-4xl  leading-tight lg:text-5xl">
             {post.title}
           </h1>
-          <div className='flex  gap-4 mt-2 blog-text'>
+          <div className="flex  gap-4 mt-2 blog-text">
             {post.date && (
               <time dateTime={post.date}>{formatDateG(post.date)}</time>
             )}
-            <div className='flex gap-1'>
+            <div className="flex gap-1">
               <View />
-              <div className='  overflow-hidden   px-2 text-foreground'>
+              <div className="  overflow-hidden   px-2 text-foreground">
                 <DigitC value={views[0]} />
               </div>
             </div>
             <p> خواندن {calculateReadingTime(post.body.code)} دقیقه</p>
           </div>
           {authors?.length ? (
-            <div className='mt-4 flex space-x-4'>
+            <div className="mt-4 flex space-x-4">
               {authors.map((author) =>
                 author ? (
                   <Link
                     key={author._id}
                     href={`https://twitter.com/${author.twitter}`}
-                    className='flex items-center space-x-2 text-sm'
+                    className="flex items-center space-x-2 text-sm"
                   >
                     <Image
                       src={author.avatar}
                       alt={author.title}
                       width={800}
                       height={1200}
-                      className='rounded-full bg-white'
+                      className="rounded-full bg-white"
                     />
-                    <div className='flex-1 text-left leading-tight'>
-                      <p className='font-medium'>{author.title}</p>
-                      <p className='text-[12px] text-muted-foreground'>
+                    <div className="flex-1 text-left leading-tight">
+                      <p className="font-medium">{author.title}</p>
+                      <p className="text-[12px] text-muted-foreground">
                         @{author.twitter}
                       </p>
                     </div>
@@ -180,7 +182,7 @@ export default async function PostPage(props: PostPageProps) {
           ) : null}
         </div>
         {post.image && (
-          <div className='relative'>
+          <div className="relative">
             <Grain />
 
             <Image
@@ -188,27 +190,27 @@ export default async function PostPage(props: PostPageProps) {
               alt={post.title}
               width={720}
               height={405}
-              className='my-8 rounded-md border bg-muted transition-colors'
+              className="my-8 rounded-md border bg-muted transition-colors"
               priority
             />
           </div>
         )}
         <Mdx code={post.body.code} />
-        <hr className='mt-12' />
-        <div className='flex justify-center py-6 lg:py-10'>
+        <hr className="mt-12" />
+        <div className="flex justify-center py-6 lg:py-10">
           <Link
-            href='/blog'
+            href="/blog"
             className={cn(buttonVariants({ variant: "ghost" }))}
           >
             See all posts
-            <ChevronLeft className='mr-2 size-4' />
+            <ChevronLeft className="mr-2 size-4" />
           </Link>
         </div>
         <React.Suspense>
           <BlogView blogId={params?.slug?.join("/")} />
         </React.Suspense>
       </article>
-      <div className=' w-full '></div>
+      <div className=" w-full "></div>
     </div>
   );
 }

@@ -19,27 +19,27 @@ const random = [
     github: "https://github.com/alirezasoltanian",
     demo: "https://noghteh-khat.ir/",
   },
-  {
-    id: 12,
-    image: "../../assets/framer.png",
-    name: "frontend",
-    title: "Tools : Nextjs13 , Typescript , Framer-motion , Tailwind  ",
-    disable: "",
+  // {
+  //   id: 12,
+  //   image: "../../assets/framer.png",
+  //   name: "frontend",
+  //   title: "Tools : Nextjs13 , Typescript , Framer-motion , Tailwind  ",
+  //   disable: "",
 
-    github: "https://github.com/alirezasoltanian",
-    demo: "https://framer-motion-page.vercel.app/",
-  },
+  //   github: "https://github.com/alirezasoltanian",
+  //   demo: "https://framer-motion-page.vercel.app/",
+  // },
   //1
-  {
-    id: 1,
-    image: "../../assets/Slicwee1.png",
-    name: "frontend",
-    title: "Tools : React , Javascript , Axios , React-router-dom , Swiper  ",
-    disable: "",
+  // {
+  //   id: 1,
+  //   image: "../../assets/Slicwee1.png",
+  //   name: "frontend",
+  //   title: "Tools : React , Javascript , Axios , React-router-dom , Swiper  ",
+  //   disable: "",
 
-    github: "https://github.com/alirezasoltanian/Responsive_Store-",
-    demo: "https://responsive-store.vercel.app/home",
-  },
+  //   github: "https://github.com/alirezasoltanian/Responsive_Store-",
+  //   demo: "https://responsive-store.vercel.app/home",
+  // },
 
   // {
   //   id: 2,
@@ -73,27 +73,27 @@ const random = [
     demo: "https://www.figma.com/file/jQ8ZwlFSv5qumlriZQhXL8/ProjectFigma?node-id=0%3A1",
   },
   //3
-  {
-    id: 5,
-    image: "../../assets/Slic12e2.png",
-    name: "frontend",
-    title: "Tools : Bootstrap , Html , Css  ",
-    disable: "",
+  // {
+  //   id: 5,
+  //   image: "../../assets/Slic12e2.png",
+  //   name: "frontend",
+  //   title: "Tools : Bootstrap , Html , Css  ",
+  //   disable: "",
 
-    github: "https://github.com/alirezasoltanian/bootstrap-project",
-    demo: "https://bootstrap-project-eta.vercel.app/",
-  },
+  //   github: "https://github.com/alirezasoltanian/bootstrap-project",
+  //   demo: "https://bootstrap-project-eta.vercel.app/",
+  // },
   //4
-  {
-    id: 6,
-    image: "../../assets/DribbbaleshotHD-2.png",
-    name: "frontend",
-    title: "Tools : React , MaterialUI , GraphQL , HyGraph , ReactRouterDom ",
-    disable: "",
+  // {
+  //   id: 6,
+  //   image: "../../assets/DribbbaleshotHD-2.png",
+  //   name: "frontend",
+  //   title: "Tools : React , MaterialUI , GraphQL , HyGraph , ReactRouterDom ",
+  //   disable: "",
 
-    github: "https://github.com/alirezasoltanian/Blogram",
-    demo: "https://blogram.vercel.app/",
-  },
+  //   github: "https://github.com/alirezasoltanian/Blogram",
+  //   demo: "https://blogram.vercel.app/",
+  // },
   //5
   {
     id: 7,
@@ -131,16 +131,16 @@ const random = [
     demo: "https://swap-stickygum.vercel.app/",
   },
   //8
-  {
-    id: 10,
-    image: "../../assets/DribbbleshotHD-6.png",
-    name: "frontend",
-    title: "Tools : Nextjs , Typescript , Tailwind    ",
-    disable: "",
+  // {
+  //   id: 10,
+  //   image: "../../assets/DribbbleshotHD-6.png",
+  //   name: "frontend",
+  //   title: "Tools : Nextjs , Typescript , Tailwind    ",
+  //   disable: "",
 
-    github: "https://github.com/alirezasoltanian/Netflix",
-    demo: "https://netflix-chi-five.vercel.app/",
-  },
+  //   github: "https://github.com/alirezasoltanian/Netflix",
+  //   demo: "https://netflix-chi-five.vercel.app/",
+  // },
 ];
 const figma = [random[3]];
 
@@ -161,10 +161,10 @@ const Portfolio = ({ portfolioRef }) => {
   }, [activeGenre]);
 
   return (
-    <section ref={portfolioRef} id='portfolio' className='portfolio'>
+    <section ref={portfolioRef} id="portfolio" className="portfolio">
       <h5>پروژه های من</h5>
       <h2>نمونه کارها</h2>
-      <div className='button-choose'>
+      <div className="button-choose">
         <button
           style={{ borderRadius: "10px 0px 0px 10px" }}
           className={activeGenre === random ? "btn btn-primary" : "btn"}
@@ -195,12 +195,12 @@ const Portfolio = ({ portfolioRef }) => {
         </button>
       </div>
       <div
-        data-aos='zoom-in'
-        data-aos-easing='ease-out-cubic'
-        data-aos-duration='900'
-        className='container portfolio__container'
+        data-aos="zoom-in"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="900"
+        className="container portfolio__container"
       >
-        <AnimatePresence mode='wait'>
+        <AnimatePresence mode="wait">
           {filtered.map(({ id, image, title, github, demo }, i) => {
             return (
               <motion.artifact
@@ -222,35 +222,35 @@ const Portfolio = ({ portfolioRef }) => {
                     scale: 0,
                   },
                 }}
-                initial='hidden'
-                animate='visible'
-                exit='removed'
+                initial="hidden"
+                animate="visible"
+                exit="removed"
                 custom={i}
                 key={id}
                 style={{
                   backgroundImage: `linear-gradient(rgba(229,229,229,0.7) 0%, rgba(150,150,150 , 0.93) 100%) , url(${image})`,
                 }}
-                className='portfolio__item'
+                className="portfolio__item"
               >
-                <div className='portfolio__cover'>
-                  <div className='portfolio__item-image'>
-                    <img src={image} alt='' />
+                <div className="portfolio__cover">
+                  <div className="portfolio__item-image">
+                    <img src={image} alt="" />
                   </div>
                   <h3>{title}</h3>
-                  <div className='portfolio__item-cta'>
+                  <div className="portfolio__item-cta">
                     <a
                       href={github}
-                      rel='noreferrer'
-                      className='btn'
-                      target='_blank'
+                      rel="noreferrer"
+                      className="btn"
+                      target="_blank"
                     >
                       سورس کد
                     </a>
                     <a
                       href={demo}
-                      rel='noreferrer'
-                      target='_blank'
-                      className='btn btn-primary'
+                      rel="noreferrer"
+                      target="_blank"
+                      className="btn btn-primary"
                     >
                       مشاهده آنلاین
                     </a>
