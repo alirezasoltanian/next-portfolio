@@ -58,10 +58,10 @@ export const ButtonGooey = () => {
             <feGaussianBlur
               in='SourceGraphic'
               stdDeviation='10'
-              result='blur'
+              result='blur-sm'
             />
             <feColorMatrix
-              in='blur'
+              in='blur-sm'
               mode='matrix'
               values='1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10'
               result='gooey'

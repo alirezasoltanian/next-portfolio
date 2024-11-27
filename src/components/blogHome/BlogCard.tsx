@@ -14,7 +14,7 @@ function BlogCard({ post }: Props) {
   return (
     <div className=' group relative  z-20 flex overflow-hidden text-brand-foreground'>
       <div className='z-20 relative overflow-hidden'>
-        <div className='absolute inset-0 z-10 -translate-x-full bg-transparent bg-gradient-to-r from-transparent via-brand-foreground bg-clip-border group-hover:translate-x-full group-hover:transition group-hover:duration-1000' />
+        <div className='absolute inset-0 z-10 -translate-x-full bg-transparent bg-linear-to-r from-transparent via-brand-foreground bg-clip-border group-hover:translate-x-full group-hover:transition group-hover:duration-1000' />
         <div
           style={{
             // minHeight: "100%",

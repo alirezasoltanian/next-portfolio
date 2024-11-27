@@ -18,7 +18,7 @@
 
 //       Is there a better way to control the order in which arbitrary properties are generated?
 //      -->
-//     <span className="glow absolute inset-[calc(var(--border-width)*-1)] rounded-[length:var(--border-radius)] border-[length:var(--border-width)] border-transparent [mask:linear-gradient(transparent,transparent),linear-gradient(white,white)] ![mask-clip:padding-box,_border-box] ![mask-composite:intersect]">
+//     <span className="glow absolute inset-[calc(var(--border-width)*-1)] rounded-[length:var(--border-radius)] border-[length:var(--border-width)] border-transparent [mask:linear-gradient(transparent,transparent),linear-gradient(white,white)] [mask-clip:padding-box,border-box]! [mask-composite:intersect]!">
 //       <!--
 //       Glowy spinny square
 //       ---

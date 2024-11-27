@@ -1,22 +1,180 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  box-sizing: border-box;
-  list-style: none;
-  text-decoration: none;
+@theme {
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-brand: var(--color-bg);
+  --color-brand-foreground: hsl(var(--color-primary-hsl));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --background-image-vc-border-gradient: radial-gradient(
+    at left top,
+    oklch(0.551 0.027 264.364),
+    50px,
+    oklch(0.278 0.033 256.848) 50%
+  );
+  --background-image-custom-vc-border-gradient: radial-gradient(
+    at left top,
+    oklch(0.278 0.033 256.848),
+    50px,
+    oklch(0.551 0.027 264.364) 50%
+  );
+  --background-image-light-custom-gradient: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.25) 0%,
+    rgba(0, 0, 0, 0.5) 25%,
+    rgba(0, 0, 0, 0.02) 100%
+  );
+  --background-image-light-custom-y-gradient: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.25) 0%,
+    rgba(0, 0, 0, 0.5) 25%,
+    rgba(0, 0, 0, 0.02) 90%
+  );
+  --background-image-custom-gradient: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.18) 25%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
+  --animate-ripple: ripple var(--duration, 1.5s) ease calc(var(--i, 0) * 0.1s)
+    infinite;
+  --animate-hover-tada: hover-tada 1s ease-in-out;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+  @keyframes spotlight {
+    0% {
+      opacity: 0;
+      transform: translate(-72%, -62%) scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -40%) scale(1);
+    }
+  }
+  @keyframes ripple {
+    50% {
+      transform: scale(var(--scale, 1.25));
+    }
+  }
+  @keyframes hover-tada {
+    0% {
+      transform: scale(1);
+    }
+    10% {
+      transform: scale(0.9) rotate(-3deg);
+    }
+    20% {
+      transform: scale(0.9) rotate(-3deg);
+    }
+    30% {
+      transform: scale(1.1) rotate(3deg);
+    }
+    40% {
+      transform: scale(1.1) rotate(-3deg);
+    }
+    50% {
+      transform: scale(1.1) rotate(3deg);
+    }
+    60% {
+      transform: scale(1.1) rotate(-3deg);
+    }
+    70% {
+      transform: scale(1.1) rotate(3deg);
+    }
+    80% {
+      transform: scale(1.1) rotate(-3deg);
+    }
+    90% {
+      transform: scale(1.1) rotate(3deg);
+    }
+    100% {
+      transform: scale(1) rotate(0);
+    }
+  }
 }
 
-html {
-  scroll-behavior: smooth;
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
 }
 
-/* @media (prefers-color-scheme: dark) {
+@layer utilities {
+  * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 0, 0, 0;
     --background-start-rgb: 214, 219, 220;
@@ -36,35 +194,42 @@ html {
   }
 } */
 
-@font-face {
-  font-family: Kalameh;
-  src: url(/public/assets//fonts/KALAMEHFANUM-BOLD.TTF);
-}
-@font-face {
-  font-family: Iransansx;
-  src: url(/public/assets//fonts/IRANSANSX-REGULAR.TTF);
-}
+  @font-face {
+    font-family: Kalameh;
+    src: url(/public/assets//fonts/KALAMEHFANUM-BOLD.TTF);
+  }
+  @font-face {
+    font-family: Iransansx;
+    src: url(/public/assets//fonts/IRANSANSX-REGULAR.TTF);
+  }
 
-.blog-title {
-  font-family: Kalameh;
+  .blog-title {
+    font-family: Kalameh;
+  }
+  .blog-text {
+    font-family: Iransansx;
+  }
+  a,
+  h4,
+  h2 {
+    font-family: Iransansx;
+  }
+  .blog-background {
+    background: repeating-conic-gradient(
+        #1a1a2f 0 0.00011%,
+        #b7020200 0 0.0002%
+      )
+      40% 40%/3000px 3000px;
+  }
+  .blog-background-sm {
+    background: repeating-conic-gradient(
+        #1a1a2f 0 0.00011%,
+        #b7020200 0 0.0002%
+      )
+      40% 40%/1000px 1000px;
+  }
+  /* @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,600&family=Press+Start+2P&display=swap"); */
 }
-.blog-text {
-  font-family: Iransansx;
-}
-a,
-h4,
-h2 {
-  font-family: Iransansx;
-}
-.blog-background {
-  background: repeating-conic-gradient(#1a1a2f 0 0.00011%, #b7020200 0 0.0002%)
-    40% 40%/3000px 3000px;
-}
-.blog-background-sm {
-  background: repeating-conic-gradient(#1a1a2f 0 0.00011%, #b7020200 0 0.0002%)
-    40% 40%/1000px 1000px;
-}
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,600&family=Press+Start+2P&display=swap"); */
 
 @layer base {
   :root {

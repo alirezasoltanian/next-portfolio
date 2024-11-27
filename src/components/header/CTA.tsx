@@ -58,9 +58,9 @@ const CTA = () => {
           target='_blank'
           rel='noopener noreferrer'
         >
-          <div className='absolute inset-1 -z-10 rounded-lg bg-gradient-to-b from-[rgb(199,210,254)] to-[#8678f9] opacity-75 blur transition-all duration-500 group-hover:-inset-1 ' />
+          <div className='absolute inset-1 -z-10 rounded-lg bg-linear-to-b from-[rgb(199,210,254)] to-[#8678f9] opacity-75 blur-sm transition-all duration-500 group-hover:-inset-1 ' />
           <div
-            className='pointer-events-none absolute inset-[-12px] -z-10 rounded-[4px] blur transition duration-300'
+            className='pointer-events-none absolute inset-[-12px] -z-10 rounded-[4px] blur-sm transition duration-300'
             style={{
               opacity,
               background: `radial-gradient(120px circle at ${position.x}px ${position.y}px, rgba(199, 210, 254,1), transparent 40%)`,

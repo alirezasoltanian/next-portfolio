@@ -24,11 +24,11 @@ function ExperienceCard({ work }: { work: Work }) {
   }
   return (
     <div
-      className='group relative max-w-md rounded-xl border border-white/60 bg-gray-900/90 p-1 shadow-2xl'
+      className="group relative max-w-md rounded-xl  bg-gray-900/90 p-1 shadow-2xl"
       onMouseMove={handleMouseMove}
     >
       <motion.div
-        className='pointer-events-none absolute -inset-px rounded-xl  transition duration-300 group-hover:opacity-100'
+        className="pointer-events-none absolute -inset-px rounded-xl  transition duration-300 group-hover:opacity-100"
         style={{
           background: useMotionTemplate`
         radial-gradient(
@@ -53,9 +53,9 @@ function ExperienceCard({ work }: { work: Work }) {
           eum ullam nostrum atque quam.
         </p>
       </div> */}
-      <Card className='relative bg-gray-900 text-white'>
+      <Card className="relative bg-gray-900 text-white border-transparent">
         <motion.div
-          className='pointer-events-none absolute -inset-px rounded-xl  transition duration-300 group-hover:opacity-100'
+          className="pointer-events-none absolute -inset-px rounded-xl  transition duration-300 group-hover:opacity-100"
           style={{
             background: useMotionTemplate`
         radial-gradient(
@@ -67,27 +67,27 @@ function ExperienceCard({ work }: { work: Work }) {
           }}
         />
         <CardHeader>
-          <div className='flex items-center justify-between gap-x-2 text-base '>
-            <h3 className='inline-flex items-center justify-center gap-x-1 font-semibold leading-none'>
-              <a className='hover:underline' href={work.link}>
+          <div className="flex items-center justify-between gap-x-2 text-base ">
+            <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
+              <a className="hover:underline" href={work.link}>
                 {work.company}
               </a>
             </h3>
-            <div className='text-sm tabular-nums text-gray-500'>
+            <div className="text-sm tabular-nums text-gray-500">
               {/* {work.start} - {work.end} */}
               {work.start}
             </div>
           </div>
 
-          <h4 className='font-mono text-sm leading-none'>{work.title}</h4>
+          <h4 className="font-mono text-sm leading-none">{work.title}</h4>
         </CardHeader>
-        <CardContent className=' text-xs'>
+        <CardContent className=" text-xs">
           <div>{work.description}</div>
-          <div className='inline-flex gap-x-1 mt-2'>
+          <div className="inline-flex gap-x-1 mt-2">
             {work.badges.map((badge) => (
               <Badge
                 // variant='secondary'
-                className='align-middle text-xs  bg-brand bg-opacity-15'
+                className="align-middle text-xs  bg-brand bg-opacity-15"
                 key={badge}
               >
                 {badge}

@@ -213,7 +213,7 @@ export const VisionOSIcon = () => {
       onMouseLeave={handleMouseLeave}
     >
       <motion.div
-        className=" relative flex h-[102.4px] w-[102.4px] items-center justify-center rounded-full bg-gradient-to-t from-[#1F6EEF] from-0% to-[#1DD8F9] to-100%"
+        className=" relative flex h-[102.4px] w-[102.4px] items-center justify-center rounded-full bg-linear-to-t from-[#1F6EEF] from-0% to-[#1DD8F9] to-100%"
         ref={ref}
         style={{
           rotateX,
