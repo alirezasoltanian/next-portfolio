@@ -1,7 +1,6 @@
 import type { Config } from "tailwindcss";
 const plugin = require("tailwindcss/plugin");
 const config = {
-  darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
@@ -19,7 +18,6 @@ const config = {
     // },
 
     extend: {
-      safelist: ["animate-ripple"],
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

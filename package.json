@@ -47,7 +47,6 @@
     "remark-code-import": "^1.2.0",
     "sharp": "^0.33.5",
     "tailwind-merge": "^2.5.4",
-    "tailwindcss-animate": "^1.0.7",
     "typewriter-effect": "^2.21.0",
     "vaul": "^1.1.1"
   },
