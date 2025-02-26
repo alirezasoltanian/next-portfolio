@@ -1,0 +1,4 @@
+alirezasoltanian.ir {
+    reverse_proxy fn-solop:3000
+}
+
