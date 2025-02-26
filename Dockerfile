@@ -1,22 +1,31 @@
-# Use the official lightweight Node.js 18 image.
-# https://hub.docker.com/_/node
-FROM node:18-slim
+FROM node:22.11.0-slim AS base
 
-# Create and change to the app directory.
-WORKDIR /usr/src/app
+# Stage 1: Install dependencies
+FROM base AS deps
+WORKDIR /app
+# Install system dependencies for node-gyp
+RUN apt-get update && apt-get install -y \
+    python3 \
+    python3-pip \
+    make \
+    g++ \
+    && rm -rf /var/lib/apt/lists/*
+COPY package.json package-lock.json ./
+RUN npm install --frozen-lockfile
 
-# Copy application dependency manifests to the container image.
-# A wildcard is used to ensure both package.json AND package-lock.json are copied.
-COPY package*.json ./
-
-# Install all dependencies.
-RUN npm install --force
-
-# Copy local code to the container image.
+# Stage 2: Build the application
+FROM base AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-
-# Build the app
 RUN npm run build
+# Stage 3: Production server
+FROM base AS runner
+WORKDIR /app
+ENV NODE_ENV=production
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/.next/standalone ./
+COPY --from=builder /app/.next/static ./.next/static
 
-# Run the web service on container startup.
-CMD [ "npm", "start" ]
+EXPOSE 3005
+CMD ["node", "server.js"]

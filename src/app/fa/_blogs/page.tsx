@@ -22,19 +22,19 @@ export default async function BlogPage() {
     return acc;
   }, {} as Record<string, number>);
   return (
-    <div className='blog-background  min-h-dvh  '>
+    <div className="blog-background  min-h-dvh  ">
       <div
-        dir='rtl'
+        dir="rtl"
         style={{
           minHeight: "100%",
           // background:
           //   "repeating-conic-gradient(#000 0 0.0001%,#0000 0 0.0002%) 60% 60%/3000px 3000px",
         }}
-        className=' container max-w-4xl py-6 lg:py-10 blog-text'
+        className=" container max-w-4xl py-6 lg:py-10 blog-text"
       >
-        <div className='flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8'>
-          <div className='flex-1 space-y-4'>
-            <h1 className='inline-block font-heading text-brand-foreground text-4xl tracking-tight lg:text-5xl '>
+        <div className="flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8">
+          <div className="flex-1 space-y-4">
+            <h1 className="inline-block font-heading text-brand-foreground text-4xl tracking-tight lg:text-5xl ">
               آخرین مطالب
             </h1>
             {/* <p className='text-xl text-muted-foreground blog-title'>
@@ -42,9 +42,9 @@ export default async function BlogPage() {
             </p> */}
           </div>
         </div>
-        <hr className='my-8' />
+        <hr className="my-8" />
         {posts?.length ? (
-          <div className='grid gap-10 sm:grid-cols-2'>
+          <div className="grid gap-10 sm:grid-cols-2">
             {posts.map((post, index) => (
               <BlogCard post={post} key={index} />
               //  {post.image && (

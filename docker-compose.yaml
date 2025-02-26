@@ -1,13 +1,36 @@
 version: "3.8"
 
 services:
-  app:
+  web:
     build: .
     ports:
-      - "3000:3000"
+      - "3005:3005"
     environment:
       - NODE_ENV=production
-      - NEXT_PUBLIC_APP_URL = http://localhost:3000
-      - REDIS_URL=https://apn1-engaging-quagga-34327.upstash.io
-      - REDIS_SECRET=AYYXACQgNTk0NjBjNWYtYmZjYS00YjQ0LTllNTAtNDczNGMyNWQ3ZDM4ZTQwMWIwNzZmOGUzNGI5YThhZDJhNmQzYWEyYzhjODE=
     restart: unless-stopped
+    container_name: fn-solop
+    networks:
+      - my_network
+
+  caddy:
+    image: caddy:2
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
+    networks:
+      - my_network
+
+volumes:
+  caddy_data:
+  caddy_config:
+  postgres_data:
+
+networks:
+  my_network:
+    name: my_network
+    driver: bridge

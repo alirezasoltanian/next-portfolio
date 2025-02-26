@@ -75,10 +75,7 @@ const components = {
     />
   ),
   p: ({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>) => (
-    <p
-      className={cn("leading-7 not-first:mt-6", className)}
-      {...props}
-    />
+    <p className={cn("leading-7 not-first:mt-6", className)} {...props} />
   ),
   ul: ({ className, ...props }: React.HTMLAttributes<HTMLUListElement>) => (
     <ul className={cn("my-6 ml-6 list-disc", className)} {...props} />
@@ -104,10 +101,10 @@ const components = {
     <img className={cn("rounded-md", className)} alt={alt} {...props} />
   ),
   hr: ({ ...props }: React.HTMLAttributes<HTMLHRElement>) => (
-    <hr className='my-4 md:my-8' {...props} />
+    <hr className="my-4 md:my-8" {...props} />
   ),
   table: ({ className, ...props }: React.HTMLAttributes<HTMLTableElement>) => (
-    <div className='my-6 w-full overflow-y-auto'>
+    <div className="my-6 w-full overflow-y-auto">
       <table className={cn("w-full", className)} {...props} />
     </div>
   ),
@@ -160,11 +157,9 @@ interface MdxProps {
 }
 
 export function Mdx({ code }: MdxProps) {
-  const Component = useMDXComponent(code);
+  // const Component = useMDXComponent(code);
 
   return (
-    <div className='mdx'>
-      <Component components={components} />
-    </div>
+    <div className="mdx">{/* <Component components={components} /> */}</div>
   );
 }

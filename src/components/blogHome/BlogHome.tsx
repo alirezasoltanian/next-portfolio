@@ -18,19 +18,19 @@ function BlogHome() {
 
   // const blogs = await db.post.findMany()
   return (
-    <div className='min-h-[100vh] w-[100%]  px-12'>
-      <div className='mb-5 flex justify-between '>
-        <p className='mr-12 text-xl font-bold'>بلاگ</p>
+    <div className="min-h-[100vh] w-[100%]  px-12">
+      <div className="mb-5 flex justify-between ">
+        <p className="mr-12 text-xl font-bold">بلاگ</p>
         <Link
-          href='/blog'
+          href="/blog"
           className={cn(buttonVariants({ variant: "ghost" }), " ml-12 ")}
         >
           موارد بیشتر
           <ChevronLeft />
         </Link>
       </div>
-      <div className='light-bg-custom-gradient h-[1px] dark:bg-custom-gradient' />
-      <div className='mt-10 flex flex-wrap justify-center  gap-5'>
+      <div className="light-bg-custom-gradient h-[1px] dark:bg-custom-gradient" />
+      <div className="mt-10 flex flex-wrap justify-center  gap-5">
         {posts?.length &&
           posts.map((post, index) => (
             <div key={post._id}>
