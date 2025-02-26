@@ -1,4 +1,4 @@
 alirezasoltanian.ir {
-    reverse_proxy fn-solop:3005
+    reverse_proxy portfolio:3005
 }
 

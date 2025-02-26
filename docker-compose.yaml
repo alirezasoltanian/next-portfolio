@@ -8,7 +8,7 @@ services:
     environment:
       - NODE_ENV=production
     restart: unless-stopped
-    container_name: fn-solop
+    container_name: portfolio
     networks:
       - my_network
 
