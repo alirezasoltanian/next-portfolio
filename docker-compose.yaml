@@ -10,7 +10,7 @@ services:
     restart: unless-stopped
     container_name: portfolio
     networks:
-      - my_network
+      - my_network_2
 
   caddy:
     image: caddy:2
@@ -23,7 +23,7 @@ services:
       - caddy_data:/data
       - caddy_config:/config
     networks:
-      - my_network
+      - my_network_2
 
 volumes:
   caddy_data:
@@ -31,6 +31,6 @@ volumes:
   postgres_data:
 
 networks:
-  my_network:
-    name: my_network
+  my_network_2:
+    name: my_network_2
     driver: bridge
