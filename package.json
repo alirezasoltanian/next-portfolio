@@ -10,7 +10,7 @@
     "turbo": " next dev --turbo",
     "ncu": "ncu -i --format group",
     "knip": "knip",
-    "start": "next start",
+    "start": "next start -p 3005",
     "lint": "next lint"
   },
   "dependencies": {
