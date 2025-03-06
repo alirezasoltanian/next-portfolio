@@ -10,7 +10,6 @@ import HeaderSocials from "./HeaderSocials";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import Typewriter from "typewriter-effect";
 import { Spotlight } from "../ui/Spotlight";
 import ImageB from "@/components/ImageB";
 import Stickers from "./stickers";
