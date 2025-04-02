@@ -1,4 +1,4 @@
-import { withContentlayer } from "next-contentlayer";
+// import { withContentlayer } from "next-contentlayer";
 await import("./src/env.js");
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -45,4 +45,5 @@ const nextConfig = {
 };
 
 // export default nextConfig;
-export default withContentlayer(nextConfig);
+// export default withContentlayer(nextConfig);
+export default nextConfig;
