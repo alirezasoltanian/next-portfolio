@@ -42,7 +42,7 @@ const CTA = () => {
   };
   return (
     <div>
-      <div className='cta'>
+      <div className="cta">
         {/* <Link data-aos="fade-right" data-aos-duration="900" to='/cv' className='btn'>SEE CV</Link> */}
         <a
           ref={divRef}
@@ -51,16 +51,16 @@ const CTA = () => {
           onBlur={handleBlur}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
-          href='/en-cv-soltanian.pdf'
+          href="/en-cv-soltanian.pdf"
           // data-aos='fade-right'
           // data-aos-duration='900'
-          className='btn group relative'
-          target='_blank'
-          rel='noopener noreferrer'
+          className="btn group relative"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <div className='absolute inset-1 -z-10 rounded-lg bg-linear-to-b from-[rgb(199,210,254)] to-[#8678f9] opacity-75 blur-sm transition-all duration-500 group-hover:-inset-1 ' />
+          <div className="absolute inset-1 -z-10 rounded-lg bg-linear-to-b from-[rgb(199,210,254)] to-[#8678f9] opacity-75 blur-sm transition-all duration-500 group-hover:-inset-1 " />
           <div
-            className='pointer-events-none absolute inset-[-12px] -z-10 rounded-[4px] blur-sm transition duration-300'
+            className="pointer-events-none absolute inset-[-12px] -z-10 rounded-[4px] blur-sm transition duration-300"
             style={{
               opacity,
               background: `radial-gradient(120px circle at ${position.x}px ${position.y}px, rgba(199, 210, 254,1), transparent 40%)`,
@@ -68,16 +68,8 @@ const CTA = () => {
           />
           SEE CV
         </a>
-        {/* <a
-          // data-aos='fade-left'
-          // data-aos-duration='900'
-          className='btn btn-primary'
-          href='#contact'
-        >
-          Let&apos;s Talk
-        </a> */}
       </div>
-      <div className='h-1/2'>
+      <div className="h-1/2">
         <ButtonGooey />
       </div>
     </div>

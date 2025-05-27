@@ -2,17 +2,16 @@
 
 "use client";
 
-import React, { useEffect, useState } from "react";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import useViewRef from "../../hooks/useViewRef";
 import About from "../about/About";
-import Contact from "../contact/Contact";
-import Experience from "../skills/Skills";
 import Footer from "../footer/Footer";
 import Header from "../header/Header";
 import Nav from "../nav/Nav";
 import Portfolio from "../portfolio/Portfolio";
+import Experience from "../skills/Skills";
 import "./home.css";
-import useViewRef from "../../hooks/useViewRef";
-import Link from "next/link";
 // import Services from '../services/Services'
 // import Testimonials from '../testimonials/Testimonials'
 export default function Home() {
@@ -35,8 +34,8 @@ export default function Home() {
     setActive(activeView);
   }, [isInFirstView, isInAboutView, isInExperienceView, isInPortfolioView]);
   return (
-    <div className='homeflow'>
-      <Link className='language' href='/fa'>
+    <div className="homeflow">
+      <Link className="language" href="/fa">
         persian
       </Link>
       <Header firstRef={firstRef} />
@@ -46,7 +45,7 @@ export default function Home() {
       {/* <Services /> */}
       <Portfolio portfolioRef={portfolioRef} />
       {/* <Testimonials /> */}
-      <Contact />
+      {/* <Contact /> */}
       <Footer />
     </div>
   );

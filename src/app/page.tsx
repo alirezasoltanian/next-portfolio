@@ -1,7 +1,6 @@
 // @ts-nocheck
 "use client";
 import About from "@/components/about/About";
-import Contact from "@/components/contact/Contact";
 import Experience from "@/components/experience/Experience";
 import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
@@ -36,8 +35,8 @@ export default function Home() {
   }, [isInFirstView, isInAboutView, isInExperienceView, isInPortfolioView]);
 
   return (
-    <div className='homeflow  overflow-x-hidden'>
-      <Link className='language' href={pathname.includes("fa") ? "/" : "/fa"}>
+    <div className="homeflow  overflow-x-hidden">
+      <Link className="language" href={pathname.includes("fa") ? "/" : "/fa"}>
         persian
       </Link>
       <Header firstRef={firstRef} />
@@ -49,7 +48,7 @@ export default function Home() {
       {/* <Services /> */}
       <Portfolio portfolioRef={portfolioRef} />
       {/* <Testimonials /> */}
-      <Contact />
+      {/* <Contact /> */}
       <Footer />
     </div>
   );

@@ -2,19 +2,17 @@
 
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import About2 from "../about/About2";
-import Contact2 from "../contact/Contact2";
-import Experience2 from "../skills/Skills2";
 import Footer2 from "../footer/Footer2";
 import Header2 from "../header/Header2";
 import Nav from "../nav/Nav";
 import Portfolio2 from "../portfolio/Portfolio2";
+import Experience2 from "../skills/Skills2";
 import "./home2.css";
 
-import Services from "../services/Services";
-import useViewRef from "../../hooks/useViewRef";
 import Link from "next/link";
+import useViewRef from "../../hooks/useViewRef";
 // import Testimonials from '../testimonials/Testimonials'
 export default function Home() {
   const [active, setActive] = useState("first");
@@ -36,8 +34,8 @@ export default function Home() {
     setActive(activeView);
   }, [isInFirstView, isInAboutView, isInExperienceView, isInPortfolioView]);
   return (
-    <div className='homeflow'>
-      <Link className='language2' href='/'>
+    <div className="homeflow">
+      <Link className="language2" href="/">
         English
       </Link>
 
@@ -48,7 +46,7 @@ export default function Home() {
       {/* <Services /> */}
       <Portfolio2 portfolioRef={portfolioRef} />
       {/* <Testimonials /> */}
-      <Contact2 />
+      {/* <Contact2 /> */}
       <Footer2 />
     </div>
   );

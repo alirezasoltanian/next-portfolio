@@ -67,7 +67,7 @@ const Header = ({ firstRef }) => {
             className="w-full rounded-t-full h-full inset-0  object-cover "
           />
         </div>
-        <a href="#contact" className="scroll__down">
+        <a href="#portfolio" className="scroll__down">
           scroll Down
         </a>
       </div>
