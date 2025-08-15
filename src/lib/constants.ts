@@ -4,10 +4,20 @@ export const PortfolioJson = [
     image: "../../assets/solop.png",
     name: "frontend",
     title:
-      "Tools : Nextjs , Drizzle , ai-sdk , Openai , zustand , ethers , NextAuth , Shadcn , Payment, Socket.io , Tailwind , nodemailer  ",
+      "Tools : Nextjs , Drizzle , ai-sdk , Openai , zustand , ethers , NextAuth , Shadcn , Payment, Socket.io , postgres, Tailwind , nodemailer  ",
     disable: "code",
     github: "",
     demo: "https://solop.ir/",
+  },
+  {
+    id: 2,
+    image: "../../assets/dideban.png",
+    name: "frontend",
+    title:
+      "Tools : Nextjs , Drizzle , ai-sdk , Openai , zustand , NextAuth , Shadcn , Payment, postgres , Tailwind  ",
+    disable: "code",
+    github: "",
+    demo: "https://dideban.solop.ir/",
   },
   // {
   //   id: 11,
