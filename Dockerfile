@@ -1,14 +1,14 @@
-FROM node:22.11.0-slim AS base
+FROM node:24.5.0-slim AS base
 
 # Stage 1: Install dependencies
 FROM base AS deps
 WORKDIR /app
-RUN apt-get update && apt-get install -y \
-    python3 \
-    python3-pip \
-    make \
-    g++ \
-    && rm -rf /var/lib/apt/lists/*
+# RUN apt-get update && apt-get install -y \
+#     python3 \
+#     python3-pip \
+#     make \
+#     g++ \
+#     && rm -rf /var/lib/apt/lists/*
 COPY package.json package-lock.json ./
 RUN npm install --frozen-lockfile
 
