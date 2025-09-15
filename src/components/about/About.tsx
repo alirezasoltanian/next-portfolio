@@ -93,11 +93,10 @@ const About = ({ aboutRef }) => {
             </artifact>
           </div>
           <p>
-            i&apos;m a developer in web2 and web3 world , in world i&apos;m full
-            stack developer you can see in the portfolio my experiences and
-            projects also can see my github and linkedin to get to know me
-            better if have question or Speech You can send me a message from the
-            Contact ME. I will be happy to talk to you :)
+            I&apos;m full stack developer you can see in the portfolio my
+            experiences and projects also can see my github and linkedin to get
+            to know me better if have question or Speech You can send me a
+            message from the Contact ME. I will be happy to talk to you :)
           </p>
         </div>
       </div>
