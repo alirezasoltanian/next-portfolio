@@ -59,35 +59,6 @@ const Header = ({ firstRef }) => {
         fill="white"
       />
       <div className="container header__container  flex flex-col items-center">
-        {/* <h5 data-aos="zoom-in-down" data-aos-duration="1500" >Hello I'm</h5>
-        <h1 data-aos="zoom-in-down" data-aos-duration="1500">Soltanian</h1>
-        <h5 className="text-light"  data-aos="zoom-in-down" data-aos-duration="1000">Fullstack Developer</h5> */}
-
-        {/* <Typewriter
-          className='text-xl'
-          options={{
-            autoStart: true,
-            loop: true,
-          }}
-          onInit={(typewriter) => {
-            typewriter
-              .typeString('<span className="bg-slate-800">Hello World</span>')
-              .pauseFor(25)
-              .typeString(".")
-              .deleteAll()
-              .typeString("I'm frontend developer")
-              .pauseFor(25)
-              .deleteAll()
-              .typeString(
-                " (Nextjs & Typescript ... (another be experience page)) "
-              )
-              .deleteAll()
-              .typeString("&")
-              .deleteAll()
-              .typeString("Web3 developer (solidity & Hardhat ...)")
-              .start();
-          }}
-        /> */}
         <h1 id="header-flicker" className="flicker " />
         {/* <h1 id='header-flicker' className='flickerfull '>
           Alireza soltanian

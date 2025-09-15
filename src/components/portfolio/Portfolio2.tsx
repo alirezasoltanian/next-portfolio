@@ -44,7 +44,7 @@ const Portfolio = ({ portfolioRef }) => {
           value="frontend"
           onClick={filterHandler}
         >
-          FrontEnd
+          Full Stack
         </button>
         <button
           style={{ borderRadius: "0px 0px 0px 0px" }}
