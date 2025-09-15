@@ -36,7 +36,7 @@ const Portfolio = ({ portfolioRef }) => {
           className={!activeGenre ? "btn btn-primary" : "btn"}
           onClick={filterHandler}
         >
-          all
+          All
         </button>
         <button
           style={{ borderRadius: "0px 0px 0px 0px" }}
