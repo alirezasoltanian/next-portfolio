@@ -69,18 +69,18 @@ function Stickers() {
     };
   }, []);
   return (
-    <div className='relative  h-fit '>
+    <div className="relative  h-fit ">
       <div
         className={`${beba.className}  z-20 absolute right-24 md:-right-16 top-0 text-brand m-0  uppercase second-two-level-move `}
       >
-        <span className='flex text-white text-[2.5rem] md:text-[4rem]'>
+        <span className="flex text-white text-[2.5rem] md:text-[4rem]">
           <span>(</span>
-          <Shine puffyness='2'>
-            <span className=' text-black'>⌐■</span>
+          <Shine puffyness="2">
+            <span className=" text-black">⌐■</span>
           </Shine>
           <span>_</span>
-          <Shine puffyness='2'>
-            <span className=' text-black'>■</span>
+          <Shine puffyness="2">
+            <span className=" text-black">■</span>
           </Shine>
           <span>)</span>
         </span>
@@ -105,14 +105,14 @@ function Stickers() {
           </svg>
         </Shine>
       </div> */}
-      <article className=' w-[600px] aspect-[2/1.1] max-h-[calc(100svh-2rem)] relative overflow-hidden max-w-[calc(100%-2rem)] portrait:min-h-[330px]'>
-        <div className='assets absolute inset-0 rounded-[4em] overflow-hidden'>
+      <article className=" w-[600px] aspect-[2/1.1] max-h-[calc(100svh-2rem)] relative overflow-hidden max-w-[calc(100%-2rem)] portrait:min-h-[330px]">
+        <div className="assets absolute inset-0 rounded-[4em] overflow-hidden">
           <ImageB
             width={420}
             height={420}
-            className='z-10 absolute top-0 left-1/2 -translate-x-1/2 h-full w-[660px] max-w-[unset] object-cover select-none pointer-events-none saturate-[1.5] brightness-[0.9] first-level-move'
-            src='/images/osaka-sky.jpeg'
-            alt=''
+            className="z-10 absolute top-0 left-1/2 -translate-x-1/2 h-full w-[660px] max-w-[unset] object-cover select-none pointer-events-none saturate-[1.5] brightness-[0.9] first-level-move"
+            src="/images/osaka-sky.jpeg"
+            alt=""
           />
 
           {/* <img
@@ -125,7 +125,7 @@ function Stickers() {
       <h4
         className={`${beba.className} z-20 absolute left-1/2 top-[60%] md:top-[50%] text-brand m-0 text-[3.5rem] md:text-[4rem] uppercase second-level-move `}
       >
-        <Shine puffyness='2'>SOLOP</Shine>
+        <Shine puffyness="2">SOLOP</Shine>
       </h4>
     </div>
   );

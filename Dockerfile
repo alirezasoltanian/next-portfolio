@@ -28,5 +28,5 @@ COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 
-EXPOSE 3005
+EXPOSE 3015
 CMD ["npm", "run", "start"]

@@ -1,5 +1,3 @@
-import { useMDXComponent } from "next-contentlayer/hooks";
-
 import { cn } from "@/lib/utils";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -13,7 +11,7 @@ import { TitleATag } from "@/components/mdx/title-a-tag";
  * @link https://github.com/shadcn/ui/blob/main/apps/www/components/mdx-components.tsx
  */
 
-const components = {
+export const mdxComponents = {
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1
       className={cn(
@@ -151,15 +149,3 @@ const components = {
   Callout,
   TitleATag,
 };
-
-interface MdxProps {
-  code: string;
-}
-
-export function Mdx({ code }: MdxProps) {
-  // const Component = useMDXComponent(code);
-
-  return (
-    <div className="mdx">{/* <Component components={components} /> */}</div>
-  );
-}

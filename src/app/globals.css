@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @theme {
   --color-border: hsl(var(--border));
@@ -196,11 +196,11 @@
 
   @font-face {
     font-family: Kalameh;
-    src: url(/public/assets//fonts/KALAMEHFANUM-BOLD.TTF);
+    src: url(/assets/fonts/KALAMEHFANUM-BOLD.TTF) format("truetype");
   }
   @font-face {
     font-family: Iransansx;
-    src: url(/public/assets//fonts/IRANSANSX-REGULAR.TTF);
+    src: url(/assets/fonts/IRANSANSX-REGULAR.TTF) format("truetype");
   }
 
   .blog-title {

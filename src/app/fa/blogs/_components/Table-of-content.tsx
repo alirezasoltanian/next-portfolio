@@ -7,11 +7,11 @@ import { slugify } from "@/lib/utils";
 // https://yusuf.fyi/posts/contentlayer-table-of-contents/
 // TABLE OF CONTENTS contentlayer
 // https://paco.me/craft
-function TableOfContent({ heading }: { heading: string[] }) {
+function TableOfContent({ heading }: { heading: string[] | undefined }) {
   return (
-    <div className='flex flex-col w-full gap-2 blog-text'>
-      <p className='my-1 blog-title text-lg '>تیتر های بلاگ</p>
-      {heading.map((item, index) => (
+    <div className="flex flex-col w-full gap-2 blog-text">
+      <p className="my-1 blog-title text-lg ">تیتر های بلاگ</p>
+      {(heading ?? []).map((item, index) => (
         <div key={index}>
           <a href={`#${slugify(item)}`}>{item}</a>
         </div>

@@ -1,11 +1,10 @@
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { RESUME_DATA } from "@/data/resume-data";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
-// export const rendering = "force-static";
+// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
@@ -67,8 +66,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className='overflow-x-hidden h-fit' lang='en'>
-      <body className={inter.className}>
+    <html className="overflow-x-hidden h-fit" lang="en">
+      <body>
         <TooltipProvider>{children}</TooltipProvider>
       </body>
       {/* <ScrollTOStartPage /> */}

@@ -1,8 +1,7 @@
-"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { allPosts } from "contentlayer/generated";
+import { getAllPosts } from "@/lib/posts";
 
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
@@ -10,8 +9,8 @@ import { buttonVariants } from "@/components/ui/button";
 import BlogCard from "./BlogCard";
 import { ChevronLeft } from "lucide-react";
 
-function BlogHome() {
-  const posts = allPosts
+export default function BlogHome() {
+  const posts = getAllPosts()
     .slice(0, 3)
     .filter((post) => post.published)
     .sort((a, b) => b.date.localeCompare(a.date));
@@ -33,7 +32,7 @@ function BlogHome() {
       <div className="mt-10 flex flex-wrap justify-center  gap-5">
         {posts?.length &&
           posts.map((post, index) => (
-            <div key={post._id}>
+            <div key={post.slug}>
               <BlogCard post={post} />
             </div>
           ))}
@@ -41,5 +40,3 @@ function BlogHome() {
     </div>
   );
 }
-
-export default BlogHome;

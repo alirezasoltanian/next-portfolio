@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { type Post } from "contentlayer/generated"
+import { type BlogPostMeta } from "@/lib/posts"
 
 import { formatDate } from "@/lib/utils"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
@@ -8,7 +8,7 @@ import { CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { PlaceholderImage } from "@/components/placeholder-image"
 
 interface PostCardProps {
-  post: Post
+  post: BlogPostMeta
   i: number
 }
 

@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { allPosts } from "contentlayer/generated";
+import { getAllPosts } from "@/lib/posts";
 
 import BlogCard from "@/components/blogHome/BlogCard";
 import { redis } from "@/lib/redis";
@@ -9,7 +9,7 @@ export const metadata = {
 };
 // export const dynamic = 'force-dynamic'
 export default async function BlogPage() {
-  const posts = allPosts
+  const posts = getAllPosts()
     .filter((post) => post.published)
     .sort((a, b) => b.date.localeCompare(a.date));
 
