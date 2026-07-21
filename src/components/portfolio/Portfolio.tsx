@@ -73,7 +73,7 @@ const Portfolio = ({ portfolioRef }) => {
           {filtered.map(
             ({ id, image, title, github, demo, name, disable }, i) => {
               return (
-                <motion.artifact
+                <motion.article
                   variants={{
                     hidden: (i) => ({
                       opacity: 0,
@@ -134,7 +134,7 @@ const Portfolio = ({ portfolioRef }) => {
                       )}
                     </div>
                   </div>
-                </motion.artifact>
+                </motion.article>
               );
             }
           )}
