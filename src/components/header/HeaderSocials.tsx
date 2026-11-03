@@ -1,6 +1,5 @@
 import React from "react";
-import { AiOutlineLinkedin } from "react-icons/ai";
-import { AiFillGithub } from "react-icons/ai";
+import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 
 const HeaderSocials = () => {
   return (
@@ -10,10 +9,10 @@ const HeaderSocials = () => {
       className="header__socials"
     >
       <a href="https://www.linkedin.com/in/alirezasoltanian/" target="_blank">
-        <AiOutlineLinkedin />
+        <LinkedInIcon />
       </a>
       <a href="https://github.com/alirezasoltanian" target="_blank">
-        <AiFillGithub />
+        <GitHubIcon />
       </a>
     </div>
   );

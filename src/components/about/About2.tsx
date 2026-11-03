@@ -2,10 +2,7 @@
 
 import React, { useEffect, useRef } from "react";
 import "./about2.css";
-import { FaAward } from "react-icons/fa";
 import ME from "../../assets/me-about2.webp";
-import { FiUsers } from "react-icons/fi";
-import { VscFolderLibrary } from "react-icons/vsc";
 import {
   motion,
   useScroll,
@@ -21,6 +18,7 @@ import { wrap } from "@motionone/utils";
 import { Marquee } from "../ui/Marquee";
 import styles from "./bubble.module.css";
 import ImageB from "@/components/ImageB";
+import { Award, FolderOpen, Users } from "lucide-react";
 
 const About = ({ aboutRef }) => {
   // justMove
@@ -78,7 +76,7 @@ const About = ({ aboutRef }) => {
               data-aos-duration="1000"
               className="about__card"
             >
-              <FaAward className="about__icon" />
+              <Award size="1em" className="about__icon" />
               <h5>سابقه</h5>
               <small>سه سال </small>
             </artifact>
@@ -89,7 +87,7 @@ const About = ({ aboutRef }) => {
               data-aos-duration="1200"
               className="about__card"
             >
-              <FiUsers className="about__icon" />
+              <Users size="1em" className="about__icon" />
               <h5>همکاری</h5>
               <small>2</small>
             </artifact>
@@ -100,7 +98,7 @@ const About = ({ aboutRef }) => {
               data-aos-duration="1500"
               className="about__card"
             >
-              <VscFolderLibrary className="about__icon" />
+              <FolderOpen size="1em" className="about__icon" />
               <h5>پروژه</h5>
               <small>5+ </small>
             </artifact>

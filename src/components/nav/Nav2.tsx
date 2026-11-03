@@ -4,11 +4,6 @@
 
 import React from "react";
 import "./nav.css";
-import { IoIosHome } from "react-icons/io";
-import { AiOutlineUser } from "react-icons/ai";
-import { FaBook } from "react-icons/fa";
-import { IoMdContacts } from "react-icons/io";
-import { MdLanguage } from "react-icons/md";
 import { useState, useRef, useEffect } from "react";
 
 //framer-motion
@@ -20,28 +15,29 @@ import {
   useViewportScroll,
 } from "framer-motion";
 import Link from "next/link";
+import { BookOpen, Contact, Globe, House, User } from "lucide-react";
 let scrollThreshold = [0, 50];
 
 const items =  [
   {
     id: 1,
     zIndex: 0,
-    tagIcon: <IoIosHome style={{ position: "relative", zIndex: 10 }} />,
+    tagIcon: <House size="1em" style={{ position: "relative", zIndex: 10 }} />,
     Tagactive: "#",
   },
   {
     id: 2,
-    tagIcon: <AiOutlineUser style={{ position: "relative", zIndex: 10 }} />,
+    tagIcon: <User size="1em" style={{ position: "relative", zIndex: 10 }} />,
     Tagactive: "#about",
   },
   {
     id: 3,
-    tagIcon: <IoMdContacts style={{ position: "relative", zIndex: 10 }} />,
+    tagIcon: <Contact size="1em" style={{ position: "relative", zIndex: 10 }} />,
     Tagactive: "#experience",
   },
   {
     id: 4,
-    tagIcon: <FaBook style={{ position: "relative", zIndex: 10 }} />,
+    tagIcon: <BookOpen size="1em" style={{ position: "relative", zIndex: 10 }} />,
     Tagactive: "#portfolio",
   },
 ];
@@ -141,7 +137,7 @@ const Nav = () => {
             href="#"
             onClick={() => setActiveNav("#")}
           >
-            <IoIosHome />
+            <House size="1em" />
           </motion.a>
           <motion.a
             variants={parent}
@@ -149,7 +145,7 @@ const Nav = () => {
             href="#about"
             onClick={() => setActiveNav("#about")}
           >
-            <AiOutlineUser />
+            <User size="1em" />
           </motion.a>
           <motion.a
             variants={parent}
@@ -157,7 +153,7 @@ const Nav = () => {
             href="#contact"
             onClick={() => setActiveNav("#contact")}
           >
-            <IoMdContacts />
+            <Contact size="1em" />
           </motion.a>
           <motion.a
             variants={parent}
@@ -165,7 +161,7 @@ const Nav = () => {
             href="#experience"
             onClick={() => setActiveNav("#experience")}
           >
-            <FaBook />
+            <BookOpen size="1em" />
           </motion.a> */}
 
         {items.map((item) => (
@@ -256,7 +252,7 @@ const Nav = () => {
           </motion.a>
         ))}
         <Link  href="/">
-          <MdLanguage />
+          <Globe size="1em" />
         </Link>
         {/* </motion.LayoutGroup> */}
       </motion.nav>

@@ -4,11 +4,6 @@
 
 import React from "react";
 import "./nav.css";
-import { IoIosHome } from "react-icons/io";
-import { AiOutlineUser } from "react-icons/ai";
-import { FaBook } from "react-icons/fa";
-import { IoMdContacts } from "react-icons/io";
-import { MdLanguage } from "react-icons/md";
 import { useState, useRef, useEffect } from "react";
 
 //framer-motion
@@ -21,31 +16,32 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
+import { BookOpen, Contact, Globe, House, User } from "lucide-react";
 let scrollThreshold = [0, 50];
 
 const items = [
   {
     id: 1,
     zIndex: 0,
-    tagIcon: <IoIosHome style={{ position: "relative", zIndex: 10 }} />,
+    tagIcon: <House size="1em" style={{ position: "relative", zIndex: 10 }} />,
     TagActive: "first",
     label: "Home",
   },
   {
     id: 2,
-    tagIcon: <AiOutlineUser style={{ position: "relative", zIndex: 10 }} />,
+    tagIcon: <User size="1em" style={{ position: "relative", zIndex: 10 }} />,
     TagActive: "about",
     label: "About",
   },
   {
     id: 3,
-    tagIcon: <IoMdContacts style={{ position: "relative", zIndex: 10 }} />,
+    tagIcon: <Contact size="1em" style={{ position: "relative", zIndex: 10 }} />,
     TagActive: "experience",
     label: "Experience",
   },
   {
     id: 4,
-    tagIcon: <FaBook style={{ position: "relative", zIndex: 10 }} />,
+    tagIcon: <BookOpen size="1em" style={{ position: "relative", zIndex: 10 }} />,
     TagActive: "portfolio",
     label: "Portfolio",
   },
@@ -234,7 +230,7 @@ const Nav = ({ active }) => {
               href={pathname.includes("fa") ? "/" : "/fa"}
               className='relative'
             >
-              <MdLanguage />
+              <Globe size="1em" />
             </Link>
           </TooltipTrigger>
           <TooltipContent className='border-2 text-brand-foreground border-brand-foreground font-semibold  bg-slate-900/70'>

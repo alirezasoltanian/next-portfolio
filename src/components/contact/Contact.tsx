@@ -1,13 +1,12 @@
 // @ts-nocheck
 
-import { MdEmail } from "react-icons/md";
-import { FaTelegramPlane } from "react-icons/fa";
-import { IoLogoWhatsapp } from "react-icons/io";
 import React, { useRef, useState, useEffect } from "react";
 import "./contact.css";
 import emailjs from "@emailjs/browser";
 import { VisionOSIcon } from "./VisionOSIcon";
 import Link from "next/link";
+import { Mail } from "lucide-react";
+import { TelegramIcon, WhatsAppIcon } from "@/components/icons";
 
 const Contact = () => {
   const divRef = useRef<HTMLButtonElement>(null);
@@ -98,7 +97,7 @@ const Contact = () => {
             data-aos-duration="900"
             className="contact__option"
           >
-            <MdEmail className="contact__option-icon" />
+            <Mail size="1em" className="contact__option-icon" />
             <h4>Email</h4>
             <h5 className="break-words">asoltanian76@gmail.com</h5>
             <a href="mailto:asoltanian76@gmail.com" target="_blank">
@@ -111,7 +110,7 @@ const Contact = () => {
             data-aos-duration="1200"
             className="contact__option"
           >
-            <FaTelegramPlane className="contact__option-icon" />
+            <TelegramIcon className="contact__option-icon" />
             <h4>telegram</h4>
             <h5>@ali76rez</h5>
             <a href="https://t.me/ali76rez" target="_blank">
@@ -124,7 +123,7 @@ const Contact = () => {
             data-aos-duration="1500"
             className="contact__option"
           >
-            <IoLogoWhatsapp className="contact__option-icon" />
+            <WhatsAppIcon className="contact__option-icon" />
             <h4>Whatsapp</h4>
             <h5>number</h5>
             <a

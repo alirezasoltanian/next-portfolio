@@ -3,16 +3,14 @@
 "use client";
 import React, { useRef } from "react";
 import "./about.css";
-import { FaAward } from "react-icons/fa";
 import ME from "../../assets/me-about2.webp";
-import { FiUsers } from "react-icons/fi";
-import { VscFolderLibrary } from "react-icons/vsc";
 import styles from "./bubble.module.css";
 import { useTransform, useMotionValue, useAnimationFrame } from "framer-motion";
 import { wrap } from "@motionone/utils";
 import { Marquee } from "../ui/Marquee";
 import ImageB from "@/components/ImageB";
 import { ButtonGooey } from "../ButtonGooey";
+import { Award, FolderOpen, Users } from "lucide-react";
 const About = ({ aboutRef }) => {
   // justMove
   const baseVelocity = -100;
@@ -65,7 +63,7 @@ const About = ({ aboutRef }) => {
               data-aos-duration="1000"
               className="about__card1"
             >
-              <FaAward className="about__icon1" />
+              <Award size="1em" className="about__icon1" />
               <h5>Experience</h5>
               <small>3+ Years Working</small>
             </artifact>
@@ -76,7 +74,7 @@ const About = ({ aboutRef }) => {
               data-aos-duration="1200"
               className="about__card1"
             >
-              <FiUsers className="about__icon1" />
+              <Users size="1em" className="about__icon1" />
               <h5>Cooperation</h5>
               <small>2</small>
             </artifact>
@@ -87,7 +85,7 @@ const About = ({ aboutRef }) => {
               data-aos-duration="1500"
               className="about__card1"
             >
-              <VscFolderLibrary className="about__icon1" />
+              <FolderOpen size="1em" className="about__icon1" />
               <h5>Project</h5>
               <small>5+ Completed</small>
             </artifact>

@@ -1,6 +1,6 @@
 import React from 'react'
 import './services.css'
-import { BiCheck } from "react-icons/bi";
+import { Check } from "lucide-react";
 
 const Services = () => {
   return (
@@ -14,27 +14,27 @@ const Services = () => {
           </div>
           <ul className='services__list'>
             <li>
-              <BiCheck className='services__list-icon' />
+              <Check size="1em" className='services__list-icon' />
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores impedit repellat quasi molestias libero quos distinctio natus cupiditate aperiam fugiat, pariatur eveniet? Totam soluta non, sed aut molestiae voluptatibus ipsam!</p>
             </li>
             <li>
-              <BiCheck className='services__list-icon' />
+              <Check size="1em" className='services__list-icon' />
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores impedit repellat quasi molestias libero quos distinctio natus cupiditate aperiam fugiat, pariatur eveniet? Totam soluta non, sed aut molestiae voluptatibus ipsam!</p>
             </li>
             <li>
-              <BiCheck className='services__list-icon' />
+              <Check size="1em" className='services__list-icon' />
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores impedit repellat quasi molestias libero quos distinctio natus cupiditate aperiam fugiat, pariatur eveniet? Totam soluta non, sed aut molestiae voluptatibus ipsam!</p>
             </li>
             <li>
-              <BiCheck className='services__list-icon' />
+              <Check size="1em" className='services__list-icon' />
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores impedit repellat quasi molestias libero quos distinctio natus cupiditate aperiam fugiat, pariatur eveniet? Totam soluta non, sed aut molestiae voluptatibus ipsam!</p>
             </li>
             <li>
-              <BiCheck className='services__list-icon' />
+              <Check size="1em" className='services__list-icon' />
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores impedit repellat quasi molestias libero quos distinctio natus cupiditate aperiam fugiat, pariatur eveniet? Totam soluta non, sed aut molestiae voluptatibus ipsam!</p>
             </li>
             <li>
-              <BiCheck className='services__list-icon' />
+              <Check size="1em" className='services__list-icon' />
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores impedit repellat quasi molestias libero quos distinctio natus cupiditate aperiam fugiat, pariatur eveniet? Totam soluta non, sed aut molestiae voluptatibus ipsam!</p>
             </li>            
           </ul>
@@ -46,27 +46,27 @@ const Services = () => {
           </div>
           <ul className='services__list'>
             <li>
-              <BiCheck className='services__list-icon' />
+              <Check size="1em" className='services__list-icon' />
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores impedit repellat quasi molestias libero quos distinctio natus cupiditate aperiam fugiat, pariatur eveniet? Totam soluta non, sed aut molestiae voluptatibus ipsam!</p>
             </li>
             <li>
-              <BiCheck className='services__list-icon' />
+              <Check size="1em" className='services__list-icon' />
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores impedit repellat quasi molestias libero quos distinctio natus cupiditate aperiam fugiat, pariatur eveniet? Totam soluta non, sed aut molestiae voluptatibus ipsam!</p>
             </li>
             <li>
-              <BiCheck className='services__list-icon' />
+              <Check size="1em" className='services__list-icon' />
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores impedit repellat quasi molestias libero quos distinctio natus cupiditate aperiam fugiat, pariatur eveniet? Totam soluta non, sed aut molestiae voluptatibus ipsam!</p>
             </li>
             <li>
-              <BiCheck className='services__list-icon' />
+              <Check size="1em" className='services__list-icon' />
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores impedit repellat quasi molestias libero quos distinctio natus cupiditate aperiam fugiat, pariatur eveniet? Totam soluta non, sed aut molestiae voluptatibus ipsam!</p>
             </li>
             <li>
-              <BiCheck className='services__list-icon' />
+              <Check size="1em" className='services__list-icon' />
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores impedit repellat quasi molestias libero quos distinctio natus cupiditate aperiam fugiat, pariatur eveniet? Totam soluta non, sed aut molestiae voluptatibus ipsam!</p>
             </li>
             <li>
-              <BiCheck className='services__list-icon' />
+              <Check size="1em" className='services__list-icon' />
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores impedit repellat quasi molestias libero quos distinctio natus cupiditate aperiam fugiat, pariatur eveniet? Totam soluta non, sed aut molestiae voluptatibus ipsam!</p>
             </li>            
           </ul>
@@ -78,27 +78,27 @@ const Services = () => {
           </div>
           <ul className='services__list'>
             <li>
-              <BiCheck className='services__list-icon' />
+              <Check size="1em" className='services__list-icon' />
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores impedit repellat quasi molestias libero quos distinctio natus cupiditate aperiam fugiat, pariatur eveniet? Totam soluta non, sed aut molestiae voluptatibus ipsam!</p>
             </li>
             <li>
-              <BiCheck className='services__list-icon' />
+              <Check size="1em" className='services__list-icon' />
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores impedit repellat quasi molestias libero quos distinctio natus cupiditate aperiam fugiat, pariatur eveniet? Totam soluta non, sed aut molestiae voluptatibus ipsam!</p>
             </li>
             <li>
-              <BiCheck className='services__list-icon' />
+              <Check size="1em" className='services__list-icon' />
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores impedit repellat quasi molestias libero quos distinctio natus cupiditate aperiam fugiat, pariatur eveniet? Totam soluta non, sed aut molestiae voluptatibus ipsam!</p>
             </li>
             <li>
-              <BiCheck className='services__list-icon' />
+              <Check size="1em" className='services__list-icon' />
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores impedit repellat quasi molestias libero quos distinctio natus cupiditate aperiam fugiat, pariatur eveniet? Totam soluta non, sed aut molestiae voluptatibus ipsam!</p>
             </li>
             <li>
-              <BiCheck className='services__list-icon' />
+              <Check size="1em" className='services__list-icon' />
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores impedit repellat quasi molestias libero quos distinctio natus cupiditate aperiam fugiat, pariatur eveniet? Totam soluta non, sed aut molestiae voluptatibus ipsam!</p>
             </li>
             <li>
-              <BiCheck className='services__list-icon' />
+              <Check size="1em" className='services__list-icon' />
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores impedit repellat quasi molestias libero quos distinctio natus cupiditate aperiam fugiat, pariatur eveniet? Totam soluta non, sed aut molestiae voluptatibus ipsam!</p>
             </li>            
           </ul>

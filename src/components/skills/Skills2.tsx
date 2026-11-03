@@ -2,7 +2,6 @@
 
 import React, { useRef } from "react";
 import "./skills2.css";
-import { BsPatchCheckFill } from "react-icons/bs";
 import {
   motion,
   useAnimationFrame,
@@ -11,6 +10,7 @@ import {
 } from "framer-motion";
 import { wrap } from "@motionone/utils";
 import ImageB from "@/components/ImageB";
+import { BadgeCheck } from "lucide-react";
 
 const nameSkill = [
   "react",
@@ -184,70 +184,70 @@ const Skills = ({ experienceRef }) => {
           <h3>Frontend Developer</h3>
           <div className="experience__content overflow-hidden">
             <artifact className="experience__details">
-              <BsPatchCheckFill className="experience__details__icon" />
+              <BadgeCheck size="1em" className="experience__details__icon" />
               <div>
                 <h4>REACT</h4>
                 <small className="text-light">Experienced</small>
               </div>
             </artifact>
             <artifact className="experience__details">
-              <BsPatchCheckFill className="experience__details__icon" />
+              <BadgeCheck size="1em" className="experience__details__icon" />
               <div>
                 <h4>NEXTJS</h4>
                 <small className="text-light">Experienced</small>
               </div>
             </artifact>
             <artifact className="experience__details">
-              <BsPatchCheckFill className="experience__details__icon" />
+              <BadgeCheck size="1em" className="experience__details__icon" />
               <div>
                 <h4>JAVASCRIPT</h4>
                 <small className="text-light">Experienced</small>
               </div>
             </artifact>
             <artifact className="experience__details">
-              <BsPatchCheckFill className="experience__details__icon" />
+              <BadgeCheck size="1em" className="experience__details__icon" />
               <div>
                 <h4>TYPESCRIPT</h4>
                 <small className="text-light">Experienced</small>
               </div>
             </artifact>
             <artifact className="experience__details">
-              <BsPatchCheckFill className="experience__details__icon" />
+              <BadgeCheck size="1em" className="experience__details__icon" />
               <div>
                 <h4>Tailwind</h4>
                 <small className="text-light">Experienced</small>
               </div>
             </artifact>
             <artifact className="experience__details">
-              <BsPatchCheckFill className="experience__details__icon" />
+              <BadgeCheck size="1em" className="experience__details__icon" />
               <div>
                 <h4>MaterialUI</h4>
                 <small className="text-light">Experienced</small>
               </div>
             </artifact>
             <artifact className="experience__details">
-              <BsPatchCheckFill className="experience__details__icon" />
+              <BadgeCheck size="1em" className="experience__details__icon" />
               <div>
                 <h4>GraphQL</h4>
                 <small className="text-light">Experienced</small>
               </div>
             </artifact>
             <artifact className="experience__details">
-              <BsPatchCheckFill className="experience__details__icon" />
+              <BadgeCheck size="1em" className="experience__details__icon" />
               <div>
                 <h4>FRAMER-MOTION</h4>
                 <small className="text-light">Experienced</small>
               </div>
             </artifact>
             <artifact className="experience__details">
-              <BsPatchCheckFill className="experience__details__icon" />
+              <BadgeCheck size="1em" className="experience__details__icon" />
               <div>
                 <h4>PWA</h4>
                 <small className="text-light">Experienced</small>
               </div>
             </artifact>
             <artifact className="experience__details">
-              <BsPatchCheckFill className="experience__details__icon" />
+              <BadgeCheck size="1em" className="experience__details__icon" />
               <div>
                 <h4>figma</h4>
                 <small className="text-light">intermediate</small>
@@ -282,35 +282,35 @@ const Skills = ({ experienceRef }) => {
           <h3>Backend</h3>
           <div className="experience__content">
             <artifact className="experience__details">
-              <BsPatchCheckFill className="experience__details__icon" />
+              <BadgeCheck size="1em" className="experience__details__icon" />
               <div>
                 <h4>Express</h4>
                 <small className="text-light">intermediate</small>
               </div>
             </artifact>
             <artifact className="experience__details">
-              <BsPatchCheckFill className="experience__details__icon" />
+              <BadgeCheck size="1em" className="experience__details__icon" />
               <div>
                 <h4>Prisma & Drizzle</h4>
                 <small className="text-light">intermediate</small>
               </div>
             </artifact>
             <artifact className="experience__details">
-              <BsPatchCheckFill className="experience__details__icon" />
+              <BadgeCheck size="1em" className="experience__details__icon" />
               <div>
                 <h4>Docker</h4>
                 <small className="text-light">intermediate</small>
               </div>
             </artifact>
             <artifact className="experience__details">
-              <BsPatchCheckFill className="experience__details__icon" />
+              <BadgeCheck size="1em" className="experience__details__icon" />
               <div>
                 <h4>Node</h4>
                 <small className="text-light">intermediate</small>
               </div>
             </artifact>
             {/* <artifact className='experience__details'>
-              <BsPatchCheckFill className='experience__details__icon' />
+              <BadgeCheck size="1em" className='experience__details__icon' />
               <div>
                 <h4>Web3js</h4>
                 <small className='text-light'>intermediate</small>
